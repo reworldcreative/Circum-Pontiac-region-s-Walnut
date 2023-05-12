@@ -1,0 +1,115 @@
+@import "variables";
+.header {
+  &__wrap {
+    justify-content: center;
+    display: grid;
+    margin: 10px auto 15px;
+  }
+  .top-panel {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    margin-bottom: 25px;
+    &__text {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: $accent;
+      margin: 0px;
+      margin-left: 457px;
+      margin-right: 275px;
+    }
+  }
+
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      margin-right: 312px;
+    }
+
+    &__text {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+
+      color: #8a8a8a;
+      width: 142px;
+      margin: 0px;
+    }
+  }
+
+  .phones {
+    margin-left: 32px;
+    margin-right: 93px;
+  }
+
+  .main-header__text {
+    margin-left: 15px;
+  }
+
+  .registration-btn {
+    margin-left: 26px;
+  }
+
+  .language-select {
+    border: none;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../img/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: right;
+    padding: 0px 10px 0px 0px;
+    margin-left: 48px;
+    option {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+
+      color: #000000;
+    }
+  }
+
+  .basket {
+    padding: 0px;
+    background: none;
+    border: none;
+    position: relative;
+    margin-left: 63px;
+    &__count {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 8px;
+      line-height: 10px;
+      color: $main-white;
+      background: $contrast;
+      border-radius: 50%;
+      padding: 3px 5px;
+      position: absolute;
+      right: 0px;
+    }
+  }
+}

@@ -1,5 +1,13 @@
 // @import "fonts";
 @import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+@import "logo";
+@import "socials";
+@import "phones";
+@import "actionButton";
+
+@import "header";
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap");
 
 // font-family: 'Lato', sans-serif;
@@ -7,11 +15,11 @@
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Roboto', sans-serif;
 
-$main-white: #ffffff;
-$accent: #337d5a;
-$contrast: #93b474;
-$main: #1a2f3f;
-$second: #8a8a8a;
+// $main-white: #ffffff;
+// $accent: #337d5a;
+// $contrast: #93b474;
+// $main: #1a2f3f;
+// $second: #8a8a8a;
 
 body {
   background-color: $main-white;

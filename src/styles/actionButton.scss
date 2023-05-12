@@ -1,0 +1,58 @@
+@import "variables";
+
+.action-btn {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+
+  color: $main-white;
+  background-color: $accent;
+  padding: 13px 20px;
+  border: none;
+}
+
+.logIn-btn {
+  background: none;
+  border: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+
+  color: #323232;
+  padding: 0px;
+
+  &__icon {
+    margin-right: 6px;
+  }
+}
+
+.registration-btn {
+  background: none;
+  border: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+
+  color: #323232;
+  padding: 0px;
+
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: -3px;
+    background-color: #93b474;
+  }
+}

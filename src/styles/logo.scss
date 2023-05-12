@@ -1,0 +1,24 @@
+@import "variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &__img {
+    width: 54px;
+    height: 53px;
+    margin-right: 8px;
+  }
+
+  &__text {
+    width: 155px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+
+    color: $main;
+  }
+}
