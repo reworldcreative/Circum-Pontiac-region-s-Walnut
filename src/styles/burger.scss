@@ -1,0 +1,124 @@
+@import "rfs/scss.scss";
+@import "variables";
+
+.burger-btn {
+  display: grid;
+  padding: 0px;
+  background: none;
+  border: none;
+  height: fit-content;
+  &__line {
+    position: relative;
+    display: block;
+    width: 19px;
+    height: 3px;
+    margin-bottom: 4.5px;
+    background-color: #000000;
+    &:last-child {
+      margin-bottom: 0px;
+      width: 13px;
+    }
+  }
+
+  &.show {
+    .burger-btn__line {
+      transition: all 0.3s ease 0s;
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        // top: 5px;
+        margin: 0px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+        bottom: 3px;
+        margin: 0px;
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+.burger {
+  &__menu {
+    display: none;
+    transition: all 0.3s ease 0s;
+    &.show {
+      z-index: 100;
+      height: 100%;
+      display: block;
+      position: absolute;
+      background: $main-white;
+      top: 0px;
+      width: 100%;
+
+      .burger-btn {
+        position: absolute;
+        right: 11px;
+        top: 21px;
+      }
+
+      .logo {
+        display: flex;
+        max-width: 100px;
+
+        &__text {
+          text-align: initial;
+        }
+        &__img {
+          margin-right: 8px;
+        }
+      }
+
+      .burger__menu_head {
+        margin: 14px 11px 12px;
+      }
+    }
+
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px;
+      background: #fafafa;
+      padding: 12px 10px 14px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    padding: 14px 12px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.active {
+      .burger__link {
+        color: $main-white;
+      }
+      background: $accent;
+    }
+  }
+
+  &__link {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    letter-spacing: 0.02em;
+
+    color: $main;
+
+    text-decoration: none;
+  }
+}

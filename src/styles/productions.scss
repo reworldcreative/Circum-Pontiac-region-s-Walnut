@@ -1,0 +1,256 @@
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+.productions {
+  &__wrap {
+    text-align: center;
+    // margin:83px 317px 74px;
+    margin: 83px auto 74px;
+  }
+
+  &__text {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin: 0px auto;
+    width: 620px;
+
+    margin-top: 32px;
+  }
+}
+
+.product {
+  width: 406px;
+
+  &.active {
+    border: 1.5px solid #93b474;
+  }
+
+  .search {
+    background: #93b474;
+    border-radius: 50%;
+    padding: 13px;
+    width: fit-content;
+    height: fit-content;
+    // display: flex;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    display: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 120%;
+      height: 120%;
+      background: rgba(255, 255, 255, 0.15);
+      left: -5px;
+      top: -5px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  .badge {
+    &.new {
+      background: url("../img/badge-new.svg");
+      background-repeat: no-repeat;
+    }
+    &__text {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 10px;
+      line-height: 12px;
+
+      letter-spacing: 0.06em;
+
+      color: $main-white;
+      position: absolute;
+      // top: 0px;
+      margin: 0px;
+    }
+
+    // background: #dd133b;
+    top: 20px;
+    align-items: center;
+    display: flex;
+    position: relative;
+    background: url("../img/badge.svg");
+    background-repeat: no-repeat;
+    padding: 17px 23px 12px 20px;
+  }
+  &__carousel {
+    // margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      .search {
+        display: flex;
+      }
+    }
+  }
+
+  &__content {
+    margin: 19px 23px 15px 20px;
+  }
+  &__text {
+    margin-right: 130px;
+  }
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    width: fit-content;
+  }
+
+  &__article {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: #8a8a8a;
+    width: fit-content;
+  }
+
+  &__discription {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 106%;
+
+    letter-spacing: 0.01em;
+
+    color: #000000;
+    margin-bottom: 16px;
+    width: fit-content;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .weight {
+    display: flex;
+
+    &__icon {
+      margin-right: 9px;
+    }
+
+    &__number {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.01em;
+
+      color: #8a8a8a;
+      width: 54px;
+      &_accent {
+        color: #337d5a;
+      }
+    }
+  }
+
+  .package {
+    display: flex;
+    &__icon {
+      margin-right: 14px;
+    }
+
+    &__type {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.01em;
+
+      color: #8a8a8a;
+      width: 81px;
+      &_accent {
+        color: #337d5a;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    .price {
+      &__number {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+
+        color: $main;
+
+        &_current {
+          font-size: 20px;
+          line-height: 24px;
+          margin-left: 9px;
+
+          color: $accent;
+        }
+
+        &_accent {
+          color: $accent;
+        }
+
+        &_total {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+
+          letter-spacing: 0.01em;
+
+          color: #8a8a8a;
+          text-decoration: line-through;
+          margin-left: 7px;
+        }
+
+        &_muted {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;
+
+          letter-spacing: 0.01em;
+
+          color: #8a8a8a;
+        }
+      }
+    }
+
+    .action-btn {
+      padding: 11.8px 36px 13px 38px;
+    }
+  }
+}

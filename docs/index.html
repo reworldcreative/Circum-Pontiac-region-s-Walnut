@@ -20,76 +20,79 @@
     <header class="header">
     <div class="header__wrap">
         <section class="top-panel">
-    <ul class="socials__list" aria-description="list of social links">
-    <li class="socials__item">
-        <a class="socials__link" href="https://www.facebook.com" target="_blank">
+    <div class="top-panel__wrap">
+        <ul class="socials__list" role="list" aria-description="list of social links">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.facebook.com" target="_blank" aria-label="Facebook page">
             <img class="socials__icon socials__icon_active" src="img/facebook-icon.svg" alt="facebook icon">
         </a>
     </li>
-    <li class="socials__item">
-        <a class="socials__link" href="https://www.instagram.com" target="_blank">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.instagram.com" target="_blank" aria-label="Instagram page">
             <img class="socials__icon" src="img/instagram-icon.svg" alt="instagram icon">
         </a>
     </li>
-    <li class="socials__item">
-        <a class="socials__link" href="https://www.youtube.com" target="_blank">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.youtube.com" target="_blank" aria-label="YouTube channel">
             <img class="socials__icon" src="img/youtube-icon.svg" alt="youtube icon">
         </a>
     </li>
 </ul>
-    <p class="top-panel__text">Ваша персональная скидка - 5%</p>
-    <div>
-        <button class="logIn-btn">
-            <img class="logIn-btn__icon" src="img/man-user.svg" alt="man user icon" aria-hidden="true">
-            Вход
-        </button>
-        <button class="registration-btn">
-            Регистрация
-        </button>
+        <p class="top-panel__text">Ваша персональная скидка - 5%</p>
+        <div>
+            <button class="logIn-btn" aria-label="login button" role="button">
+                <img class="logIn-btn__icon" src="img/man-user.svg" alt="man user icon" aria-hidden="true">
+                Вход
+            </button>
+            <button class="registration-btn" aria-label="registration button" role="button">
+                Регистрация
+            </button>
 
+            <select class="language-select" name="language-select" aria-description="language select">
+    <option value="RU" selected aria-label="Russian">RU</option>
+    <option value="UA" aria-label="Ukrainian">UA</option>
+    <option value="EN" aria-label="English">EN</option>
+</select>
 
-        <select class="language-select" name="language-select">
-            <option value="RU" selected>RU</option>
-            <option value="UA">UA</option>
-            <option value="EN">EN</option>
-        </select>
+        </div>
     </div>
 </section>
 
         <section class="main-header">
-            <a class="logo" href="#" target="_blank">
+            <div class="main-header__wrap">
+                <a class="logo" href="#" target="_blank">
     <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
-            <ul class="socials-fill__list" aria-description="list of social links">
-    <li class="socials-fill__item">
-        <a class="socials-fill__link" href="https://www.viber.com" target="_blank">
+                <ul class="socials-fill__list" role="list" aria-description="list of social links">
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.viber.com" target="_blank" aria-label="Facebook page">
             <img class="socials-fill__icon" src="img/viber-icon.svg" alt="viber icon">
         </a>
     </li>
-    <li class="socials-fill__item">
-        <a class="socials-fill__link" href="https://web.telegram.org/k/" target="_blank">
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://web.telegram.org/k/" target="_blank" aria-label="Instagram page">
             <img class="socials-fill__icon" src="img/telegram-icon.svg" alt="telegram icon">
         </a>
     </li>
-    <li class="socials-fill__item">
-        <a class="socials-fill__link" href="https://www.whatsapp.com" target="_blank">
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.whatsapp.com" target="_blank" aria-label="YouTube channel">
             <img class="socials-fill__icon" src="img/whatsapp-icon.svg" alt="whatsapp icon">
         </a>
     </li>
 </ul>
-            <address>
-    <ul class="phones" aria-description="list of contact phones">
-        <li class="phones__item">
-            <a class="phones__link" href="tel:+380447505011">
+                <address>
+    <ul class="phones" role="list" aria-description="list of contact phones">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380447505011" aria-label="Phone: +38 (044) 750-50-11">
                 <span class="phones__code">
                     +38 (044)
                 </span>
                 750-50-11
             </a>
         </li>
-        <li class="phones__item">
-            <a class="phones__link" href="tel:+380977755051">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380977755051" aria-label="Phone: +38 (097) 775-50-51">
                 <span class="phones__code">
                     +38 (097)
                 </span>
@@ -100,18 +103,239 @@
 </address>
 
 
-            <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
+                <div class="main-header__container">
+                    <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
 
-            <p class="main-header__text">Ждем Вашего звонка ежедневно с 9 до 18</p>
+                    <p class="main-header__text">Ждем Вашего звонка ежедневно с 9 до 18</p>
+                    <button class="basket" aria-description="basket of your shopping">
+    <span class="basket__count" aria-description="count of your shopping">0</span>
+    <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
+</button>
+                </div>
+            </div>
+        </section>
+
+        <nav class="menu" role="navigation" aria-label="main menu">
+    <ul class="menu__list">
+        <li class="menu__item active" aria-current="page" aria-selected="true">
+            <a href="#" class="menu__link" role="menuitem">Магазин</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link" role="menuitem">О производстве</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link" role="menuitem">Оплата и доставка</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link" role="menuitem">Оптовым и корпоративным клиентам</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link" role="menuitem">Новости и статьи</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link" role="menuitem">Контакты</a>
+        </li>
+    </ul>
+</nav>
+    </div>
+
+    <div class="header__wrap_mobile">
+        <div class="header__mobile_top">
+            <address>
+    <ul class="phones" role="list" aria-description="list of contact phones">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380447505011" aria-label="Phone: +38 (044) 750-50-11">
+                <span class="phones__code">
+                    +38 (044)
+                </span>
+                750-50-11
+            </a>
+        </li>
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380977755051" aria-label="Phone: +38 (097) 775-50-51">
+                <span class="phones__code">
+                    +38 (097)
+                </span>
+                775-50-51
+            </a>
+        </li>
+    </ul>
+</address>
+            <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
+            <select class="language-select" name="language-select" aria-description="language select">
+    <option value="RU" selected aria-label="Russian">RU</option>
+    <option value="UA" aria-label="Ukrainian">UA</option>
+    <option value="EN" aria-label="English">EN</option>
+</select>
+        </div>
+
+        <div class="header__mobile_main">
+            <button class="burger-btn" aria-label="Open the menu" aria-expanded="false">
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+</button>
+            <a class="logo" href="#" target="_blank">
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
+    <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
+</a>
             <button class="basket" aria-description="basket of your shopping">
     <span class="basket__count" aria-description="count of your shopping">0</span>
     <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
 </button>
-        </section>
+        </div>
+
+        <nav class="burger__menu" role="navigation" aria-label="main menu">
+    <div class="burger__menu_head">
+        <a class="logo" href="#" target="_blank">
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
+    <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
+</a>
+
+        <button class="burger-btn" aria-label="Open the menu" aria-expanded="false">
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+</button>
     </div>
+
+    <div class="burger__menu_top">
+        <div>
+            <button class="logIn-btn" aria-label="login button" role="button">
+                <img class="logIn-btn__icon" src="img/man-user.svg" alt="man user icon" aria-hidden="true">
+                Вход
+            </button>
+            <button class="registration-btn" aria-label="registration button" role="button">
+                Регистрация
+            </button>
+        </div>
+        <ul class="socials__list" role="list" aria-description="list of social links">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.facebook.com" target="_blank" aria-label="Facebook page">
+            <img class="socials__icon socials__icon_active" src="img/facebook-icon.svg" alt="facebook icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.instagram.com" target="_blank" aria-label="Instagram page">
+            <img class="socials__icon" src="img/instagram-icon.svg" alt="instagram icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.youtube.com" target="_blank" aria-label="YouTube channel">
+            <img class="socials__icon" src="img/youtube-icon.svg" alt="youtube icon">
+        </a>
+    </li>
+</ul>
+    </div>
+    <ul class="burger__list">
+        <li class="burger__item">
+            <a href="#" class="burger__link">Магазин</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">О производстве</a>
+        </li>
+        <li class="burger__item active">
+            <a href="#" class="burger__link">Оплата и доставка</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">Оптовым и корпоративным клиентам</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">Новости и статьи</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">Контакты</a>
+        </li>
+    </ul>
+</nav>
+    </div>
+
 </header>
 
+    <section class="video">
+    <div class="video__wrap">
+        <h1 class="video__head">Орех Причерноморья</h1>
+        <p class="video__text">
+            Единственный в Украине сад совместного
+            выращивание фундука и грецкого ореха
+        </p>
+
+        <button class="video__button" id="play-btn" aria-label="play video">
+            <img src="img/play-icon.svg" alt="play video button icon">
+        </button>
+    </div>
+    <div class="poster-image" id="poster-image" aria-hidden="true"></div>
+    <!-- <video class="video__video" preload="none" poster="img/main-banner.jpg"
+        src="https://www.youtube.com/embed/hT4O8VI__XE" type="video/mp4"></video> -->
+
+    <iframe class="video__video" preload="none" id="video" src="https://www.youtube.com/embed/hT4O8VI__XE"
+        title="Circum Pontiac region's Walnut video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</section>
+
+    <section class="productions">
+    <div class="productions__wrap">
+        <h2 class="section-title">Продукция</h2>
+
+        <p class="productions__text">
+            Экологически чистые, качественные ядра грецкого ореха и фундука,
+            а также плоды шиповника в удобной, надежной, вакуумной упаковке
+            разного объема
+        </p>
+    </div>
+
+    <article class="product active">
+    <div class="badge">
+        <p class="badge__text">АКЦИЯ</p>
+    </div>
+
+    <div class="product__carousel">
+        <div class="search">
+            <img src="img/magnifying-glass.svg" alt="search icon">
+        </div>
+        <img class="product__image" src="img/KOND.png" alt="">
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический,
+                очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number">Цена: <span class="price__number_current">19 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total">21 <span class="price__number_muted">грн.</span></span>
+                </p>
+            </div>
+
+            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        </div>
+    </div>
+</article>
+</section>
+
     <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+
     <script src="scripts/main.min.js"></script>
 </body>
 

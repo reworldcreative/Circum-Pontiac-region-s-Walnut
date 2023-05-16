@@ -1,7 +1,7 @@
 @import "variables";
 
 .action-btn {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -17,7 +17,7 @@
 .logIn-btn {
   background: none;
   border: none;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -26,6 +26,8 @@
 
   color: #323232;
   padding: 0px;
+  display: inline-flex;
+  align-items: center;
 
   &__icon {
     margin-right: 6px;
@@ -35,7 +37,7 @@
 .registration-btn {
   background: none;
   border: none;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;

@@ -1,0 +1,40 @@
+<nav class="burger__menu" role="navigation" aria-label="main menu">
+    <div class="burger__menu_head">
+        @@include('../logo.html',{})
+
+        @@include('burger.html',{})
+    </div>
+
+    <div class="burger__menu_top">
+        <div>
+            <button class="logIn-btn" aria-label="login button" role="button">
+                <img class="logIn-btn__icon" src="@img/man-user.svg" alt="man user icon" aria-hidden="true">
+                Вход
+            </button>
+            <button class="registration-btn" aria-label="registration button" role="button">
+                Регистрация
+            </button>
+        </div>
+        @@include('../socialLinks.html',{})
+    </div>
+    <ul class="burger__list">
+        <li class="burger__item">
+            <a href="#" class="burger__link">Магазин</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">О производстве</a>
+        </li>
+        <li class="burger__item active">
+            <a href="#" class="burger__link">Оплата и доставка</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">Оптовым и корпоративным клиентам</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">Новости и статьи</a>
+        </li>
+        <li class="burger__item">
+            <a href="#" class="burger__link">Контакты</a>
+        </li>
+    </ul>
+</nav>

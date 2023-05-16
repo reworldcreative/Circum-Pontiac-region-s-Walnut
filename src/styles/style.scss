@@ -1,13 +1,20 @@
 // @import "fonts";
+$rfs-breakpoint: 1500;
 @import "rfs/scss.scss";
 @import "normalize";
 @import "variables";
-@import "logo";
-@import "socials";
-@import "phones";
+// @import "logo";
+// @import "socials";
+// @import "phones";
 @import "actionButton";
+@import "menu";
 
 @import "header";
+@import "burger";
+@import "productions";
+
+@import "video";
+
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap");
 
 // font-family: 'Lato', sans-serif;
@@ -23,4 +30,18 @@
 
 body {
   background-color: $main-white;
+}
+
+.section-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 53px;
+
+  letter-spacing: 0.01em;
+
+  color: $main;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

@@ -1,0 +1,48 @@
+<article class="product active">
+    <div class="badge">
+        <p class="badge__text">АКЦИЯ</p>
+    </div>
+
+    <div class="product__carousel">
+        <div class="search">
+            <img src="@img/magnifying-glass.svg" alt="search icon">
+        </div>
+        <img class="product__image" src="@img/KOND.png" alt="">
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический,
+                очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="@img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="@img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number">Цена: <span class="price__number_current">19 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total">21 <span class="price__number_muted">грн.</span></span>
+                </p>
+            </div>
+
+            @@include('../actionButton.html',{
+            title:"Купить",
+            description:"buy product",
+            lable:"buy",
+            })
+        </div>
+    </div>
+</article>

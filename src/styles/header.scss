@@ -1,17 +1,40 @@
 @import "variables";
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "logo";
+@import "socials";
+@import "phones";
+
 .header {
   &__wrap {
-    justify-content: center;
-    display: grid;
-    margin: 10px auto 15px;
+    // justify-content: center;
+    // display: grid;
+    // width: fit-content;
+    // margin: 10px auto 15px;
+    margin: 0px auto 15px;
+
+    &_mobile {
+      display: none;
+    }
   }
   .top-panel {
     display: flex;
-    align-items: center;
+    // align-items: center;
     // justify-content: space-between;
-    margin-bottom: 25px;
+    // padding-top: 10px;
+    // padding-bottom: 20px;
+    // padding: 10px 315px 20px;
+    padding: 10px 0px 20px;
+
+    background: rgba(245, 245, 245, 0.5);
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin: 0px auto;
+    }
     &__text {
-      font-family: "Montserrat";
+      font-family: "Montserrat", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
@@ -21,20 +44,42 @@
       margin: 0px;
       margin-left: 457px;
       margin-right: 275px;
+
+      // @include rfs(457px, margin-left);
+      // @include rfs(275px, margin-right);
     }
   }
 
   .main-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    // padding: 0px 315px 14px;
+    padding: 0px 0px 14px;
 
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0px auto;
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
     .logo {
+      align-items: inherit;
       margin-right: 312px;
+      // margin-right: 24.01%;
+      // @include rfs(312px, margin-right);
     }
 
     &__text {
-      font-family: "Montserrat";
+      font-family: "Montserrat", sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 12px;
@@ -48,21 +93,35 @@
   }
 
   .phones {
-    margin-left: 32px;
+    margin-left: 33px;
     margin-right: 93px;
+    margin-top: -6px;
+  }
+
+  .socials-fill {
+    &__list {
+      margin: -10px 0px 0px 0px;
+    }
+    &__item {
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
   }
 
   .main-header__text {
-    margin-left: 15px;
+    margin-left: 16px;
   }
 
   .registration-btn {
-    margin-left: 26px;
+    // margin-left: 26px;
+    margin-left: 22px;
   }
 
   .language-select {
     border: none;
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -79,9 +138,10 @@
     background-position-y: center;
     background-position-x: right;
     padding: 0px 10px 0px 0px;
-    margin-left: 48px;
+    // margin-left: 48px;
+    margin-left: 45px;
     option {
-      font-family: "Raleway";
+      font-family: "Raleway", sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 13px;
@@ -98,8 +158,10 @@
     border: none;
     position: relative;
     margin-left: 63px;
+    margin-top: -3px;
+    margin-right: 3px;
     &__count {
-      font-family: "Montserrat";
+      font-family: "Montserrat", sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 8px;
@@ -109,7 +171,187 @@
       border-radius: 50%;
       padding: 3px 5px;
       position: absolute;
-      right: 0px;
+      // right: 0px;
+      right: -4px;
+      top: -2px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header {
+    &__wrap {
+      margin: 0px 0px 15px;
+    }
+
+    .phones {
+      margin-right: 2vw;
+    }
+
+    .basket {
+      margin-left: 3vw;
+    }
+
+    .top-panel {
+      &__text {
+        margin-left: 20vw;
+        margin-right: 20vw;
+      }
+    }
+    .logo {
+      margin-right: 13vw !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    .menu {
+      margin: 0px 20px;
+
+      &__list {
+        margin-left: 0px;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      &__item {
+        margin-right: auto;
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    .main-header {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__container {
+        width: 100%;
+        justify-content: space-evenly;
+      }
+    }
+
+    .top-panel__text {
+      margin-left: 13vw;
+      margin-right: 13vw;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    .main-header {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .phones {
+      &__item {
+        min-width: max-content;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    &__wrap {
+      display: none;
+      &_mobile {
+        display: block;
+        // margin: 12px 10px 8px 12px;
+        // margin: 0px 0px 8px 12px;
+        margin: 0px 0px 8px 0px;
+      }
+    }
+
+    &__mobile {
+      &_top {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        margin: 0px 0px 0px 12px;
+      }
+
+      &_main {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        // margin-top: 13px;
+
+        padding-right: 10px;
+        margin: 13px 0px 0px 12px;
+      }
+    }
+
+    .phones {
+      margin: 0px;
+      &__item {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    .basket {
+      margin-left: 0px;
+    }
+
+    .logo {
+      text-align: center;
+      display: block;
+      margin-right: 0px !important;
+
+      &__img {
+        margin-right: 0px;
+      }
+      &__text {
+        width: fit-content;
+        font-size: 11px;
+        line-height: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .action-btn {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+
+      color: $accent;
+      background: none;
+      padding: 0px;
+      margin-top: -2px;
+
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        left: 0px;
+        bottom: 0px;
+        background-color: #93b474;
+      }
+    }
+
+    .language-select {
+      margin: 0px;
+      &:focus {
+        outline: 1px solid $contrast;
+      }
+      padding: 12px 22px 11px 15px;
+      background-position-x: 35px;
     }
   }
 }
