@@ -1,40 +1,58 @@
-<article class="product active">
-    <div class="badge">
-        <p class="badge__text">АКЦИЯ</p>
+<article class="product">
+    <div class="badge @@badge" aria-label="Promotion: discount on goods">
+        <p class="badge__text">@@badge__text</p>
     </div>
 
     <div class="product__carousel">
-        <div class="search">
+        <!-- <button class="search" aria-label="scale image">
             <img src="@img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="@img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="@@img1" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="@@img2" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <img class="product__image" src="@img/KOND.png" alt="">
     </div>
 
     <div class="product__content">
         <div class="product__text">
-            <h3 class="product__title">Грецкий орех</h3>
-            <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический,
-                очищенный</p>
+            <h3 class="product__title">@@product__name</h3>
+            <p class="product__article">@@product__article</p>
+            <p class="product__discription">@@product__discription</p>
         </div>
 
 
         <div class="product__info">
             <div class="weight">
                 <img class="weight__icon" src="@img/food-scale-tool.svg" alt="weight icon">
-                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+                <p class="weight__number">Масса: <span class="weight__number_accent">@@weight</span></p>
             </div>
             <div class="package">
                 <img class="package__icon" src="@img/package-icon.svg" alt="weight icon">
-                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+                <p class="package__type">Упаковка <span class="package__type_accent">@@package__type</span></p>
             </div>
         </div>
 
         <div class="product__price">
             <div class="price">
-                <p class="price__number">Цена: <span class="price__number_current">19 </span><span
-                        class="price__number_accent">грн.</span>
-                    <span class="price__number_total">21 <span class="price__number_muted">грн.</span></span>
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from">@@from</span> <span
+                        class="price__number_current">@@current__price </span><span
+                        class="price__number_accent">@@currency</span>
+                    <span class="price__number_total">@@total__price <span
+                            class="price__number_muted">@@total__price_currency</span></span>
                 </p>
             </div>
 

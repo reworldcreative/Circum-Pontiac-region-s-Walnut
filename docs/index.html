@@ -13,6 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
 
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="styles/style.min.css">
 </head>
 
@@ -283,26 +286,43 @@
             а также плоды шиповника в удобной, надежной, вакуумной упаковке
             разного объема
         </p>
-    </div>
 
-    <article class="product active">
-    <div class="badge">
+
+        <ul class="productions__list">
+            <li class="productions__item">
+                <article class="product">
+    <div class="badge promotion" aria-label="Promotion: discount on goods">
         <p class="badge__text">АКЦИЯ</p>
     </div>
 
     <div class="product__carousel">
-        <div class="search">
+        <!-- <button class="search" aria-label="scale image">
             <img src="img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/KOND.png" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <img class="product__image" src="img/KOND.png" alt="">
     </div>
 
     <div class="product__content">
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический,
-                очищенный</p>
+            <p class="product__discription">Орех сладкий, классический, очищенный</p>
         </div>
 
 
@@ -319,9 +339,12 @@
 
         <div class="product__price">
             <div class="price">
-                <p class="price__number">Цена: <span class="price__number_current">19 </span><span
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from"></span> <span
+                        class="price__number_current">19 </span><span
                         class="price__number_accent">грн.</span>
-                    <span class="price__number_total">21 <span class="price__number_muted">грн.</span></span>
+                    <span class="price__number_total">21 <span
+                            class="price__number_muted">грн.</span></span>
                 </p>
             </div>
 
@@ -329,12 +352,341 @@
         </div>
     </div>
 </article>
+            </li>
+            <li class="productions__item">
+                <article class="product">
+    <div class="badge new" aria-label="Promotion: discount on goods">
+        <p class="badge__text">НОВИНКА</p>
+    </div>
+
+    <div class="product__carousel">
+        <!-- <button class="search" aria-label="scale image">
+            <img src="img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/SOLODKY.png" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from">от</span> <span
+                        class="price__number_current">21 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total"> <span
+                            class="price__number_muted"></span></span>
+                </p>
+            </div>
+
+            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="productions__item">
+                <article class="product">
+    <div class="badge " aria-label="Promotion: discount on goods">
+        <p class="badge__text"></p>
+    </div>
+
+    <div class="product__carousel">
+        <!-- <button class="search" aria-label="scale image">
+            <img src="img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/SOLONY.png" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from">от</span> <span
+                        class="price__number_current">21 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total"> <span
+                            class="price__number_muted"></span></span>
+                </p>
+            </div>
+
+            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="productions__item">
+                <article class="product">
+    <div class="badge " aria-label="Promotion: discount on goods">
+        <p class="badge__text"></p>
+    </div>
+
+    <div class="product__carousel">
+        <!-- <button class="search" aria-label="scale image">
+            <img src="img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/milky.png" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from"></span> <span
+                        class="price__number_current">19 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total">21 <span
+                            class="price__number_muted">грн.</span></span>
+                </p>
+            </div>
+
+            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="productions__item">
+                <article class="product">
+    <div class="badge " aria-label="Promotion: discount on goods">
+        <p class="badge__text"></p>
+    </div>
+
+    <div class="product__carousel">
+        <!-- <button class="search" aria-label="scale image">
+            <img src="img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/SOLODKY-milky.png" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from">от</span> <span
+                        class="price__number_current">21 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total"> <span
+                            class="price__number_muted"></span></span>
+                </p>
+            </div>
+
+            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="productions__item">
+                <article class="product">
+    <div class="badge " aria-label="Promotion: discount on goods">
+        <p class="badge__text"></p>
+    </div>
+
+    <div class="product__carousel">
+        <!-- <button class="search" aria-label="scale image">
+            <img src="img/magnifying-glass.svg" alt="search icon">
+        </button> -->
+
+        <div class="swiper product__swiper">
+            <button class="search" aria-label="scale image">
+                <img src="img/magnifying-glass.svg" alt="search icon">
+            </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/SOLONY-milky.png" alt="product image">
+                </div>
+                <div class="swiper-slide">
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <h3 class="product__title">Грецкий орех</h3>
+            <p class="product__article">Арт: 0091</p>
+            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+        </div>
+
+
+        <div class="product__info">
+            <div class="weight">
+                <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+                <p class="weight__number">Масса: <span class="weight__number_accent">40г.</span></p>
+            </div>
+            <div class="package">
+                <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+                <p class="package__type">Упаковка <span class="package__type_accent">вакуумная</span></p>
+            </div>
+        </div>
+
+        <div class="product__price">
+            <div class="price">
+                <p class="price__number"><span class="price__number_text">Цена:</span><span
+                        class="price__number_accent price__number_from">от</span> <span
+                        class="price__number_current">21 </span><span
+                        class="price__number_accent">грн.</span>
+                    <span class="price__number_total"> <span
+                            class="price__number_muted"></span></span>
+                </p>
+            </div>
+
+            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        </div>
+    </div>
+</article>
+            </li>
+        </ul>
+
+        <a class="shop" href="#" aria-lable="go to shop">
+            Перейти в магазин
+        </a>
+    </div>
 </section>
 
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="scripts/main.min.js"></script>
 </body>

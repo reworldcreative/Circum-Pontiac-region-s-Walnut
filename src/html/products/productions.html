@@ -7,7 +7,121 @@
             а также плоды шиповника в удобной, надежной, вакуумной упаковке
             разного объема
         </p>
-    </div>
 
-    @@include('product.html',{})
+
+        <ul class="productions__list">
+            <li class="productions__item">
+                @@include('product.html',{
+                badge:"promotion",
+                badge__text:"АКЦИЯ",
+                img1:"@img/KOND.png",
+                img2:"@img/walnut.webp",
+                product__name:"Грецкий орех",
+                product__article:"Арт: 0091",
+                product__discription:"Орех сладкий, классический, очищенный",
+                weight:"40г.",
+                package__type:"вакуумная",
+                currency:"грн.",
+                from:"",
+                current__price:"19",
+                total__price:"21",
+                total__price_currency:"грн.",
+                })
+            </li>
+            <li class="productions__item">
+                @@include('product.html',{
+                badge:"new",
+                badge__text:"НОВИНКА",
+                img1:"@img/SOLODKY.png",
+                img2:"@img/walnut.webp",
+                product__name:"Грецкий орех",
+                product__article:"Арт: 0091",
+                product__discription:"Орех сладкий, классический, очищенный",
+                weight:"40г.",
+                package__type:"вакуумная",
+                currency:"грн.",
+                from:"от",
+                current__price:"21",
+                total__price:"",
+                total__price_currency:"",
+                })
+            </li>
+            <li class="productions__item">
+                @@include('product.html',{
+                badge:"",
+                badge__text:"",
+                img1:"@img/SOLONY.png",
+                img2:"@img/walnut.webp",
+                product__name:"Грецкий орех",
+                product__article:"Арт: 0091",
+                product__discription:"Орех сладкий, классический, очищенный",
+                weight:"40г.",
+                package__type:"вакуумная",
+                currency:"грн.",
+                from:"от",
+                current__price:"21",
+                total__price:"",
+                total__price_currency:"",
+                })
+            </li>
+            <li class="productions__item">
+                @@include('product.html',{
+                badge:"",
+                badge__text:"",
+                img1:"@img/milky.png",
+                img2:"@img/walnut.webp",
+                product__name:"Грецкий орех",
+                product__article:"Арт: 0091",
+                product__discription:"Орех сладкий, классический, очищенный",
+                weight:"40г.",
+                package__type:"вакуумная",
+                currency:"грн.",
+                from:"",
+                current__price:"19",
+                total__price:"21",
+                total__price_currency:"грн.",
+                })
+            </li>
+            <li class="productions__item">
+                @@include('product.html',{
+                badge:"",
+                badge__text:"",
+                img1:"@img/SOLODKY-milky.png",
+                img2:"@img/walnut.webp",
+                product__name:"Грецкий орех",
+                product__article:"Арт: 0091",
+                product__discription:"Орех сладкий, классический, очищенный",
+                weight:"40г.",
+                package__type:"вакуумная",
+                currency:"грн.",
+                from:"от",
+                current__price:"21",
+                total__price:"",
+                total__price_currency:"",
+                })
+            </li>
+            <li class="productions__item">
+                @@include('product.html',{
+                badge:"",
+                badge__text:"",
+                img1:"@img/SOLONY-milky.png",
+                img2:"@img/walnut.webp",
+                product__name:"Грецкий орех",
+                product__article:"Арт: 0091",
+                product__discription:"Орех сладкий, классический, очищенный",
+                weight:"40г.",
+                package__type:"вакуумная",
+                currency:"грн.",
+                from:"от",
+                current__price:"21",
+                total__price:"",
+                total__price_currency:"",
+                })
+            </li>
+        </ul>
+
+        <a class="shop" href="#" aria-lable="go to shop">
+            Перейти в магазин
+        </a>
+    </div>
 </section>
