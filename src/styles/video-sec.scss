@@ -1,0 +1,41 @@
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+.video-sec {
+  .video {
+    &__wrap {
+      padding: 242px 0px 205px;
+    }
+    &__head {
+      width: 1185px;
+      margin: 0px auto 64px;
+      //   margin-bottom: 64px;
+
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 45px;
+      line-height: 53px;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+
+    &__button {
+      margin-bottom: 28px;
+    }
+
+    &__text {
+      font-family: "Raleway", sans-serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+    }
+
+    .poster-image {
+      height: auto;
+    }
+  }
+}

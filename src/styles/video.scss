@@ -57,10 +57,23 @@
   }
 
   .poster-image {
-    background: url("../img/main-banner.jpg");
+    // background: url("../img/main-banner.jpg");
     width: 100%;
     height: 600px;
     position: absolute;
     z-index: 10;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .video {
+    &__text {
+      width: auto;
+    }
   }
 }

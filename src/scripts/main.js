@@ -11,14 +11,24 @@ $(document).ready(function () {
 });
 
 if (document.getElementById("play-btn")) {
-  document.getElementById("play-btn").onclick = function (event) {
-    fadeImage(event);
-  };
+  // document.getElementById("play-btn").onclick = function (event) {
+  //   fadeImage(event);
+  // };
 
-  function fadeImage(event) {
-    document.getElementById("poster-image").style.zIndex = "0";
-    document.getElementById("video").style.zIndex = "30";
-  }
+  // function fadeImage(event) {
+  //   document.getElementById("poster-image").style.zIndex = "0";
+  //   document.getElementById("video").style.zIndex = "30";
+  // }
+
+  const video = document.querySelectorAll(".video__button");
+
+  video.forEach((el) =>
+    el.addEventListener("click", (event) => {
+      event.currentTarget.parentElement.parentElement.getElementsByTagName(
+        "iframe"
+      )[0].style.zIndex = "40";
+    })
+  );
 }
 
 if ($(".search")) {
@@ -44,4 +54,13 @@ const productSwiper = new Swiper(".product__swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+const videoSwiper = new Swiper(".video__carousel", {
+  slidesPerView: "auto",
+  navigation: {
+    nextEl: ".video__swiper-button-next",
+    prevEl: ".video__swiper-button-prev",
+  },
+  effect: "slide",
 });
