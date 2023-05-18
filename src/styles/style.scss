@@ -19,6 +19,12 @@ $rfs-breakpoint: 1500;
 @import "video";
 @import "video-sec";
 
+@import "benefits";
+@import "banner";
+
+@import "news";
+@import "moreInfoBtn";
+
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap");
 
 // font-family: 'Lato', sans-serif;
@@ -31,6 +37,25 @@ $rfs-breakpoint: 1500;
 // $contrast: #93b474;
 // $main: #1a2f3f;
 // $second: #8a8a8a;
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  outline: 0;
+  outline-offset: 0;
+
+  pointer-events: none;
+  /* visibility: hidden; */
+}
 
 body {
   background-color: $main-white;

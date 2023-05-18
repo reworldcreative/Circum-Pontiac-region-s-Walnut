@@ -3,6 +3,7 @@
 @import "variables";
 
 .video-sec {
+  height: 700px;
   .video {
     &__wrap {
       padding: 242px 0px 205px;
@@ -33,9 +34,35 @@
       line-height: 28px;
       letter-spacing: 0.01em;
     }
+  }
 
-    .poster-image {
-      height: auto;
+  .poster-image {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .video-sec {
+    .video {
+      &__head {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .video-sec {
+    height: 500px;
+    .video {
+      &__head {
+        font-size: 25px;
+        line-height: 28px;
+      }
+
+      &__wrap {
+        padding: 122px 0px 0px;
+      }
     }
   }
 }

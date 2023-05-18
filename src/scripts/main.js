@@ -62,5 +62,28 @@ const videoSwiper = new Swiper(".video__carousel", {
     nextEl: ".video__swiper-button-next",
     prevEl: ".video__swiper-button-prev",
   },
-  effect: "slide",
+  // effect: "slide",
+});
+
+const newsSwiper = new Swiper(".news__carousel", {
+  // slidesPerView: 3,
+  navigation: {
+    nextEl: ".news-next",
+    prevEl: ".news-prev",
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    620: {
+      slidesPerView: 1.5,
+    },
+    900: {
+      slidesPerView: 2,
+    },
+    1300: {
+      slidesPerView: 3,
+    },
+  },
 });
