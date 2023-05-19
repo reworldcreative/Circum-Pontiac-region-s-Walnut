@@ -1,7 +1,7 @@
 @import "rfs/scss.scss";
 @import "normalize";
 @import "variables";
-@import "logo";
+@import "./components/logo";
 
 .footer {
   &__wrap {
@@ -13,7 +13,7 @@
     display: flex;
     margin: 0px auto;
     justify-content: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     width: 1291px;
     .logo {
       margin-right: 79px;

@@ -43,7 +43,7 @@ const paths = {
   },
   src: {
     html: `${srcFolder}/*.html`,
-    styles: `${srcFolder}/styles/style.scss`,
+    styles: `${srcFolder}/styles/*.scss`,
     scripts: `${srcFolder}/scripts/main.js`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,

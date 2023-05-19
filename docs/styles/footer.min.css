@@ -5,7 +5,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -338,34 +337,109 @@ template {
   display: none;
 }
 
-.visibility-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  outline: 0;
-  outline-offset: 0;
-  pointer-events: none;
-  /* visibility: hidden; */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
-
-body {
-  background-color: #ffffff;
+.logo__img {
+  width: 54px;
+  height: 53px;
+  margin-right: 8px;
 }
-
-.section-title {
+.logo__text {
+  width: 155px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 45px;
-  line-height: 53px;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
   color: #1a2f3f;
-  margin-top: 0px;
-  margin-bottom: 0px;
+}
+
+.footer__wrap {
+  padding-bottom: 26px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.footer__top {
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  width: 1291px;
+}
+.footer__top .logo {
+  margin-right: 79px;
+}
+.footer__top .menu {
+  align-items: center;
+  display: flex;
+  width: 999px;
+}
+.footer__top .menu__list {
+  margin: 0px;
+  width: 100%;
+  padding-bottom: 7px;
+  justify-content: space-between;
+}
+.footer__top .menu__item {
+  margin: 0px;
+}
+.footer__top .menu__item.active::after {
+  content: none;
+}
+.footer__bottom {
+  margin: 43px auto 39px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  width: 1291px;
+  color: #1a2f3f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__bottom .developer_accent {
+  font-weight: 600;
+  color: #337d5a;
+}
+.footer__bottom .developer_accent:last-child {
+  font-weight: 400;
+}
+@media screen and (max-width: 1400px) {
+  .footer__top {
+    width: auto;
+    flex-wrap: wrap;
+  }
+  .footer__top .logo {
+    margin: 0px;
+  }
+  .footer__bottom {
+    width: auto;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer__top .logo {
+    margin-bottom: 20px;
+  }
+  .footer__top .menu__list {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer__top .menu__list {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0px 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer__top .menu__list {
+    display: grid;
+  }
 }

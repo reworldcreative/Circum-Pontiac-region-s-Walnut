@@ -1,9 +1,9 @@
 @import "variables";
 $rfs-breakpoint: 1500;
 @import "rfs/scss.scss";
-@import "logo";
-@import "socials";
-@import "phones";
+@import "./components/logo";
+@import "./components/socials";
+@import "./components/phones";
 
 .header {
   &__wrap {

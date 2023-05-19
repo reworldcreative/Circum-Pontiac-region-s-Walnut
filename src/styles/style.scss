@@ -1,32 +1,33 @@
 // @import "fonts";
 $rfs-breakpoint: 1500;
-@import "rfs/scss.scss";
-@import "normalize";
-@import "variables";
 // @import "logo";
 // @import "socials";
 // @import "phones";
-@import "actionButton";
-@import "menu";
 
-@import "header";
-@import "burger";
-@import "productions";
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+// @import "./components/actionButton";
+// @import "./components/menu";
 
-@import "about";
-@import "statistic";
+// @import "header";
+// @import "./components/burger";
+// @import "./components/productions";
 
-@import "video";
-@import "video-sec";
+// @import "./components/about";
+// @import "./components/statistic";
 
-@import "benefits";
-@import "banner";
+// @import "./components/video";
+// @import "./components/video-sec";
 
-@import "news";
-@import "moreInfoBtn";
+// @import "./components/benefits";
+// @import "./components/banner";
 
-@import "contacts";
-@import "footer";
+// @import "./components/news";
+// @import "./components/moreInfoBtn";
+
+// @import "./components/contacts";
+// @import "footer";
 
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap");
 

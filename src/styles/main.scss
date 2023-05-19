@@ -1,0 +1,25 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+@import "./components/actionButton";
+@import "./components/menu";
+
+@import "header";
+@import "./components/burger";
+@import "./components/productions";
+
+@import "./components/about";
+@import "./components/statistic";
+
+@import "./components/video";
+@import "./components/video-sec";
+
+@import "./components/benefits";
+@import "./components/banner";
+
+@import "./components/news";
+@import "./components/moreInfoBtn";
+
+@import "./components/contacts";
+@import "footer";
