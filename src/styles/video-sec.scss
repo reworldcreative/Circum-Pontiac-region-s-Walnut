@@ -3,14 +3,15 @@
 @import "variables";
 
 .video-sec {
-  height: 700px;
+  height: 740px;
   .video {
     &__wrap {
       padding: 242px 0px 205px;
     }
     &__head {
       width: 1185px;
-      margin: 0px auto 64px;
+      // margin: 0px auto 64px;
+      margin: 0px auto 70px;
       //   margin-bottom: 64px;
 
       font-family: "Raleway", sans-serif;
@@ -23,7 +24,8 @@
     }
 
     &__button {
-      margin-bottom: 28px;
+      // margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
     &__text {

@@ -14,7 +14,8 @@
 
   &__navigation {
     position: relative;
-    bottom: 65px;
+    bottom: 55px;
+    max-height: 58px;
     // bottom: 140px;
     display: flex;
     max-width: 141px;
@@ -38,8 +39,8 @@
 
     .video__swiper-button-next {
       background-color: $accent;
-      //   padding: 19.8px 25px;
-      padding: 22.8px 25px 18px;
+      // padding: 19.8px 25px;
+      padding: 15.8px 25px;
       margin-left: -1px;
       img {
         filter: invert(99%) sepia(32%) saturate(2%) hue-rotate(258deg)

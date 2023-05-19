@@ -67,6 +67,7 @@ const videoSwiper = new Swiper(".video__carousel", {
 
 const newsSwiper = new Swiper(".news__carousel", {
   // slidesPerView: 3,
+  spaceBetween: 30,
   navigation: {
     nextEl: ".news-next",
     prevEl: ".news-prev",

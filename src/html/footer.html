@@ -1,1 +1,15 @@
-<footer></footer>
+<footer class="footer">
+    <div class="footer__wrap">
+        <div class="footer__top">
+            @@include('logo.html',{})
+            @@include('footerMenu.html',{})
+        </div>
+
+        <div class="footer__bottom">
+            <p class="developer">Разработано <span class="developer_accent">AVADA <span
+                        class="developer_accent">MEDIA</span></span></p>
+            <p class="copyright">Copyright © 2019. Все права защищены</p>
+            @@include('socialLinks.html',{})
+        </div>
+    </div>
+</footer>

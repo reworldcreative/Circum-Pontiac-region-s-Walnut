@@ -5,7 +5,8 @@
 .statistic {
   &__wrap {
     // margin: 70px 383px 87px 395px;
-    margin: 70px auto 87px;
+    // margin: 70px auto 87px;
+    margin: 70px auto 93px;
     justify-content: center;
     display: flex;
   }
@@ -47,6 +48,9 @@
       font-size: 18px;
       line-height: 21px;
       letter-spacing: 0.05em;
+
+      top: 15px;
+      right: -32px;
     }
   }
 

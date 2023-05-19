@@ -7,26 +7,30 @@
 <body>
     @@include('html/header.html',{})
 
-    @@include('html/video.html',{
-    banner:"@img/main-banner.jpg",
-    })
+    <main>
+        @@include('html/video.html',{
+        banner:"@img/main-banner.jpg",
+        })
 
-    @@include('html/products/productions.html',{})
+        @@include('html/products/productions.html',{})
 
-    @@include('html/about.html',{})
+        @@include('html/about.html',{})
 
-    @@include('html/statistic.html',{})
+        @@include('html/statistic.html',{})
 
-    @@include('html/video-sec.html',{
-    banner:"@img/banner2.jpg",
-    title:"Наша главная цель - получить максимальную прибыль с одного гектара",
-    text:"Cмотреть видео о производстве",
-    })
+        @@include('html/video-sec.html',{
+        banner:"@img/banner2.jpg",
+        title:"Наша главная цель - получить максимальную прибыль с одного гектара",
+        text:"Cмотреть видео о производстве",
+        })
 
-    @@include('html/benefits/benefits.html',{})
-    @@include('html/banner.html',{})
+        @@include('html/benefits/benefits.html',{})
+        @@include('html/banner.html',{})
 
-    @@include('html/news.html',{})
+        @@include('html/news.html',{})
+
+        @@include('html/contacts.html',{})
+    </main>
 
     @@include('html/footer.html',{})
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
