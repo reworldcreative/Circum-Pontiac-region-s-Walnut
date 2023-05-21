@@ -1,0 +1,195 @@
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+.person {
+  background: #fbfbfb;
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    // padding: 80px 0px 90px;
+    padding: 80px 16.4% 90px;
+  }
+
+  &__photo {
+    margin-right: 42px;
+    width: 342px;
+    height: 493px;
+  }
+
+  &__container {
+    // margin-right: 62px;
+    margin-right: 60px;
+    margin-top: 31px;
+  }
+
+  &__name {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  &__profession {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 131%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    width: 279px;
+  }
+
+  .quote__wrap {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  &__quote {
+    font-family: "Raleway";
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    // line-height: 87%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    position: relative;
+    margin: 0px;
+    // margin-bottom: 63px;
+    margin-left: 12px;
+    width: 349px;
+    &_symbol {
+      //   position: relative;
+      //   content: '"';
+      margin-top: -12px;
+      font-size: 55px;
+      color: $accent;
+    }
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+
+    color: #fcfcfc;
+    margin-bottom: 15px;
+    width: 356px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__story {
+    background-color: $accent;
+    // padding: 31px 34px 53px 47px;
+    padding: 31px 41px 37px 47px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url("../img/logo-bg.png");
+      width: 100px;
+      height: 200px;
+      left: 46.41%;
+      bottom: 12%;
+    }
+  }
+}
+
+@media screen and (max-width: 1915px) {
+  .person {
+    &__wrap {
+      padding: 80px 0px 90px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .person {
+    &__wrap {
+      gap: 20px;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .person {
+    &__photo {
+      width: 30vw;
+    }
+
+    &__profession {
+      width: auto;
+    }
+
+    &__quote {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .person {
+    &__photo {
+      width: 100%;
+      height: auto;
+      margin: 0px;
+    }
+
+    &__container {
+      margin-left: 20px;
+    }
+
+    &__story {
+      &::after {
+        position: fixed;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .person {
+    &__story {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

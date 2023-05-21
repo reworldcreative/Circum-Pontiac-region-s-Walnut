@@ -1,0 +1,18 @@
+<article class="news-item">
+    <div class="news-item__image">
+        @@include('video-gallery.html',{
+        banner:"@@video",
+        title:"",
+        text:"",
+        })
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="@@date">@@datetext</time>
+        <h3 class="news-item__title">@@title</h3>
+        <p class="news-item__text">@@text</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="@img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>

@@ -1,0 +1,41 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/about";
+@import "./components/video";
+@import "./components/video-sec";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/person";
+@import "./components/statistic";
+@import "./components/gallery";
+@import "./components/video-gallery";
+@import "./components/banner";
+@import "./components/news";
+@import "./components/contacts";
+
+.about {
+  .more-info {
+    display: none;
+  }
+  background: transparent;
+}
+
+.statistic {
+  &__wrap {
+    margin: 70px auto 86px;
+  }
+}
+
+.gallery {
+  .more-info {
+    padding: 18px 34px;
+  }
+}

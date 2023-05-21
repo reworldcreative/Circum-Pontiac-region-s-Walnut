@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="styles/@@style.min.css">
+    <link rel="stylesheet" href="styles/about.min.css">
 </head>
 
 <body>
@@ -123,10 +123,10 @@
         <nav class="menu" role="navigation" aria-label="main menu">
     <ul class="menu__list">
         <li class="menu__item active" aria-current="page" aria-selected="true">
-            <a href="#" class="menu__link" role="menuitem">Магазин</a>
+            <a href="index.html" class="menu__link" role="menuitem">Магазин</a>
         </li>
         <li class="menu__item">
-            <a href="#" class="menu__link" role="menuitem">О производстве</a>
+            <a href="about.html" class="menu__link" role="menuitem">О производстве</a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__link" role="menuitem">Оплата и доставка</a>
@@ -235,10 +235,10 @@
     </div>
     <ul class="burger__list">
         <li class="burger__item">
-            <a href="#" class="burger__link">Магазин</a>
+            <a href="index.html" class="burger__link">Магазин</a>
         </li>
         <li class="burger__item">
-            <a href="#" class="burger__link">О производстве</a>
+            <a href="about.html" class="burger__link">О производстве</a>
         </li>
         <li class="burger__item active">
             <a href="#" class="burger__link">Оплата и доставка</a>
@@ -259,7 +259,510 @@
 </header>
 
     <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ul class="breadcrumb__list">
+        <li><a class="breadcrumb__link" href="index.html">Главная</a></li>
+        <img class="breadcrumb__arrow" src="img/right arrow.svg" alt="right arrow">
+        <li><a class="breadcrumb__link" href="#">О производстве</a></li>
+    </ul>
+</nav>
+        <section class="video">
+    <div class="video__wrap">
+        <h1 class="video__head">Орех Причерноморья</h1>
+        <p class="video__text">
+            Единственный в Украине сад совместного
+            выращивание фундука и грецкого ореха
+        </p>
 
+        <button class="video__button" id="play-btn" aria-label="play video">
+            <img src="img/play-icon.svg" alt="play video button icon">
+        </button>
+    </div>
+    <div class="poster-image" id="poster-image" aria-hidden="true">
+        <!-- <img src="img/main-banner.jpg" alt="banner"> -->
+        <img src="img/banner 4.jpg" alt="banner">
+    </div>
+    <!-- <video class="video__video" preload="none" poster="img/main-banner.jpg"
+        src="https://www.youtube.com/embed/hT4O8VI__XE" type="video/mp4"></video> -->
+
+    <iframe aria-label="walnut video" class="video__video" preload="none"
+        src="https://www.youtube.com/embed/hT4O8VI__XE" title="Circum Pontiac region's Walnut video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen type="video/mp4"></iframe>
+</section>
+
+
+        <section class="about">
+    <div class="about__wrap">
+        <div class="about__col">
+            <h2 class="section-title">О производителе</h2>
+            <p class="about__text">
+                <span class="about__text_accent">
+                    Сельскохозяйственный обслуживающий кооператив
+                    “Орех Причерноморья”
+                </span> выращивает смешанные сады
+                ореха грецкого с фундуком, а также ореха грецкого
+                с шиповником, на площади более 150 гектаров.
+            </p>
+            <p class="about__text about__text_second">
+                 Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
+            </p>
+
+            <p class="about__text about__text_last">
+                Помимо этого кооператив занимается выращиванием
+                посадочного материала, саженцов привитого и непривитого
+                грецкого ореха, фундука и шиповника.
+            </p>
+
+            <a class="more-info" href="#" aria-lable="more information">
+    Подробнее
+</a>
+        </div>
+
+        <div class="swiper video__carousel">
+            <!-- <button class="play" aria-label="play image">
+                <img src="img/play-icon.svg" alt="play icon">
+            </button> -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <iframe preload="none" class="video__item" src="https://www.youtube.com/embed/W9rZL4bgr4o"
+                        title="Nut farming and harvesting" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide">
+                    <iframe preload="none" class="video__item" src="https://www.youtube.com/embed/al68eQXB4FQ"
+                        title="California Walnut Processing" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video__navigation">
+                <div class="video__swiper-button-prev">
+                    <img src="img/right arrow.svg" alt="arrow">
+                </div>
+                <div class="video__swiper-button-next">
+                    <img src="img/right arrow.svg" alt="arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="person" aria-label="informaniton about person">
+    <div class="person__wrap">
+        <img class="person__photo" src="img/person.jpg" alt="person photo">
+
+        <div class="person__container">
+            <h4 class="person__name">Павел Тулба</h4>
+            <p class="person__profession">Учередитель и владелец предприятия “Орех Причерноморья”</p>
+            <div class="quote__wrap">
+                <span class="person__quote_symbol" aria-hidden="true">&#10077;</span>
+                <blockquote class="person__quote">
+                    Главная наша цель – получить максимальную прибыль с одного гектара.
+                </blockquote>
+            </div>
+
+            <a class="more-info" href="#" aria-lable="more information">
+    Написать нам
+</a>
+        </div>
+
+        <div class="person__story">
+            <p class="person__caption">История предприятия</p>
+            <p class="person__text">Наше предприятие основано в 2012 году
+                для закладки смешанного сада грецкого ореха
+                и фундука.</p>
+            <p class="person__text">На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои
+                насаждения. Кроме выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением
+                и выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
+                выращиванию трюфелей на корнях фундука.</p>
+            <p class="person__text">Земля, которой пользуется кооператив, является собственностью членов нашего
+                кооператива.</p>
+        </div>
+    </div>
+</section>
+        <section class="statistic">
+    <div class="statistic__wrap">
+        <h2 class="section-title visibility-hidden" aria-hidden="true">statistic</h2>
+        <ul class="statistic__list">
+            <li class="statistic__item" aria-label="240 ha Mixed gardens">
+                <strong class="statistic__number">240<span class="statistic__number_unit">Га</span></strong>
+                <p class="statistic__text">Cмешанных <br> садов</p>
+            </li>
+
+            <li class="statistic__item" aria-label="1 ha Greenhouse complex">
+                <strong class="statistic__number">1<span class="statistic__number_unit">Га</span></strong>
+                <p class="statistic__text">Тепличного <br> комплекса</p>
+            </li>
+
+            <li class="statistic__item" aria-label="10 ha The first industrial rosehip plantation in Ukraine">
+                <strong class="statistic__number">10<span class="statistic__number_unit">Га</span></strong>
+                <p class="statistic__text">Первая промышленная плантация <br> шиповника в Украине</p>
+            </li>
+
+            <li class="statistic__item" aria-label="80% Seedling survival rate">
+                <strong class="statistic__number">80<span class="statistic__number_unit">%</span></strong>
+                <p class="statistic__text">Приживаемости <br> саженцев</p>
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="gallery">
+    <div class="gallery__wrap">
+        <h2 class="section-title">Галерея</h2>
+        <p class="gallery__caption">Кадры социальной активности компании</p>
+
+        <ul class="gallery__list">
+            <li>
+                <article class="gallery__item">
+    <div class="gallery__container">
+        <h4 class="gallery__discription">SIAL Paris 2018</h4>
+        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
+    </div>
+    <img class="gallery__image" src="img/gallery/gallery 1.jpg" alt="two men standing together">
+</article>
+            </li>
+            <li>
+                <article class="gallery__item">
+    <div class="gallery__container">
+        <h4 class="gallery__discription">SIAL Paris 2018</h4>
+        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
+    </div>
+    <img class="gallery__image" src="img/gallery/gallery 2.jpg" alt="field">
+</article>
+            </li>
+
+            <li>
+                <section class="video-gallery">
+    <div class="video__wrap video-gallery__wrap @@solo">
+        <button class="video__button" id="play-btn" aria-label="Play video">
+            <img src="img/play-icon.svg" alt="play video button icon">
+        </button>
+        <h2 class="video__head">Проект UBHDP</h2>
+        <p class="video__text">
+            Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP за возможность получить консультацию от мировых специалистов!
+        </p>
+    </div>
+    <div class="poster-image" id="poster-image" aria-hidden="true">
+        <img src="img/banner 5.jpg" alt="banner">
+    </div>
+
+    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
+        title="Circum Pontiac region's Walnut video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</section>
+            </li>
+
+            <li>
+                <article class="gallery__item">
+    <div class="gallery__container">
+        <h4 class="gallery__discription">SIAL Paris 2018</h4>
+        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
+    </div>
+    <img class="gallery__image" src="img/gallery/gallery 3.jpg" alt="a tractor on a green field">
+</article>
+            </li>
+            <li>
+                <article class="gallery__item">
+    <div class="gallery__container">
+        <h4 class="gallery__discription">SIAL Paris 2018</h4>
+        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
+    </div>
+    <img class="gallery__image" src="img/gallery/gallery 4.jpg" alt="greenhouse">
+</article>
+            </li>
+
+            <li>
+                <section class="video-gallery">
+    <div class="video__wrap video-gallery__wrap solo">
+        <button class="video__button" id="play-btn" aria-label="Play video">
+            <img src="img/play-icon.svg" alt="play video button icon">
+        </button>
+        <h2 class="video__head"></h2>
+        <p class="video__text">
+            
+        </p>
+    </div>
+    <div class="poster-image" id="poster-image" aria-hidden="true">
+        <img src="img/banner 6.jpg" alt="banner">
+    </div>
+
+    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
+        title="Circum Pontiac region's Walnut video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</section>
+            </li>
+        </ul>
+
+        <a class="more-info" href="#" aria-lable="more information">
+    Смотреть всю галерею
+</a>
+    </div>
+</section>
+        <section class="banner">
+    <div class="banner__wrap">
+        <img class="banner__icon" src="img/eco.svg" alt="banner icon">
+        <h2 class="banner__head">Эко продукция</h2>
+        <p class="banner__text">
+            Выращиваем каждое деревцо с любовью, на экологически
+            чистой земле, без использования пестицидов и химии
+        </p>
+    </div>
+    <div class="banner__image">
+        <img src="img/banner 7.jpg" alt="banner">
+    </div>
+</section>
+        <section class="news">
+    <div class="news__wrap">
+        <div class="news__top">
+            <div>
+                <h2 class="section-title">Новости</h2>
+                <p class="news__caption">Свежие новости и полезная информация</p>
+            </div>
+
+            <div class="news__navigation" aria-label="news navigation">
+                <button class="news__swiper-button-prev news-prev" aria-label="previous news">
+                    <img src="img/right arrow.svg" alt="arrow" aria-hidden="true">
+                </button>
+                <button class="news__swiper-button-next news-next" aria-label="next news">
+                    <img src="img/right arrow.svg" alt="arrow" aria-hidden="true">
+                </button>
+            </div>
+        </div>
+
+        <div class="swiper news__carousel">
+        <div class="news__list swiper-wrapper">
+            <div class="swiper-slide">
+            <article class="news-item">
+    <div class="news-item__image">
+        <img src="img/news 1.jpg" alt="a man in a greenhouse">
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
+        <h3 class="news-item__title">Центр поддержки экспорта, в студии Павел Тулба</h3>
+        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>
+            </div>
+            <div class="swiper-slide">
+            <article class="news-item">
+    <div class="news-item__image">
+        <section class="video-gallery">
+    <div class="video__wrap video-gallery__wrap @@solo">
+        <button class="video__button" id="play-btn" aria-label="Play video">
+            <img src="img/play-icon.svg" alt="play video button icon">
+        </button>
+        <h2 class="video__head"></h2>
+        <p class="video__text">
+            
+        </p>
+    </div>
+    <div class="poster-image" id="poster-image" aria-hidden="true">
+        <img src="img/news 3.jpg" alt="banner">
+    </div>
+
+    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
+        title="Circum Pontiac region's Walnut video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</section>
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
+        <h3 class="news-item__title">В Одесской области состоялся масштабный торгово - экспортный форум</h3>
+        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>
+            </div>
+            <div class="swiper-slide">
+                <article class="news-item">
+    <div class="news-item__image">
+        <img src="img/news 2.jpg" alt="box of nuts">
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
+        <h3 class="news-item__title">Сертификация органического производителя</h3>
+        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>
+            </div>
+
+            <div class="swiper-slide">
+                <article class="news-item">
+    <div class="news-item__image">
+        <section class="video-gallery">
+    <div class="video__wrap video-gallery__wrap @@solo">
+        <button class="video__button" id="play-btn" aria-label="Play video">
+            <img src="img/play-icon.svg" alt="play video button icon">
+        </button>
+        <h2 class="video__head"></h2>
+        <p class="video__text">
+            
+        </p>
+    </div>
+    <div class="poster-image" id="poster-image" aria-hidden="true">
+        <img src="img/news 3.jpg" alt="banner">
+    </div>
+
+    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
+        title="Circum Pontiac region's Walnut video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</section>
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
+        <h3 class="news-item__title">В Одесской области состоялся масштабный торгово - экспортный форум</h3>
+        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>
+                </div>
+                <div class="swiper-slide">
+                <article class="news-item">
+    <div class="news-item__image">
+        <img src="img/news 2.jpg" alt="box of nuts">
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
+        <h3 class="news-item__title">В Одесской области состоялся масштабный торгово - экспортный форум</h3>
+        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="news-item">
+    <div class="news-item__image">
+        <img src="img/news 2.jpg" alt="box of nuts">
+    </div>
+
+    <div class="news-item__container">
+        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
+        <h3 class="news-item__title">Сертификация органического производителя</h3>
+        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
+
+        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+    </div>
+</article>
+                </div>
+        </div>
+    </div>
+
+       <div class="more__wrap">
+        <a class="more-info" href="#" aria-lable="more information">
+    Смотреть все новости
+</a>
+       </div>
+    </div>
+</section>
+
+        <section class="contacts">
+    <address class="contacts__wrap">
+        <div class="contacts__container">
+            <h2 class="section-title contacts__title">Контакты</h2>
+            <div class="contacts__links">
+                <div class="contacts__phones">
+                    <img class="contacts__icon" src="img/telephone.svg" alt="telephone icon" aria-hidden="true">
+                    <address>
+    <ul class="phones" role="list" aria-description="list of contact phones">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380447505011" aria-label="Phone: +38 (044) 750-50-11">
+                <span class="phones__code">
+                    +38 (044)
+                </span>
+                750-50-11
+            </a>
+        </li>
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380977755051" aria-label="Phone: +38 (097) 775-50-51">
+                <span class="phones__code">
+                    +38 (097)
+                </span>
+                775-50-51
+            </a>
+        </li>
+    </ul>
+</address>
+                </div>
+                <ul class="socials-fill__list" role="list" aria-label="list of social links">
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.viber.com" target="_blank" aria-label="Facebook page">
+            <img role="presentation" class="socials-fill__icon" src="img/viber-icon.svg" alt="viber icon">
+        </a>
+    </li>
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://web.telegram.org/k/" target="_blank" aria-label="Instagram page">
+            <img role="presentation" class="socials-fill__icon" src="img/telegram-icon.svg" alt="telegram icon">
+        </a>
+    </li>
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.whatsapp.com" target="_blank" aria-label="YouTube channel">
+            <img role="presentation" class="socials-fill__icon" src="img/whatsapp-icon.svg" alt="whatsapp icon">
+        </a>
+    </li>
+</ul>
+            </div>
+
+            <div class="contacts__mail">
+                <img class="contacts__icon" src="img/envelope.svg" alt="envelope icon" aria-hidden="true">
+                <a class="contacts__mail-link" href="mailto:nuts@nbsc.com.ua">nuts@nbsc.com.ua</a>
+            </div>
+
+            <div class="contacts__office">
+                <img class="contacts__icon" src="img/house.svg" alt="house icon" aria-hidden="true">
+
+                <div>
+                    <h4 class="contacts__caption">Офис и отдел продаж</h4>
+                    <a href="https://goo.gl/maps/7JHC14Hu6sFhf3Wd6" target="_blank" aria-label="link to office location"
+                        class="contacts__location">Украина, г. Одесса, <br>
+                        ул. Космонавтов, 32</a>
+                </div>
+            </div>
+
+            <div class="contacts__production">
+                <img class="contacts__icon" src="img/tree.svg" alt="tree icon" aria-hidden="true">
+
+                <div>
+                    <h4 class="contacts__caption">Производство</h4>
+                    <a href="https://goo.gl/maps/cF5KG48Mpcm2TFLw5" target="_blank"
+                        aria-label="link to production location" class="contacts__location">Украина, Одесская обл,
+                        <br>с. Яськи, ул. Центральная, 232</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contacts__map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.8880943477598!2d30.712512015590093!3d46.43109757912429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633a7b20ed43b%3A0xfaab4e45d64743a!2z0YPQuy4g0JrQvtGB0LzQvtC90LDQstGC0L7QsiwgMzIsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1684495061467!5m2!1sru!2sua"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </address>
+</section>
     </main>
 
     <footer class="footer">
@@ -272,7 +775,7 @@
             <nav class="menu" role="navigation" aria-label="main menu">
     <ul class="menu__list">
         <li class="menu__item active" aria-current="page" aria-selected="true">
-            <a href="#" class="menu__link" role="menuitem" aria-current="page">Магазин</a>
+            <a href="index.html" class="menu__link" role="menuitem" aria-current="page">Магазин</a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__link" role="menuitem">Корпоративным клиентам</a>
@@ -281,7 +784,7 @@
             <a href="#" class="menu__link" role="menuitem">Оплата и доставка</a>
         </li>
         <li class="menu__item">
-            <a href="#" class="menu__link" role="menuitem">О производстве</a>
+            <a href="about.html" class="menu__link" role="menuitem">О производстве</a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__link" role="menuitem">Новости и статьи</a>

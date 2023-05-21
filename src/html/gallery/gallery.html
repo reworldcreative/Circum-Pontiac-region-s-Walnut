@@ -1,0 +1,63 @@
+<section class="gallery">
+    <div class="gallery__wrap">
+        <h2 class="section-title">Галерея</h2>
+        <p class="gallery__caption">Кадры социальной активности компании</p>
+
+        <ul class="gallery__list">
+            <li>
+                @@include('galleryItem.html',{
+                    title:"SIAL Paris 2018",
+                    text:"В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018",
+                    image:"@img/gallery/gallery 1.jpg",
+                    imageTitle:"two men standing together",
+                })
+            </li>
+            <li>
+                @@include('galleryItem.html',{
+                    title:"SIAL Paris 2018",
+                    text:"В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018",
+                    image:"@img/gallery/gallery 2.jpg",
+                    imageTitle:"field",
+                })
+            </li>
+
+            <li>
+                @@include('../video-gallery.html',{
+                    banner:"@img/banner 5.jpg",
+                    title:"Проект UBHDP",
+                    text:"Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP за возможность получить консультацию от мировых специалистов!",
+                    })
+            </li>
+
+            <li>
+                @@include('galleryItem.html',{
+                    title:"SIAL Paris 2018",
+                    text:"В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018",
+                    image:"@img/gallery/gallery 3.jpg",
+                    imageTitle:"a tractor on a green field",
+                })
+            </li>
+            <li>
+                @@include('galleryItem.html',{
+                    title:"SIAL Paris 2018",
+                    text:"В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018",
+                    image:"@img/gallery/gallery 4.jpg",
+                    imageTitle:"greenhouse",
+                })
+            </li>
+
+            <li>
+                @@include('../video-gallery.html',{
+                    banner:"@img/banner 6.jpg",
+                    title:"",
+                    text:"",
+                    solo:"solo",
+                    })
+            </li>
+        </ul>
+
+        @@include('../moreBtn.html',{
+            text:"Смотреть всю галерею",
+            })
+    </div>
+</section>

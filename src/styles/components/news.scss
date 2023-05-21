@@ -110,6 +110,9 @@
   &__image {
     img {
       width: 100%;
+      z-index: 30;
+      position: relative;
+      top: 0px;
     }
   }
 
@@ -195,6 +198,27 @@
         brightness(90%) contrast(310%);
       width: 18px;
       margin-left: 7px;
+    }
+  }
+
+  .video-gallery {
+    position: relative;
+    top: 0px;
+
+    .video {
+      &__wrap {
+        padding: 25% 0px;
+      }
+      &__video {
+        top: 0px;
+        position: absolute;
+        height: 99%;
+      }
+    }
+
+    .poster-image {
+      z-index: 10;
+      position: relative;
     }
   }
 }

@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html',{
-"title":"О компании"
+"title":"О компании",
+"style":"about",
 })
 
 <body>
     @@include('html/header.html',{})
 
     <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+            lastLink:"index.html",
+            lastLinkText:"Главная",
+            currentLinkText:"О производстве",
+        })
+        @@include('html/video.html',{
+        banner:"@img/banner 4.jpg",
+        })
 
+
+        @@include('html/about.html',{
+        textSecond:" Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и непривитого грецкого ореха, фундука и шиповника.",
+        })
+
+        @@include('html/person/person.html',{})
+        @@include('html/statistic.html',{})
+        @@include('html/gallery/gallery.html',{})
+        @@include('html/banner.html',{
+            image:"@img/banner 7.jpg",
+        })
+        @@include('html/news.html',{})
+
+        @@include('html/contacts.html',{})
     </main>
 
     @@include('html/footer.html',{})

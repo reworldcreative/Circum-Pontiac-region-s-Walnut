@@ -1,0 +1,45 @@
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+.breadcrumb {
+  position: absolute;
+  z-index: 50;
+  margin: 36px auto 0px 315px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    // position: absolute;
+    // z-index: 20;
+    // margin: 36px auto 0px 315px;
+  }
+
+  &__arrow {
+    width: 12px;
+    height: 12px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(294deg)
+      brightness(102%) contrast(103%);
+    margin: 0px 10px 0px 6px;
+  }
+  &__link {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+
+    color: $main-white;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .breadcrumb {
+    margin: 36px auto 0px 20px;
+  }
+}

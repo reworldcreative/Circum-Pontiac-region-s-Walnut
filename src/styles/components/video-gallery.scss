@@ -1,0 +1,95 @@
+@import "rfs/scss.scss";
+@import "../normalize";
+@import "../variables";
+
+.video-gallery {
+  position: relative;
+  &__wrap {
+    padding: 237px 0px 0px;
+  }
+
+  .poster-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .solo {
+    padding: 40% 0px 0px;
+  }
+  .video {
+    &__video {
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__head {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 27px;
+
+      letter-spacing: 0.01em;
+
+      color: $main-white;
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+
+      text-align: center;
+
+      color: $main-white;
+    }
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .video-gallery {
+    &__wrap {
+      padding: 10% 0px 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .video-gallery {
+    &__wrap {
+      padding: 3% 0px 0px;
+    }
+    .video__button {
+      img {
+        width: 30px;
+      }
+    }
+
+    .poster-image {
+      height: 200px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    &__list {
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .video-gallery .solo {
+    padding: 25% 0px 0px;
+  }
+}
