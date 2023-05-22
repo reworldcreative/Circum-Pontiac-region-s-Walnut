@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.min.css">
-    <title>О компании</title>
+    <title>Оплата и доставка</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="styles/about.min.css">
+    <link rel="stylesheet" href="styles/payment.min.css">
 </head>
 
 <body>
@@ -263,126 +263,153 @@
     <ul class="breadcrumb__list">
         <li><a class="breadcrumb__link" href="index.html">Главная</a></li>
         <img class="breadcrumb__arrow" src="img/right arrow.svg" alt="right arrow">
-        <li><a class="breadcrumb__link" href="#">О производстве</a></li>
+        <li><a class="breadcrumb__link" href="#">Оптовым и корпоративным клиентам</a></li>
     </ul>
 </nav>
-        <section class="video">
-    <div class="video__wrap">
-        <h1 class="video__head">Орех Причерноморья</h1>
-        <p class="video__text">
-            Единственный в Украине сад совместного
-            выращивание фундука и грецкого ореха
-        </p>
 
-        <button class="video__button" id="play-btn" aria-label="play video">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <!-- <img src="img/main-banner.jpg" alt="banner"> -->
-        <img src="img/banner 4.jpg" alt="banner">
-    </div>
-    <!-- <video class="video__video" preload="none" poster="img/main-banner.jpg"
-        src="https://www.youtube.com/embed/hT4O8VI__XE" type="video/mp4"></video> -->
+        <section class="banner-pay">
+            <div class="banner-pay__wrap">
+                <h2 class="banner-pay__caption">Оплата и доставка</h2>
+            </div>
+        </section>
 
-    <iframe aria-label="walnut video" class="video__video" preload="none"
-        src="https://www.youtube.com/embed/hT4O8VI__XE" title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen type="video/mp4"></iframe>
-</section>
+        <section class="pay-tabs">
+    <div class="pay-tabs__wrap">
+        <div class="pay-tabs__container">
+            <div class="pay-tabs-navigation">
+                <ul class="pay-tabs-navigation__list">
+                    <li class="pay-tabs-navigation__item active" name="order">
+                        <img class="pay-tabs-navigation__icon" src="img/tabs/wallet.svg" alt="wallet icon">
+                        <h3 class="pay-tabs-navigation__caption">Оплата заказа</h3>
+                    </li>
 
+                    <li class="pay-tabs-navigation__item" name="delivery">
+                        <img class="pay-tabs-navigation__icon" src="img/tabs/lorry.svg" alt="lorry icon">
+                        <h3 class="pay-tabs-navigation__caption">Доставка партии</h3>
+                    </li>
 
-        <section class="about">
-    <div class="about__wrap">
-        <div class="about__col">
-            <h2 class="section-title">О производителе</h2>
-            <p class="about__text">
-                <span class="about__text_accent">
-                    Сельскохозяйственный обслуживающий кооператив
-                    “Орех Причерноморья”
-                </span> выращивает смешанные сады
-                ореха грецкого с фундуком, а также ореха грецкого
-                с шиповником, на площади более 150 гектаров.
-            </p>
-            <p class="about__text about__text_second">
-                 Помимо этого кооператив занимается выращиванием посадочного материала, саженцов привитого и непривитого грецкого ореха, фундука и шиповника.
-            </p>
-
-            <p class="about__text about__text_last">
-                Помимо этого кооператив занимается выращиванием
-                посадочного материала, саженцов привитого и непривитого
-                грецкого ореха, фундука и шиповника.
-            </p>
-
-            <a class="more-info" href="#" aria-lable="more information">
-    Подробнее
-</a>
-        </div>
-
-        <div class="swiper video__carousel">
-            <!-- <button class="play" aria-label="play image">
-                <img src="img/play-icon.svg" alt="play icon">
-            </button> -->
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <iframe preload="none" class="video__item" src="https://www.youtube.com/embed/W9rZL4bgr4o"
-                        title="Nut farming and harvesting" frameborder="0"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide">
-                    <iframe preload="none" class="video__item" src="https://www.youtube.com/embed/al68eQXB4FQ"
-                        title="California Walnut Processing" frameborder="0"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
+                    <li class="pay-tabs-navigation__item" name="returns">
+                        <img class="pay-tabs-navigation__icon" src="img/tabs/package.svg" alt="package">
+                        <h3 class="pay-tabs-navigation__caption">Возврат товара</h3>
+                    </li>
+                </ul>
             </div>
 
-            <div class="video__navigation">
-                <div class="video__swiper-button-prev">
-                    <img src="img/right arrow.svg" alt="arrow">
-                </div>
-                <div class="video__swiper-button-next">
-                    <img src="img/right arrow.svg" alt="arrow">
-                </div>
+            <div class="pay-tabs__body">
+                <article class="pay-tabs__item active" id="order">
+                    <div class="pay-tabs__content">
+                        <h3 class="pay-tabs__title">Способы оплаты </h3>
+                        <div class="pay-tabs__block">
+                            <div class="pay-tabs__row">
+                                <img class="pay-tabs__icon" src="img/tabs/bank.svg" alt="bank icon">
+                                <h4 class="pay-tabs__block-caption">Безналичный расчет</h4>
+                            </div>
+                            <p class="pay-tabs__text">
+                                Вы можете выбрать “получить реквизиты”
+                                для дальнейшей оплаты на карту, или в терминалах.
+                            </p>
+                        </div>
+
+                        <div class="pay-tabs__block">
+                            <div class="pay-tabs__row">
+                                <img class="pay-tabs__icon" src="img/tabs/card.svg" alt="card icon">
+                                <h4 class="pay-tabs__block-caption">Оплата с помощью банковской карты</h4>
+                            </div>
+                            <p class="pay-tabs__text">
+                                Оплатите Ваш заказ картой любого банка онлайн
+                                (LiqPay/Приват24)
+                            </p>
+                        </div>
+
+                        <div class="pay-tabs__block">
+                            <div class="pay-tabs__row">
+                                <img class="pay-tabs__icon" src="img/tabs/walletFull.svg" alt="card icon">
+                                <h4 class="pay-tabs__block-caption">Наличный расчет</h4>
+                            </div>
+                            <p class="pay-tabs__text">
+                                Оплата заказов наложенным платежом в отделении
+                                Новой Почты, или наличными курьерами
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/tabs/pay-tab 1.jpg"
+                        alt="hand holding a bank card in the background man holding a laptop on his lap">
+                </article>
+
+                <article class="pay-tabs__item" id="delivery">
+                    <div class="pay-tabs__content">
+                        <h3 class="pay-tabs__title">Способы доставки</h3>
+                        <div class="pay-tabs__block">
+                            <div class="pay-tabs__row">
+                                <img class="pay-tabs__icon" src="img/tabs/courier.svg" alt="courier icon">
+                                <h4 class="pay-tabs__block-caption">Курьером по Одессе</h4>
+                            </div>
+                            <p class="pay-tabs__text">
+                                Доставка всегда включена в стоимость
+                            </p>
+                        </div>
+
+                        <div class="pay-tabs__block">
+                            <div class="pay-tabs__row">
+                                <img class="pay-tabs__icon" src="img/tabs/Nova Posta.svg" alt="Nova Posta icon">
+                                <h4 class="pay-tabs__block-caption">Доставка по Украине</h4>
+                            </div>
+                            <p class="pay-tabs__text">
+                                Доставка по всей Украине осуществляется
+                                Новой Почтой, за счет покупателя
+                            </p>
+                        </div>
+
+                        <div class="pay-tabs__block">
+                            <div class="pay-tabs__row">
+                                <img class="pay-tabs__icon" src="img/tabs/box.svg" alt="package icon">
+                                <h4 class="pay-tabs__block-caption">Отправка товара</h4>
+                            </div>
+                            <p class="pay-tabs__text">
+                                Отправка товара, который есть в наличии,
+                                происходит в течении 2-4 рабочих дней
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/tabs/pay-tab 2.jpg" alt="a man loads boxes into a car">
+                </article>
+
+                <article class="pay-tabs__item" id="returns">
+                    <div class="pay-tabs__content">
+                        <h3 class="pay-tabs__title returns">Возврат товара</h3>
+
+                        <div class="pay-tabs__block">
+                            <p class="pay-tabs__text returns">
+                                Возврат товара осуществляется в соответствии с Законом Украины «О защите прав
+                                потребителей». В период установленного производителем срока гарантии Вы можете вернуть
+                                нам товар при таких условиях:
+                            </p>
+
+                            <ul class="pay-tabs__list">
+                                <li>
+                                    <p class="pay-tabs__text">Наличие документа от уполномоченного производителем
+                                        сервисного центра, где
+                                        указано, что дефект является существенным (товар ненадлежащего качества);</p>
+                                </li>
+
+                                <li>
+                                    <p class="pay-tabs__text">Сохранен гарантийный талон и документ, подтверждающий
+                                        оплату;</p>
+                                </li>
+
+                                <li>
+                                    <p class="pay-tabs__text">Целостность комплекта не нарушена.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="img/tabs/pay-tab 3.jpg" alt="boxes">
+                </article>
             </div>
         </div>
     </div>
 </section>
 
-        <section class="person" aria-label="informaniton about person">
-    <div class="person__wrap">
-        <img class="person__photo" src="img/person.jpg" alt="person photo">
-
-        <div class="person__container">
-            <h4 class="person__name">Павел Тулба</h4>
-            <p class="person__profession">Учередитель и владелец предприятия “Орех Причерноморья”</p>
-            <div class="quote__wrap">
-                <span class="person__quote_symbol" aria-hidden="true">&#10077;</span>
-                <blockquote class="person__quote">
-                    Главная наша цель – получить максимальную прибыль с одного гектара.
-                </blockquote>
-            </div>
-
-            <a class="more-info" href="#" aria-lable="more information">
-    Написать нам
-</a>
-        </div>
-
-        <div class="person__story">
-            <p class="person__caption">История предприятия</p>
-            <p class="person__text">Наше предприятие основано в 2012 году
-                для закладки смешанного сада грецкого ореха
-                и фундука.</p>
-            <p class="person__text">На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои
-                насаждения. Кроме выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением
-                и выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
-                выращиванию трюфелей на корнях фундука.</p>
-            <p class="person__text">Земля, которой пользуется кооператив, является собственностью членов нашего
-                кооператива.</p>
-        </div>
-    </div>
-</section>
         <section class="statistic">
     <div class="statistic__wrap">
         <h2 class="section-title visibility-hidden" aria-hidden="true">statistic</h2>
@@ -409,44 +436,18 @@
         </ul>
     </div>
 </section>
-        <section class="gallery">
-    <div class="gallery__wrap">
-        <h2 class="section-title">Галерея</h2>
-        <p class="gallery__caption">Кадры социальной активности компании</p>
-
-        <ul class="gallery__list">
-            <li>
-                <article class="gallery__item">
-    <div class="gallery__container">
-        <h4 class="gallery__discription">SIAL Paris 2018</h4>
-        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
-    </div>
-    <img class="gallery__image" src="img/gallery/gallery 1.jpg" alt="two men standing together">
-</article>
-            </li>
-            <li>
-                <article class="gallery__item">
-    <div class="gallery__container">
-        <h4 class="gallery__discription">SIAL Paris 2018</h4>
-        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
-    </div>
-    <img class="gallery__image" src="img/gallery/gallery 2.jpg" alt="field">
-</article>
-            </li>
-
-            <li>
-                <section class="video-gallery">
-    <div class="video__wrap video-gallery__wrap @@solo">
-        <button class="video__button" id="play-btn" aria-label="Play video">
+        <section class="video-sec video">
+    <div class="video__wrap video-sec__wrap">
+        <h2 class="video__head">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
+        <button class="video__button" id="play-btn" aria-label="Play video: Circum Pontiac region's Walnut">
             <img src="img/play-icon.svg" alt="play video button icon">
         </button>
-        <h2 class="video__head">Проект UBHDP</h2>
         <p class="video__text">
-            Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP за возможность получить консультацию от мировых специалистов!
+            Cмотреть видео о производстве
         </p>
     </div>
     <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/banner 5.jpg" alt="banner">
+        <img src="img/banner2.jpg" alt="banner">
     </div>
 
     <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
@@ -454,232 +455,6 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
 </section>
-            </li>
-
-            <li>
-                <article class="gallery__item">
-    <div class="gallery__container">
-        <h4 class="gallery__discription">SIAL Paris 2018</h4>
-        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
-    </div>
-    <img class="gallery__image" src="img/gallery/gallery 3.jpg" alt="a tractor on a green field">
-</article>
-            </li>
-            <li>
-                <article class="gallery__item">
-    <div class="gallery__container">
-        <h4 class="gallery__discription">SIAL Paris 2018</h4>
-        <p class="gallery__text">В этом Году при поддержке проекта International Trade Centre Ukraine, и финансировании правительства Швеции, мы побывали на крупнейшей продовольственной выставке Европы SIAL Paris 2018</p>
-    </div>
-    <img class="gallery__image" src="img/gallery/gallery 4.jpg" alt="greenhouse">
-</article>
-            </li>
-
-            <li>
-                <section class="video-gallery">
-    <div class="video__wrap video-gallery__wrap solo">
-        <button class="video__button" id="play-btn" aria-label="Play video">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-        <h2 class="video__head"></h2>
-        <p class="video__text">
-            
-        </p>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/banner 6.jpg" alt="banner">
-    </div>
-
-    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
-        title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</section>
-            </li>
-        </ul>
-
-        <a class="more-info" href="#" aria-lable="more information">
-    Смотреть всю галерею
-</a>
-    </div>
-</section>
-        <section class="banner">
-    <div class="banner__wrap">
-        <img class="banner__icon" src="img/eco.svg" alt="banner icon">
-        <h2 class="banner__head">Эко продукция</h2>
-        <p class="banner__text">
-            Выращиваем каждое деревцо с любовью, на экологически
-            чистой земле, без использования пестицидов и химии
-        </p>
-    </div>
-    <div class="banner__image">
-        <img src="img/banner 7.jpg" alt="banner">
-    </div>
-</section>
-        <section class="news">
-    <div class="news__wrap">
-        <div class="news__top">
-            <div>
-                <h2 class="section-title">Новости</h2>
-                <p class="news__caption">Свежие новости и полезная информация</p>
-            </div>
-
-            <div class="news__navigation" aria-label="news navigation">
-                <button class="news__swiper-button-prev news-prev" aria-label="previous news">
-                    <img src="img/right arrow.svg" alt="arrow" aria-hidden="true">
-                </button>
-                <button class="news__swiper-button-next news-next" aria-label="next news">
-                    <img src="img/right arrow.svg" alt="arrow" aria-hidden="true">
-                </button>
-            </div>
-        </div>
-
-        <div class="swiper news__carousel">
-        <div class="news__list swiper-wrapper">
-            <div class="swiper-slide">
-            <article class="news-item">
-    <div class="news-item__image">
-        <img src="img/news 1.jpg" alt="a man in a greenhouse">
-    </div>
-
-    <div class="news-item__container">
-        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
-        <h3 class="news-item__title">Центр поддержки экспорта, в студии Павел Тулба</h3>
-        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
-
-        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
-                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
-    </div>
-</article>
-            </div>
-            <div class="swiper-slide">
-            <article class="news-item">
-    <div class="news-item__image">
-        <section class="video-gallery">
-    <div class="video__wrap video-gallery__wrap @@solo">
-        <button class="video__button" id="play-btn" aria-label="Play video">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-        <h2 class="video__head"></h2>
-        <p class="video__text">
-            
-        </p>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/news 3.jpg" alt="banner">
-    </div>
-
-    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
-        title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</section>
-    </div>
-
-    <div class="news-item__container">
-        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
-        <h3 class="news-item__title">В Одесской области состоялся масштабный торгово - экспортный форум</h3>
-        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
-
-        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
-                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
-    </div>
-</article>
-            </div>
-            <div class="swiper-slide">
-                <article class="news-item">
-    <div class="news-item__image">
-        <img src="img/news 2.jpg" alt="box of nuts">
-    </div>
-
-    <div class="news-item__container">
-        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
-        <h3 class="news-item__title">Сертификация органического производителя</h3>
-        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
-
-        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
-                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
-    </div>
-</article>
-            </div>
-
-            <div class="swiper-slide">
-                <article class="news-item">
-    <div class="news-item__image">
-        <section class="video-gallery">
-    <div class="video__wrap video-gallery__wrap @@solo">
-        <button class="video__button" id="play-btn" aria-label="Play video">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-        <h2 class="video__head"></h2>
-        <p class="video__text">
-            
-        </p>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/news 3.jpg" alt="banner">
-    </div>
-
-    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
-        title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</section>
-    </div>
-
-    <div class="news-item__container">
-        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
-        <h3 class="news-item__title">В Одесской области состоялся масштабный торгово - экспортный форум</h3>
-        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
-
-        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
-                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
-    </div>
-</article>
-                </div>
-                <div class="swiper-slide">
-                <article class="news-item">
-    <div class="news-item__image">
-        <img src="img/news 2.jpg" alt="box of nuts">
-    </div>
-
-    <div class="news-item__container">
-        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
-        <h3 class="news-item__title">В Одесской области состоялся масштабный торгово - экспортный форум</h3>
-        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
-
-        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
-                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
-    </div>
-</article>
-                </div>
-                <div class="swiper-slide">
-                    <article class="news-item">
-    <div class="news-item__image">
-        <img src="img/news 2.jpg" alt="box of nuts">
-    </div>
-
-    <div class="news-item__container">
-        <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
-        <h3 class="news-item__title">Сертификация органического производителя</h3>
-        <p class="news-item__text">Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...</p>
-
-        <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
-                src="img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
-    </div>
-</article>
-                </div>
-        </div>
-    </div>
-
-       <div class="more__wrap">
-        <a class="more-info" href="#" aria-lable="more information">
-    Смотреть все новости
-</a>
-       </div>
-    </div>
-</section>
-
         <section class="contacts">
     <address class="contacts__wrap">
         <div class="contacts__container">
@@ -825,7 +600,7 @@
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 
     <script src="scripts/main.min.js"></script>
 </body>

@@ -1,0 +1,26 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/video";
+@import "./components/breadcrumb";
+@import "./components/wholesaleInfo";
+@import "./components/tabs";
+@import "./components/banner";
+@import "./components/statistic";
+@import "./components/contacts";
+
+.main-video {
+  .video__wrap {
+    padding: 240px 0px 140px;
+  }
+  .video__button {
+    display: none;
+  }
+}

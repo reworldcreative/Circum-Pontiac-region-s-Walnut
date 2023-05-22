@@ -72,6 +72,14 @@
 
 @media screen and (max-width: 1200px) {
   .statistic__list {
+    width: 100%;
     justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .statistic__list {
+    display: grid;
+    gap: 20px;
   }
 }

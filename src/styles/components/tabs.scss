@@ -1,0 +1,155 @@
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+.tabs {
+  &__wrap {
+    display: grid;
+  }
+
+  .tabs-navigation {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    &__container {
+      display: block;
+    }
+    &__list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0px auto;
+      padding: 0px;
+      width: 1294px;
+      //   padding-bottom: 20px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      padding-bottom: 20px;
+
+      border-bottom: 3px solid transparent;
+      &.active {
+        border-bottom: 3px solid $accent;
+
+        .tabs-navigation__icon {
+          filter: invert(39%) sepia(74%) saturate(287%) hue-rotate(99deg)
+            brightness(92%) contrast(97%);
+        }
+      }
+    }
+    &__icon {
+      margin-right: 17px;
+    }
+    &__caption {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 115%;
+
+      letter-spacing: 0.01em;
+
+      color: $main;
+      margin: 0px;
+    }
+  }
+
+  &__item {
+    // display: flex;
+    display: none;
+    justify-content: center;
+    gap: 52px;
+    margin-top: 37px;
+    .action-btn {
+      margin-top: 36px;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    width: 477px;
+
+    &:nth-child(4) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__content {
+    margin-top: 47px;
+
+    img {
+      width: 761px;
+      height: 471px;
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .tabs {
+    &__wrap {
+      margin: 0px 10px;
+    }
+
+    .tabs-navigation__list {
+      width: 100%;
+    }
+
+    &__item {
+      justify-content: space-between;
+      img {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tabs {
+    &__item {
+      gap: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tabs {
+    .tabs-navigation__list {
+      display: block;
+    }
+
+    &__item {
+      img {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tabs {
+    &__item {
+      img {
+        display: none;
+      }
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/video";
+@import "./components/video-sec";
+@import "./components/breadcrumb";
+@import "./components/statistic";
+@import "./components/banner";
+@import "./components/contacts";
+@import "./components/pay-teb";
+
+.banner-pay {
+  background-image: url("@img/banner 10.jpg");
+  background-repeat: no-repeat;
+  &__wrap {
+    padding: 119px 0px 108px;
+    text-align: center;
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 73px;
+
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner-pay {
+    &__wrap {
+      padding: 80px 0px 60px;
+    }
+  }
+}

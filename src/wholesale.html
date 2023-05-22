@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Оптовым и корпоративным клиентам",
+"style":"wholesale",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Оптовым и корпоративным клиентам",
+        })
+        <div class="main-video">
+            @@include('html/video.html',{
+            banner:"@img/banner 8.jpg",
+            })
+        </div>
+        @@include('html/wholesaleInfo.html',{})
+        @@include('html/tabs/tabs.html',{})
+        @@include('html/statistic.html',{})
+        @@include('html/banner.html',{
+        image:"@img/banner 9.jpg",
+        })
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
