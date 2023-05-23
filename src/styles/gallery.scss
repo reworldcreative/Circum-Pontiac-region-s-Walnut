@@ -1,0 +1,160 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/video";
+@import "./components/video-sec";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/gallery";
+@import "./components/video-gallery";
+@import "./components/contacts";
+
+.gallery-banner {
+  position: relative;
+
+  &__image {
+    width: 100%;
+  }
+  &__wrap {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    margin: 238px auto 0px;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 73px;
+
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+  }
+}
+
+.gallery {
+  .section-title {
+    display: none;
+  }
+
+  &__wrap {
+    padding: 93px 0px 0px;
+  }
+
+  &__caption {
+    display: none;
+  }
+
+  &__list {
+    margin: 0px auto 70px;
+  }
+}
+
+.gallery__second {
+  display: contents;
+}
+
+@media screen and (max-width: 1400px) {
+  .gallery__list {
+    .video-small {
+      width: 40vw;
+      height: 70vh;
+    }
+  }
+
+  .gallery__item {
+    width: 40vw;
+    height: 70vh;
+  }
+
+  .gallery__item {
+    width: 40vw;
+    height: 70vh;
+  }
+
+  .gallery-banner__wrap {
+    margin: 25vh auto 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .gallery__list {
+    .video-small {
+      width: 70vw;
+      height: 90vh;
+    }
+  }
+
+  .gallery__item {
+    width: 70vw;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .video-gallery .poster-image {
+    height: 100%;
+  }
+  .gallery__list {
+    .video-small {
+      width: 70vw;
+      height: 90vh;
+
+      .video-gallery {
+        .video__wrap {
+          padding: 45% 0px 0px;
+        }
+      }
+    }
+  }
+
+  .gallery__item {
+    width: auto;
+    height: auto;
+  }
+
+  .gallery__wrap {
+    padding: 93px 10px 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery__list {
+    .video-small {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .video-gallery {
+    height: 230px;
+  }
+}

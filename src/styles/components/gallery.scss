@@ -96,6 +96,10 @@
   }
 }
 
+.gallery__second {
+  display: none;
+}
+
 @media screen and (max-width: 1915px) {
   .gallery {
     &__list {

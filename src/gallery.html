@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Орех Причерноморья",
+"style":"gallery",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"О производстве",
+        })
+
+        <section class="gallery-banner">
+            <img class="gallery-banner__image" src="@img/gallery banner.jpg" alt="walnut saccharine">
+            <div class="gallery-banner__wrap">
+                <h1 class="gallery-banner__title">Галерея</h1>
+                <p class="gallery-banner__text">Кадры социальной активности компании</p>
+            </div>
+        </section>
+
+        @@include('html/gallery/gallery.html',{})
+
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
