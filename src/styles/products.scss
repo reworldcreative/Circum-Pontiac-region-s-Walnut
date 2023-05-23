@@ -1,0 +1,58 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+@import "./components/actionButton";
+@import "./components/menu";
+
+@import "header";
+@import "./components/burger";
+@import "./components/productions";
+@import "./components/breadcrumb";
+
+@import "./components/banner";
+@import "./components/moreInfoBtn";
+
+@import "./components/contacts";
+@import "./components/productsFilter";
+@import "footer";
+
+.banner-products {
+  background-image: url("@img/banner 11.jpg");
+  background-repeat: no-repeat;
+  &__wrap {
+    padding: 119px 0px 108px;
+    text-align: center;
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 73px;
+
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    margin: 0px;
+  }
+}
+
+.productions {
+  .section-title {
+    display: none;
+  }
+
+  &__text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner-products {
+    &__wrap {
+      padding: 80px 0px 60px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Орех Причерноморья",
+"style":"products",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Магазин",
+        })
+
+        <section class="banner-products">
+            <div class="banner-products__wrap">
+                <h2 class="banner-products__caption">Каталог продукции</h2>
+            </div>
+        </section>
+        @@include('html/products/productsFilter.html',{})
+        @@include('html/products/productions.html',{
+        shopButtonText:"Загрузить еще",
+        })
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

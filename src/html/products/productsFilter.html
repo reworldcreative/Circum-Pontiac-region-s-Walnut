@@ -1,0 +1,48 @@
+<form>
+    <fieldset class="filter__wrap">
+        <button class="settings-button" aria-label="filter settings button">
+            Фильтр
+            <img class="settings-button__image" src="@img/settings.svg" alt="settings icon" aria-hidden="true">
+        </button>
+
+        <select class="taste" name="select" required>
+            <option value="" disabled selected>Вкус</option>
+            <option value="1">сладкий</option>
+            <option value="2">соленый</option>
+        </select>
+
+        <select class="mass" name="select" required>
+            <option value="" disabled selected>Масса</option>
+            <option value="1">до 40</option>
+            <option value="2">> 40</option>
+        </select>
+
+        <!-- <select class="cost" name="select" required>
+            <option value="" disabled selected>Стоимость</option>
+            <option value="1">до 21</option>
+            <option value="2">> 21</option>
+        </select> -->
+
+        <button class="cost">
+            Стоимость
+            <span class="cost-down">
+                <img src="@img/right arrow.svg" alt="down arrow">
+            </span>
+            <span class="cost-up">
+                <img src="@img/right arrow.svg" alt="up arrow">
+            </span>
+        </button>
+
+        <div>
+            @@include('../actionButton.html',{
+            title:"Применить",
+            description:"apply settings",
+            lable:"apply",
+            })
+
+            <button class="clear-button">
+                <span class="clear-button__icon" aria-hidden="true">X</span>Сбросить
+            </button>
+        </div>
+    </fieldset>
+</form>
