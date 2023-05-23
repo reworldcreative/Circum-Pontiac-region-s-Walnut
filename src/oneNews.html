@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Новости и статьи",
+"style":"oneNews",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Новости и статьи",
+        })
+
+        <section class="oneNews">
+            <div class="oneNews__wrap">
+
+            </div>
+        </section>
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

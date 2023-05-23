@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Новости и статьи",
+"style":"news",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Новости и статьи",
+        })
+
+
+        <section class="news-section">
+            <div class="news-section__wrap">
+                <h2 class="section-title">Новости и статьи</h2>
+                <p class="news-section__title">Свежие новости и полезная информация</p>
+               <div class="news-section__container">
+                <div class="mainNews">
+                    <article class="news-item mainNews__item">
+                        <div class="news-item__image">
+                            <img src="@img/mainNews.jpg" alt="main news image">
+                        </div>
+                    
+                        <div class="news-item__container">
+                            <time class="news-item__date active" datetime="12-04-2019">12.04.2019</time>
+                            <h3 class="news-item__title">Центр поддержки экспорта, в студии Павел Тулба</h3>
+                            <p class="news-item__text">Сельскохозяйственный обслуживающий кооператив 
+                                “Орех Причерноморья” предлагает своим клиентам 
+                                выгодные условия сотрудничества.</p>
+                            <p class="news-item__text">Ореховый бизнес – один из наиболее перспективных 
+                                в Украине. Ежегодная нехватка продукта в Европе составляет 100 000 тонн. У Вас есть возможность зарабатывать десятки тысяч долларов в год всего 
+                                на нескольких гектарах земли.</p>
+                    
+                            <a class="readMore active" href="#" aria-label="Read more about the news">Читать <img class="readMore__arrow"
+                                    src="@img/right arrow.svg" alt="arrow" aria-hidden="true"></a>
+                        </div>
+                    </article>
+                </div>
+               <div class="news-section__row">
+                @@include('html/newsItem.html',{
+                    image:"@img/news 1.jpg",
+                    imageDescription:"a man in a greenhouse",
+                    date:"2019-04-12",
+                    datetext:"12.04.2019",
+                    title:"Центр поддержки экспорта, в студии Павел Тулба",
+                    text:"Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...",
+                })
+                @@include('html/newsVideoItem.html',{
+                    image:"@img/news 3.jpg",
+                    imageDescription:"box of nuts",
+                    date:"2019-04-12",
+                    datetext:"12.04.2019",
+                    video:"@img/news 3.jpg",
+                    title:"В Одесской области состоялся масштабный торгово - экспортный форум",
+                    text:"Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...",
+                })
+                @@include('html/newsItem.html',{
+                    image:"@img/news 2.jpg",
+                    imageDescription:"box of nuts",
+                    date:"2019-04-12",
+                    datetext:"12.04.2019",
+                    title:"Сертификация органического производителя",
+                    text:"Как уже упоминал Павел Тулба, шиповник цветёт. Эта культура очень недооценена среди наших садоводов, не смотря на большой спрос в Европе и отличную...",
+                })
+               </div>
+
+                @@include('html/video-gallery.html',{
+                    banner:"@img/banner 5.jpg",
+                    title:"Проект UBHDP",
+                    text:"Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP за возможность получить консультацию от мировых специалистов!",
+                })
+    
+                    @@include('html/moreBtn.html',{
+                        text:"Посмотреть еще",
+                    })
+               </div>
+            </div>
+        </section>
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}

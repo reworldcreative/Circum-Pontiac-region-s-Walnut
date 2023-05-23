@@ -72,6 +72,14 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .video {
+    &__wrap {
+      padding: 100px 0px 80px;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .video {
     &__text {

@@ -2167,6 +2167,11 @@ template {
   height: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+  .video__wrap {
+    padding: 100px 0px 80px;
+  }
+}
 @media screen and (max-width: 800px) {
   .video__text {
     width: auto;
