@@ -115,6 +115,12 @@ $rfs-breakpoint: 1500;
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .breadcrumb {
     margin: 36px auto 0px 5vw;

@@ -1828,3 +1828,224 @@ template {
 .breadcrumb__link {
   color: #8a8a8a;
 }
+
+.readMore {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #1a2f3f;
+}
+.readMore:hover {
+  color: #337d5a;
+}
+.readMore:hover .readMore__arrow {
+  filter: none;
+}
+.readMore__arrow {
+  filter: invert(0%) sepia(100%) saturate(8%) hue-rotate(163deg) brightness(90%) contrast(310%);
+  width: 18px;
+  margin-left: 7px;
+}
+
+.oneNews__wrap {
+  margin: 57px auto 86px;
+  width: fit-content;
+  display: flex;
+  gap: 40px;
+}
+.oneNews__container {
+  width: 990px;
+}
+.oneNews__title {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 109%;
+  letter-spacing: 0.01em;
+  color: #1a2f3f;
+  margin: 0px;
+  margin-bottom: 12px;
+  width: 468px;
+}
+.oneNews__sub-title {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: 0.01em;
+  color: #1a2f3f;
+  width: 500px;
+  margin-top: 0px;
+  margin-bottom: 22px;
+}
+.oneNews__sub-title.first {
+  margin-top: 39px;
+}
+.oneNews__list-caption {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: 0.01em;
+  color: #1a2f3f;
+  margin-top: 0px;
+  margin-bottom: 11px;
+}
+.oneNews__date {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 147%;
+  letter-spacing: 0.01em;
+  color: #8a8a8a;
+}
+.oneNews__image {
+  margin-top: 29px;
+  margin-bottom: 28px;
+}
+.oneNews__image img {
+  width: 100%;
+}
+.oneNews__text {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 156%;
+  color: #1a2f3f;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.oneNews__list {
+  margin: 0px;
+  padding-left: 20px;
+}
+.oneNews__list li {
+  color: #337d5a;
+}
+.oneNews__more {
+  text-align: center;
+  margin-top: 50px;
+  display: none;
+}
+
+.sideNews {
+  width: 270px;
+  margin-top: 128px;
+  text-align: center;
+  background: #fcfcfc;
+  padding: 27px 20px 30px;
+}
+.sideNews__title {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 108%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #1a2f3f;
+  margin-top: 0px;
+  margin-bottom: 19px;
+}
+.sideNews__list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.sideNews__item {
+  margin-bottom: 41px;
+}
+.sideNews__item:last-child {
+  margin-bottom: 0px;
+}
+.sideNews__image {
+  margin-bottom: 14px;
+  width: 100%;
+}
+.sideNews__caption {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 107%;
+  letter-spacing: 0.01em;
+  color: #1a2f3f;
+  margin-top: 0px;
+  text-align: initial;
+  margin-bottom: 8px;
+}
+.sideNews__date {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 169%;
+  letter-spacing: 0.01em;
+  color: #8a8a8a;
+  width: 100%;
+  display: block;
+  text-align: initial;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1400px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+  .oneNews__wrap {
+    margin: 57px 20px 86px;
+    width: auto;
+    max-width: fit-content;
+    gap: 0px;
+  }
+  .oneNews__container {
+    width: 70%;
+  }
+  .oneNews__image {
+    width: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .oneNews__wrap {
+    display: block;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .oneNews__container {
+    width: 100%;
+  }
+  .sideNews {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+  }
+  .sideNews__list {
+    display: flex;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .oneNews__more {
+    display: block;
+  }
+  .oneNews__title {
+    width: auto;
+  }
+  .oneNews__sub-title {
+    width: auto;
+  }
+  .sideNews {
+    display: none;
+  }
+}

@@ -20,3 +20,272 @@ $rfs-breakpoint: 1500;
     color: #8a8a8a;
   }
 }
+
+.readMore {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+
+  letter-spacing: 0.01em;
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: $main;
+  // &.active,
+  &:hover {
+    color: $accent;
+    .readMore__arrow {
+      filter: none;
+    }
+  }
+  &__arrow {
+    filter: invert(0%) sepia(100%) saturate(8%) hue-rotate(163deg)
+      brightness(90%) contrast(310%);
+    width: 18px;
+    margin-left: 7px;
+  }
+}
+
+.oneNews {
+  &__wrap {
+    margin: 57px auto 86px;
+    width: fit-content;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__container {
+    width: 990px;
+  }
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 109%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin: 0px;
+    margin-bottom: 12px;
+    width: 468px;
+  }
+
+  &__sub-title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 117%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    width: 500px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+
+    &.first {
+      margin-top: 39px;
+    }
+  }
+
+  &__list-caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 11px;
+  }
+
+  &__date {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 147%;
+
+    letter-spacing: 0.01em;
+
+    color: #8a8a8a;
+  }
+
+  &__image {
+    margin-top: 29px;
+    margin-bottom: 28px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 156%;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    margin: 0px;
+    padding-left: 20px;
+
+    li {
+      color: $accent;
+    }
+  }
+
+  &__more {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+  }
+}
+
+.sideNews {
+  width: 270px;
+  margin-top: 128px;
+  text-align: center;
+  background: #fcfcfc;
+  padding: 27px 20px 30px;
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 108%;
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 19px;
+  }
+  &__list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  &__item {
+    margin-bottom: 41px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 14px;
+    width: 100%;
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 107%;
+
+    letter-spacing: 0.01em;
+    color: $main;
+    margin-top: 0px;
+    text-align: initial;
+    margin-bottom: 8px;
+  }
+
+  &__date {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 169%;
+
+    letter-spacing: 0.01em;
+
+    color: #8a8a8a;
+    width: 100%;
+    display: block;
+    text-align: initial;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+
+  .oneNews {
+    &__wrap {
+      margin: 57px 20px 86px;
+      width: auto;
+      max-width: fit-content;
+      gap: 0px;
+    }
+
+    &__container {
+      width: 70%;
+    }
+
+    &__image {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .oneNews {
+    &__wrap {
+      display: block;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+  }
+
+  .sideNews {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    &__list {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .oneNews {
+    &__more {
+      display: block;
+    }
+
+    &__title {
+      width: auto;
+    }
+
+    &__sub-title {
+      width: auto;
+    }
+  }
+  .sideNews {
+    display: none;
+  }
+}
