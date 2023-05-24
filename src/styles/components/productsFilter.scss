@@ -30,6 +30,7 @@ $rfs-breakpoint: 1500;
   border: none;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1289px;
 }
 
@@ -54,6 +55,8 @@ select {
 
   background-repeat: no-repeat;
   background-position: right;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-position-x: 95%;
 }
 
 .cost {
@@ -69,6 +72,7 @@ select {
   color: $main;
   border: 0px;
   background: none;
+  margin-left: 51px;
 }
 
 .cost-down {
@@ -76,6 +80,8 @@ select {
     width: 15px;
     height: 15px;
     rotate: 90deg;
+    filter: invert(49%) sepia(77%) saturate(21%) hue-rotate(314deg)
+      brightness(96%) contrast(98%);
   }
 
   border: none;
@@ -87,20 +93,40 @@ select {
     width: 15px;
     height: 15px;
     rotate: 270deg;
+    filter: invert(49%) sepia(77%) saturate(21%) hue-rotate(314deg)
+      brightness(96%) contrast(98%);
   }
 
   border: none;
   background: none;
+
+  &.active {
+    img {
+      filter: none;
+    }
+  }
 }
 
 // select:required:invalid {
 // }
 
+.buttons {
+  display: flex;
+
+  &__select {
+    display: flex;
+    gap: 28px;
+  }
+}
+
 select[class="taste"] {
+  width: 283px;
+  // margin-right: 28px;
   background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
 }
 
 select[class="mass"] {
+  width: 171px;
   background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
 }
 
@@ -139,5 +165,70 @@ option {
   margin-left: 47px;
   &__icon {
     margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .filter__wrap {
+    margin: 66px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .filter__wrap {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  select[class="taste"] {
+    width: 15vw;
+  }
+
+  select[class="mass"] {
+    width: 15vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  select[class="taste"] {
+    width: 20vw;
+  }
+
+  select[class="mass"] {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  select[class="taste"] {
+    width: 30vw;
+  }
+
+  .buttons {
+    // display: grid;
+    // gap: 20px;
+    &__select {
+      display: grid;
+    }
+  }
+
+  select[class="mass"] {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .filter__wrap {
+    display: grid;
+  }
+  .buttons {
+    display: grid;
+    gap: 20px;
+  }
+
+  .cost {
+    margin-left: 0px;
+    width: fit-content;
   }
 }

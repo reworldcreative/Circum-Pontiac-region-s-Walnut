@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Орех Причерноморья",
+"style":"productPage",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Карточка товара",
+        })
+
+        <section class="mainProduct">
+            <article class="mainProduct__wrap">
+                <div class="product__carousel">
+                    <div class="swiper product__swiper">
+                        <button class="search" aria-label="scale image">
+                            <img src="@img/magnifying-glass.svg" alt="search icon">
+                        </button>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="product__image" src="@img/productImage.png" alt="product image">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="product__image" src="@img/walnut.webp" alt="walnut image">
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+
+                <div class="mainProduct__discription">
+                    <div class="mainProduct__type-wrap">
+                        <p class="mainProduct__type">Грецкий орех</p>
+                        <p class="mainProduct__article">Арт: 0091</p>
+                    </div>
+
+                    <h2 class="mainProduct__name">Орех соленый кондитерский очищенный</h2>
+
+                    <div class="mainProduct__infoList">
+                        @@include('html/products/infoItem.html',{
+                        caption:"Состав",
+                        text:"Ядро грецкого ореха, вымытого очищенного от кожуры, соль экстра (раствор 7%)",
+                        })
+
+                        @@include('html/products/infoItem.html',{
+                        caption:"Масса нетто",
+                        text:"40г.",
+                        })
+
+                        @@include('html/products/infoItem.html',{
+                        caption:"Энергетическая ценность",
+                        text:"654 Ккал.",
+                        })
+
+                        @@include('html/products/infoItem.html',{
+                        caption:"Срок годности",
+                        text:"12 месяцев, с даты расфасовки (указана на упаковке)",
+                        })
+                    </div>
+
+                    <div class="mainProduct__alert">
+                        <div class="alert__icon">
+                            <img src="@img/exclamation point.svg" alt="exclamation point icon">
+                        </div>
+
+                        <p class="alert__text">Хранить в помещениях, защищенных от попадания прямых,
+                            солнечных лучей, при температуре от +3 °C до +20 °C, и относительной
+                            влажности воздуха не более 75 %</p>
+                    </div>
+
+                    <div class="product__price">
+                        <div class="price">
+                            <p class="price__number"><span class="price__number_text">Ваша цена:</span><span
+                                    class="price__number_accent price__number_from"></span>
+
+                                <span class="price__number_current">19 </span>
+                                <span class="price__number_accent">грн.</span>
+
+                                <span class="price__number_total">21
+                                    <span class="price__number_muted">грн.</span>
+                                </span>
+                            </p>
+                        </div>
+
+                        @@include('html/actionButton.html',{
+                        title:"Заказать",
+                        description:"order product",
+                        lable:"order",
+                        })
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="mainProduct-Info">
+            <div class="mainProduct-Info__wrap">
+
+                <div class="mainProduct-Info__navigation">
+                    <ul class="mainProduct-Info__list">
+                        <li class="mainProduct-Info__item active" name="description">
+                            <h3 class="mainProduct-Info__caption">Описание</h3>
+                        </li>
+
+                        <li class="mainProduct-Info__item" name="package">
+                            <h3 class="mainProduct-Info__caption">Упаковка</h3>
+                        </li>
+
+                        <li class="mainProduct-Info__item" name="pay">
+                            <h3 class="mainProduct-Info__caption">Оплата</h3>
+                        </li>
+
+                        <li class="mainProduct-Info__item" name="shipping">
+                            <h3 class="mainProduct-Info__caption">Доставка</h3>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="mainProduct-Info__body">
+                    <article class="tab__item active" id="description">
+                        <img src="@img/Walnut-bg.jpg" alt="walnut">
+                        <div class="tab__content">
+                            <p class="tab__text">Уже 4000 лет люди питаются ценными грецкими орехами. Они особенно
+                                полезны послеоперационным больным,
+                                детям, кормящим, беременным женщинам. Чтобы вернуть силы, укрепить иммунитет, одолеть
+                                туберкулез, кашель;
+                                грецкий орех очищенный, отборный нужно истолочь, смешать с медом (2:1) и чайную ложку
+                                целебной смеси
+                                употреблять перед едой.
+                            </p>
+
+                            <p class="tab__text">В белке грецких орехов много (15 %) аргинина. Он особенно нужен детям,
+                                больным, пожилым людям,
+                                в организме
+                                которых аминокислота плохо синтезируется. Аргинин помогает сосудам регенерировать,
+                                а всему организму –
+                                победить воспаления.
+                            </p>
+
+                            <div class="tab__list-first">
+                                <p class="tab__title">Другие полезные вещества грецких орехов:</p>
+                                <ul class="tab-inner__list">
+                                    <li class="tab-inner__item">
+                                        <p class="tab-inner__text">Антиоксиданты защищают печень от повреждений</p>
+                                    </li>
+                                    <li class="tab-inner__item">
+                                        <p class="tab-inner__text">Полифенолы не дают образоваться сосудистым тромбам
+                                        </p>
+                                    </li>
+                                    <li class="tab-inner__item">
+                                        <p class="tab-inner__text">Нейропротекторы улучшают работу мозга, отодвигают
+                                            старость</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <p class="tab__title">Нужно систематически есть грецкие орехи, чтобы:</p>
+                            <ul class="tab-inner__list">
+                                <li class="tab-inner__item">
+                                    <p class="tab-inner__text">На 30–40 % снизить риск заболевания раком простаты</p>
+                                </li>
+                                <li class="tab-inner__item">
+                                    <p class="tab-inner__text">На 50 % – раком молочной железы</p>
+                                </li>
+                                <li class="tab-inner__item">
+                                    <p class="tab-inner__text">Предотвратить дегенерацию глазной макулы, а значит,
+                                        улучшить зрение</p>
+                                </li>
+                                <li class="tab-inner__item">
+                                    <p class="tab-inner__text">Отрегулировать обмен веществ, выработку инсулина;
+                                        понизить количество сахара в крови</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+
+                    <article class="tab__item" id="package">
+                        <div class="tab__content">
+                            <p class="tab__text">Высушенные плоды ореха грецкого обрабатывают и упаковывают в вакуумные
+                                полиетиленовые пакеты, а так же,
+                                дополнительно,
+                                в брендированые картонные коробочки массой 40, 80 и 500 грамм.
+                            </p>
+
+                            <p class="tab__title">При необходимости готовы рассмотреть изготовление партии по
+                                индивидуальным параметрам для наших клиентов.</p>
+
+                            <p class="tab__text">Тара должна быть крепкой, целой, сухой, не поврежденной вредителями,
+                                чистой, без посторонних запахов.
+                                Грецкий орех весьма удобен для транспортировки.
+                                Хранить орехи лучше всего в сухих, чистых помещениях при температуре от —3 до +5°С (без
+                                резких колебаний)
+                                и относительной
+                                влажности 60%.
+                                Орехи неплохо хранятся в течение 2-5 лет при температуре — 1-3°С, без заметного
+                                ухудшения качества.
+                            </p>
+
+                        </div>
+                    </article>
+
+                    <article class="tab__item" id="pay">
+                        <div class="tab__content">
+                            <p class="tab__text">
+                                pay tab
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="tab__item" id="shipping">
+                        <div class="tab__content">
+                            <p class="tab__text">
+                                shipping tab
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

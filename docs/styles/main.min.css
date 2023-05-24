@@ -4296,6 +4296,11 @@ template {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 1300px) {
+  .contacts__wrap {
+    gap: 50px;
+  }
+}
 @media screen and (max-width: 800px) {
   .contacts__map {
     width: 400px;

@@ -141,6 +141,14 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .contacts {
+    &__wrap {
+      gap: 50px;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .contacts {
     &__map {

@@ -9,9 +9,13 @@ $rfs-breakpoint: 1500;
 @import "./components/burger";
 @import "./components/productions";
 @import "./components/breadcrumb";
+@import "./components/about";
 
 @import "./components/banner";
 @import "./components/moreInfoBtn";
+
+@import "./components/video";
+@import "./components/video-sec";
 
 @import "./components/contacts";
 @import "./components/productsFilter";
@@ -49,10 +53,107 @@ $rfs-breakpoint: 1500;
   }
 }
 
+.products-about {
+  background: #fbfbfb;
+  &__wrap {
+    padding: 100px 0px 90px;
+    display: flex;
+    width: 1290px;
+    // flex-wrap: wrap;
+    gap: 63px;
+    margin: 0px auto;
+  }
+
+  &__col {
+    width: 527px;
+  }
+
+  &__text-wrap {
+    height: 277px;
+    padding-right: 45px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #337d5a;
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+  }
+
+  .section-sub-title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 208%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 8px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+
+  .products-about {
+    &__wrap {
+      flex-wrap: wrap;
+      margin: 0px 20px;
+      max-width: 90%;
+      justify-content: center;
+    }
+
+    &__col {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .banner-products {
     &__wrap {
       padding: 80px 0px 60px;
+    }
+
+    &__caption {
+      font-size: 42px;
+      line-height: 33px;
+    }
+  }
+
+  .products-about {
+    .section-title {
+      font-size: 29px;
+      line-height: 32px;
+    }
+
+    .section-sub-title {
+      font-size: 17px;
+      line-height: 120%;
     }
   }
 }
