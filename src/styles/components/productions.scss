@@ -57,11 +57,13 @@
     letter-spacing: 0.02em;
 
     color: $accent;
-    padding: 16.5px 27px 17.5px;
+    // padding: 16.5px 27px 17.5px;
+    padding: 14.5px 27px 17.5px;
     border: 1.5px solid $accent;
     text-decoration: none;
     display: inline-block;
-    margin-top: 66px;
+    // margin-top: 71px;
+    margin-top: 68px;
   }
 }
 
@@ -168,7 +170,7 @@
     // max-width: 500px;
     // max-height: 250px;
 
-    max-width: 100%;
+    max-width: 99%;
     max-height: 100%;
     height: 100%;
 
@@ -200,7 +202,7 @@
 
   &__content {
     // margin: 19px 23px 15px 20px;
-    margin: 5px 23px 15px 20px;
+    margin: 7px 23px 15px 20px;
   }
   &__text {
     margin-right: 130px;

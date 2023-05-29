@@ -5,6 +5,7 @@
 .tabs {
   &__wrap {
     display: grid;
+    padding-bottom: 91px;
   }
 
   .tabs-navigation {
@@ -27,7 +28,8 @@
       align-items: center;
       position: relative;
 
-      padding-bottom: 20px;
+      // padding-bottom: 20px;
+      padding-bottom: 14px;
 
       border-bottom: 3px solid transparent;
       &.active {
@@ -63,7 +65,9 @@
     gap: 52px;
     margin-top: 37px;
     .action-btn {
-      margin-top: 36px;
+      margin-top: 40px;
+      font-size: 14px;
+      padding: 18px 45px;
     }
 
     &.active {

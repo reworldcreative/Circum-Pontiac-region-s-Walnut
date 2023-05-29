@@ -6,6 +6,7 @@
   &__wrap {
     display: grid;
     margin-top: 83px;
+    padding-bottom: 74px;
   }
 
   .pay-tabs-navigation {
@@ -28,7 +29,8 @@
       align-items: center;
       position: relative;
 
-      padding-bottom: 14px;
+      // padding-bottom: 14px;
+      padding-bottom: 3px;
 
       border-bottom: 3px solid transparent;
       &.active {
@@ -111,6 +113,14 @@
     }
   }
 
+  &__block {
+    &:last-child {
+      .pay-tabs__text {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
   &__text {
     font-family: "Raleway", sans-serif;
     font-style: normal;
@@ -120,7 +130,8 @@
 
     color: $main;
     margin-top: 0px;
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
+    margin-bottom: 38px;
     width: 405px;
 
     &.returns {
@@ -141,6 +152,7 @@
   }
 
   &__content {
+    margin-top: 6px;
     > img {
       width: 770px;
       height: 471px;

@@ -65,3 +65,49 @@
     }
   }
 }
+
+// .video-carousel {
+//   margin: 0px;
+//   width: 700px;
+//   height: 472px;
+
+//   &__wraper {
+//     height: 100%;
+//   }
+
+//   &__slide {
+//     height: 100%;
+//   }
+
+//   &__navigation {
+//     position: relative;
+//     bottom: 55px;
+//     max-height: 58px;
+//     // bottom: 140px;
+//     display: flex;
+//     max-width: 141px;
+//     // max-height: 58px;
+//     z-index: 30;
+
+//     .video-carousel__button-prev {
+//       background-color: $accent;
+//       padding: 19.8px 25px;
+//       transform: rotate(180deg);
+//       img {
+//         filter: invert(99%) sepia(32%) saturate(2%) hue-rotate(258deg)
+//           brightness(116%) contrast(100%);
+//       }
+//     }
+
+//     .video-carousel__button-next {
+//       background-color: $accent;
+//       // padding: 19.8px 25px;
+//       padding: 15.8px 25px;
+//       margin-left: -1px;
+//       img {
+//         filter: invert(99%) sepia(32%) saturate(2%) hue-rotate(258deg)
+//           brightness(116%) contrast(100%);
+//       }
+//     }
+//   }
+// }

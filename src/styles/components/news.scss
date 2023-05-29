@@ -51,7 +51,7 @@
     margin-top: 70px;
     padding: 17.5px 24px 16.5px 28.5px;
     display: inline-block;
-    margin: 70px auto 0px;
+    margin: 72px auto 0px;
   }
 
   &__navigation {
@@ -228,6 +228,12 @@
     &__wrap {
       width: auto;
       margin: 0px 20px;
+    }
+
+    .video-gallery {
+      .poster-image {
+        height: auto;
+      }
     }
   }
 }

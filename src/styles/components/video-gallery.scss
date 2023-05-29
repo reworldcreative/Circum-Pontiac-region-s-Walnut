@@ -4,13 +4,15 @@
 
 .video-gallery {
   position: relative;
-  height: 100%;
+  // height: 100%;
   &__wrap {
     padding: 237px 0px 0px;
   }
 
   .poster-image {
-    height: 100%;
+    // height: 100%;
+    display: flex;
+    height: fit-content;
     img {
       width: 100%;
       height: 100%;
@@ -26,6 +28,10 @@
       left: 0px;
       position: absolute;
       z-index: -1;
+    }
+
+    &__button {
+      margin-bottom: 22px;
     }
 
     &__head {
@@ -75,10 +81,19 @@
     }
 
     .poster-image {
-      height: 200px;
+      height: 250px;
+      // height: auto;
 
       img {
         height: 100%;
+      }
+    }
+
+    .video-small {
+      .video-gallery {
+        .poster-image {
+          height: 300px;
+        }
       }
     }
   }

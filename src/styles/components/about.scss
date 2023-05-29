@@ -51,8 +51,8 @@
       // letter-spacing: 0.01em;
       width: 483px;
       margin-top: 0px;
-      // margin-bottom: 49px;
-      margin-bottom: 67px;
+      margin-bottom: 49px;
+      // margin-bottom: 67px;
     }
   }
 
@@ -71,6 +71,18 @@
   // }
 }
 
+@media screen and (max-width: 1300px) {
+  .about {
+    &__wrap {
+      padding: 100px 20px 90px;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .about {
     &__col {
@@ -81,6 +93,10 @@
     &__text_second {
       width: auto;
     }
+
+    .video__carousel {
+      height: 400px;
+    }
   }
 }
 
@@ -88,6 +104,14 @@
   .about {
     .section-title {
       font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    .video__carousel {
+      height: 300px;
     }
   }
 }

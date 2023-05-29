@@ -51,6 +51,33 @@ $rfs-breakpoint: 1500;
   &__text {
     display: none;
   }
+
+  &__wrap {
+    margin: 78px auto 88px;
+  }
+
+  // .products-about {
+  //   &__wrap {
+  //     padding: 105px 0px 90px;
+  //   }
+
+  //   .section-title {
+  //     line-height: 48px;
+  //   }
+
+  //   &__text {
+  //     margin-top: 0px;
+  //     line-height: 24px;
+  //   }
+
+  //   &__text-wrap {
+  //     padding-right: 80px;
+  //   }
+  // }
+
+  .shop {
+    padding: 14.5px 43px 17.5px;
+  }
 }
 
 .products-about {
@@ -112,6 +139,31 @@ $rfs-breakpoint: 1500;
     color: $main;
     margin-bottom: 32px;
   }
+
+  &__wrap {
+    padding: 105px 0px 90px;
+  }
+
+  .section-title {
+    line-height: 48px;
+  }
+
+  &__text {
+    margin-top: 0px;
+    line-height: 24px;
+  }
+
+  &__text-wrap {
+    padding-right: 80px;
+  }
+}
+
+.contacts__wrap {
+  margin: 73px auto 80px;
+}
+
+.footer__wrap {
+  padding-top: 18px;
 }
 
 @media screen and (max-width: 1400px) {

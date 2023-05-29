@@ -1159,8 +1159,11 @@ template {
 .footer__top .logo {
   margin-right: 79px;
 }
+.footer__top .logo__text {
+  margin: 0px;
+}
 .footer__top .menu {
-  align-items: center;
+  align-items: end;
   display: flex;
   width: 999px;
 }
@@ -1215,6 +1218,11 @@ template {
   }
   .footer__top .menu__list {
     padding: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .footer__top .menu {
+    margin: 0px 20px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1725,11 +1733,6 @@ template {
   height: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .video__wrap {
-    padding: 100px 0px 80px;
-  }
-}
 @media screen and (max-width: 800px) {
   .video__text {
     width: auto;
@@ -2103,7 +2106,7 @@ template {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1700px) {
   .breadcrumb {
     margin: 36px auto 0px 5vw;
   }
@@ -2522,6 +2525,7 @@ template {
 
 .tabs__wrap {
   display: grid;
+  padding-bottom: 91px;
 }
 .tabs .tabs-navigation {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -2541,7 +2545,7 @@ template {
   display: flex;
   align-items: center;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 14px;
   border-bottom: 3px solid transparent;
 }
 .tabs .tabs-navigation__item.active {
@@ -2570,7 +2574,9 @@ template {
   margin-top: 37px;
 }
 .tabs__item .action-btn {
-  margin-top: 36px;
+  margin-top: 40px;
+  font-size: 14px;
+  padding: 18px 45px;
 }
 .tabs__item.active {
   display: flex;
@@ -2670,6 +2676,7 @@ template {
 }
 .banner__image {
   position: relative;
+  height: 740px;
 }
 .banner__image img {
   width: 100%;
@@ -3049,7 +3056,7 @@ template {
 }
 
 .statistic__wrap {
-  margin: 70px auto 93px;
+  margin: 70px auto 87px;
   justify-content: center;
   display: flex;
 }
@@ -3097,6 +3104,7 @@ template {
   letter-spacing: 0.02em;
   color: #1a2f3f;
   margin: 0px auto;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -3132,7 +3140,7 @@ template {
 }
 .contacts__phones {
   display: flex;
-  margin-right: 47px;
+  margin-right: 33px;
 }
 .contacts__links {
   display: flex;

@@ -55,6 +55,9 @@ $rfs-breakpoint: 1500;
     width: fit-content;
     display: flex;
     gap: 40px;
+    width: 1292px;
+
+    padding-bottom: 76px;
   }
 
   &__container {
@@ -121,9 +124,12 @@ $rfs-breakpoint: 1500;
 
   &__image {
     margin-top: 29px;
-    margin-bottom: 28px;
+    // margin-bottom: 28px;
+    margin-bottom: 20px;
     img {
-      width: 100%;
+      // width: 100%;
+      width: 990px;
+      height: 595px;
     }
   }
 
@@ -145,6 +151,10 @@ $rfs-breakpoint: 1500;
 
     li {
       color: $accent;
+
+      .oneNews__text {
+        margin-bottom: 3px;
+      }
     }
   }
 
@@ -156,7 +166,7 @@ $rfs-breakpoint: 1500;
 }
 
 .sideNews {
-  width: 270px;
+  width: 220px;
   margin-top: 128px;
   text-align: center;
   background: #fcfcfc;
@@ -189,8 +199,10 @@ $rfs-breakpoint: 1500;
   }
 
   &__image {
-    margin-bottom: 14px;
-    width: 100%;
+    margin-bottom: 9px;
+    // width: 100%;
+    width: 220px;
+    height: 163px;
   }
 
   &__caption {
@@ -198,7 +210,7 @@ $rfs-breakpoint: 1500;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
-    line-height: 107%;
+    line-height: 119%;
 
     letter-spacing: 0.01em;
     color: $main;
@@ -222,6 +234,48 @@ $rfs-breakpoint: 1500;
     text-align: initial;
     margin-bottom: 8px;
   }
+
+  &__join {
+    margin-top: 20px;
+    padding: 43px 36px 29px;
+    background: $accent;
+    text-align: center;
+
+    .join-caption {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      letter-spacing: 0.02em;
+
+      color: $main-white;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+
+    .join-text {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: $main-white;
+      margin-bottom: 33px;
+      margin-top: 0px;
+    }
+    .socials__list {
+      justify-content: center;
+    }
+
+    .socials__icon {
+      filter: invert(100%) sepia(0%) saturate(7427%) hue-rotate(89deg)
+        brightness(106%) contrast(91%);
+    }
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -234,7 +288,7 @@ $rfs-breakpoint: 1500;
       margin: 57px 20px 86px;
       width: auto;
       max-width: fit-content;
-      gap: 0px;
+      gap: 20px;
     }
 
     &__container {
@@ -242,6 +296,15 @@ $rfs-breakpoint: 1500;
     }
 
     &__image {
+      width: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .sideNews {
       width: auto;
     }
   }
@@ -267,6 +330,11 @@ $rfs-breakpoint: 1500;
     &__list {
       display: flex;
       gap: 20px;
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
     }
   }
 }

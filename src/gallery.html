@@ -12,7 +12,7 @@
         @@include('html/Breadcrumbs/Breadcrumbs.html',{
         lastLink:"index.html",
         lastLinkText:"Главная",
-        currentLinkText:"О производстве",
+        currentLinkText:"Галерея",
         })
 
         <section class="gallery-banner">
@@ -23,7 +23,9 @@
             </div>
         </section>
 
-        @@include('html/gallery/gallery.html',{})
+        @@include('html/gallery/gallery.html',{
+            buttonText:"Посмотреть еще",
+        })
 
 
         @@include('html/contacts.html',{})

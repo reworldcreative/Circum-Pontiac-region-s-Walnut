@@ -371,8 +371,11 @@ template {
 .footer__top .logo {
   margin-right: 79px;
 }
+.footer__top .logo__text {
+  margin: 0px;
+}
 .footer__top .menu {
-  align-items: center;
+  align-items: end;
   display: flex;
   width: 999px;
 }
@@ -427,6 +430,11 @@ template {
   }
   .footer__top .menu__list {
     padding: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .footer__top .menu {
+    margin: 0px 20px;
   }
 }
 @media screen and (max-width: 800px) {

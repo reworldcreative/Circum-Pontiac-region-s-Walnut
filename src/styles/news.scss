@@ -37,6 +37,7 @@ $rfs-breakpoint: 1500;
     display: grid;
     justify-content: center;
     margin-top: 11px;
+    padding-bottom: 90px;
   }
 
   &__container {
@@ -63,7 +64,11 @@ $rfs-breakpoint: 1500;
       }
 
       &__title {
-        width: 243px;
+        // width: 243px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        width: 325px;
       }
     }
   }
@@ -71,7 +76,8 @@ $rfs-breakpoint: 1500;
   &__row {
     display: flex;
     gap: 30px;
-    margin-top: 60px;
+    // margin-top: 60px;
+    margin-top: 52px;
     margin-bottom: 26px;
   }
 
@@ -91,8 +97,19 @@ $rfs-breakpoint: 1500;
   }
 
   .more-info {
-    margin-top: 70px;
+    // margin-top: 70px;
+    margin-top: 53px;
   }
+}
+
+.contacts {
+  .section-title {
+    margin: 0px;
+  }
+}
+
+.footer__top {
+  padding-top: 58px;
 }
 
 @media screen and (max-width: 1400px) {

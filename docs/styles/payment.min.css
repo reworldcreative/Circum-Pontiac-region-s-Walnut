@@ -1159,8 +1159,11 @@ template {
 .footer__top .logo {
   margin-right: 79px;
 }
+.footer__top .logo__text {
+  margin: 0px;
+}
 .footer__top .menu {
-  align-items: center;
+  align-items: end;
   display: flex;
   width: 999px;
 }
@@ -1215,6 +1218,11 @@ template {
   }
   .footer__top .menu__list {
     padding: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .footer__top .menu {
+    margin: 0px 20px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1725,11 +1733,6 @@ template {
   height: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .video__wrap {
-    padding: 100px 0px 80px;
-  }
-}
 @media screen and (max-width: 800px) {
   .video__text {
     width: auto;
@@ -2491,7 +2494,7 @@ template {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1700px) {
   .breadcrumb {
     margin: 36px auto 0px 5vw;
   }
@@ -2841,7 +2844,7 @@ template {
 }
 
 .statistic__wrap {
-  margin: 70px auto 93px;
+  margin: 70px auto 87px;
   justify-content: center;
   display: flex;
 }
@@ -2889,6 +2892,7 @@ template {
   letter-spacing: 0.02em;
   color: #1a2f3f;
   margin: 0px auto;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -2941,6 +2945,7 @@ template {
 }
 .banner__image {
   position: relative;
+  height: 740px;
 }
 .banner__image img {
   width: 100%;
@@ -3000,7 +3005,7 @@ template {
 }
 .contacts__phones {
   display: flex;
-  margin-right: 47px;
+  margin-right: 33px;
 }
 .contacts__links {
   display: flex;
@@ -3431,6 +3436,7 @@ template {
 .pay-tabs__wrap {
   display: grid;
   margin-top: 83px;
+  padding-bottom: 74px;
 }
 .pay-tabs .pay-tabs-navigation {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -3450,7 +3456,7 @@ template {
   display: flex;
   align-items: center;
   position: relative;
-  padding-bottom: 14px;
+  padding-bottom: 3px;
   border-bottom: 3px solid transparent;
 }
 .pay-tabs .pay-tabs-navigation__item.active {
@@ -3516,6 +3522,9 @@ template {
 .pay-tabs__title.returns {
   margin-bottom: 35px;
 }
+.pay-tabs__block:last-child .pay-tabs__text {
+  margin-bottom: 0px;
+}
 .pay-tabs__text {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -3524,7 +3533,7 @@ template {
   line-height: 150%;
   color: #1a2f3f;
   margin-top: 0px;
-  margin-bottom: 24px;
+  margin-bottom: 38px;
   width: 405px;
 }
 .pay-tabs__text.returns {
@@ -3539,6 +3548,9 @@ template {
 }
 .pay-tabs__list li {
   color: #337d5a;
+}
+.pay-tabs__content {
+  margin-top: 6px;
 }
 .pay-tabs__content > img {
   width: 770px;
@@ -3588,10 +3600,22 @@ template {
 .banner-pay {
   background-image: url("../img/banner 10.jpg");
   background-repeat: no-repeat;
+  position: relative;
+}
+.banner-pay::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
 }
 .banner-pay__wrap {
   padding: 119px 0px 108px;
   text-align: center;
+  z-index: 10;
+  position: relative;
 }
 .banner-pay__caption {
   font-family: "Raleway", sans-serif;

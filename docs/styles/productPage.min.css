@@ -1159,8 +1159,11 @@ template {
 .footer__top .logo {
   margin-right: 79px;
 }
+.footer__top .logo__text {
+  margin: 0px;
+}
 .footer__top .menu {
-  align-items: center;
+  align-items: end;
   display: flex;
   width: 999px;
 }
@@ -1215,6 +1218,11 @@ template {
   }
   .footer__top .menu__list {
     padding: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .footer__top .menu {
+    margin: 0px 20px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1611,11 +1619,11 @@ template {
   line-height: 18px;
   letter-spacing: 0.02em;
   color: #337d5a;
-  padding: 16.5px 27px 17.5px;
+  padding: 14.5px 27px 17.5px;
   border: 1.5px solid #337d5a;
   text-decoration: none;
   display: inline-block;
-  margin-top: 66px;
+  margin-top: 68px;
 }
 
 .product {
@@ -1696,7 +1704,7 @@ template {
   display: flex;
 }
 .product__image {
-  max-width: 100%;
+  max-width: 99%;
   max-height: 100%;
   height: 100%;
 }
@@ -1715,7 +1723,7 @@ template {
   content: url("../img/right arrow.svg");
 }
 .product__content {
-  margin: 5px 23px 15px 20px;
+  margin: 7px 23px 15px 20px;
 }
 .product__text {
   margin-right: 130px;
@@ -2342,7 +2350,7 @@ template {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1700px) {
   .breadcrumb {
     margin: 36px auto 0px 5vw;
   }
@@ -2372,7 +2380,7 @@ template {
 }
 .contacts__phones {
   display: flex;
-  margin-right: 47px;
+  margin-right: 33px;
 }
 .contacts__links {
   display: flex;
@@ -2473,12 +2481,13 @@ template {
   margin: 78px auto 89px;
   display: flex;
   gap: 74px;
-  width: 1425px;
+  width: 1292px;
 }
 .mainProduct .product__carousel {
   background: #fcfcfc;
   border: 1.5px solid #93b474;
   min-width: 553px;
+  width: 553px;
   height: 571px;
 }
 .mainProduct .product__carousel:hover .search {
@@ -2566,12 +2575,9 @@ template {
   margin-bottom: 42px;
   width: 90%;
 }
-.mainProduct__infoList {
-  width: 99%;
-}
 .mainProduct__alert {
   background: #fcfcfc;
-  margin-top: 37px;
+  margin-top: 45px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 22px 17px 26px 18px;
   display: flex;
@@ -2592,7 +2598,7 @@ template {
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
-  line-height: 113%;
+  line-height: 129%;
   color: #1a2f3f;
   margin: 0px;
 }
@@ -2608,13 +2614,31 @@ template {
 .mainProduct .product__price .price__number {
   margin: 0px;
 }
+.mainProduct .product__price .price__number_text {
+  font-size: 18px;
+}
+.mainProduct .product__price .price__number_current {
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.01em;
+}
+.mainProduct .product__price .price__number_accent {
+  font-size: 16px;
+  line-height: 20px;
+}
+.mainProduct .product__price .price__number_total {
+  font-size: 18px;
+}
 .mainProduct .product__price .action-btn {
   margin-top: 0px;
+  padding: 16px 56px 17px 61px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .mainProduct-infoItem {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 41px;
 }
 .mainProduct-infoItem:first-child {
@@ -2632,6 +2656,7 @@ template {
   letter-spacing: 0.02em;
   color: #000000;
   margin: 0px;
+  width: 41%;
 }
 .mainProduct-infoItem__text {
   font-family: "Montserrat", sans-serif;
@@ -2668,6 +2693,7 @@ template {
   .mainProduct .product__carousel {
     min-width: 98%;
     height: fit-content;
+    width: auto;
   }
   .mainProduct .product__price .price__number_total {
     display: inline-block;
@@ -2676,6 +2702,9 @@ template {
 @media screen and (max-width: 500px) {
   .mainProduct-infoItem__caption {
     width: min-content;
+  }
+  .mainProduct-infoItem {
+    justify-content: space-between;
   }
 }
 .mainProduct-Info__wrap {
@@ -2689,6 +2718,7 @@ template {
   justify-content: space-evenly;
   margin: 0px auto;
   padding: 0px;
+  width: 950px;
 }
 .mainProduct-Info__item {
   padding: 0px 20px 20px;
@@ -2708,6 +2738,7 @@ template {
 }
 .mainProduct-Info__body {
   margin-top: 55px;
+  margin-bottom: 89px;
 }
 .mainProduct-Info__body .tab__item {
   display: none;
@@ -2757,15 +2788,24 @@ template {
   margin-bottom: 12px;
 }
 
+.footer__wrap {
+  padding-top: 53px;
+}
+
 @media screen and (max-width: 1400px) {
   .mainProduct-Info__wrap {
     width: auto;
     margin: 0px 20px;
   }
+  .mainProduct-Info__list {
+    width: auto;
+  }
 }
 @media screen and (max-width: 1000px) {
   .mainProduct-Info .tab__item img {
     width: 100%;
+    max-width: fit-content;
+    height: 70vh;
   }
   .mainProduct-Info .tab__item.active {
     flex-wrap: wrap;

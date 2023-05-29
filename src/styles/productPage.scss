@@ -27,7 +27,8 @@ $rfs-breakpoint: 1500;
     margin: 78px auto 89px;
     display: flex;
     gap: 74px;
-    width: 1425px;
+    // width: 1425px;
+    width: 1292px;
   }
 
   .product__carousel {
@@ -35,6 +36,7 @@ $rfs-breakpoint: 1500;
     border: 1.5px solid $contrast;
 
     min-width: 553px;
+    width: 553px;
     height: 571px;
 
     &:hover {
@@ -147,12 +149,13 @@ $rfs-breakpoint: 1500;
   }
 
   &__infoList {
-    width: 99%;
+    // width: 99%;
   }
 
   &__alert {
     background: #fcfcfc;
-    margin-top: 37px;
+    // margin-top: 37px;
+    margin-top: 45px;
     border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 22px 17px 26px 18px;
     display: flex;
@@ -178,7 +181,8 @@ $rfs-breakpoint: 1500;
         font-style: normal;
         font-weight: 500;
         font-size: 15px;
-        line-height: 113%;
+        // line-height: 113%;
+        line-height: 129%;
 
         color: $main;
         margin: 0px;
@@ -196,18 +200,41 @@ $rfs-breakpoint: 1500;
       margin-right: 30px;
       &__number {
         margin: 0px;
+
+        &_text {
+          font-size: 18px;
+        }
+
+        &_current {
+          font-size: 24px;
+          line-height: 29px;
+          letter-spacing: 0.01em;
+        }
+
+        &_accent {
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        &_total {
+          font-size: 18px;
+        }
       }
     }
 
     .action-btn {
       margin-top: 0px;
+      padding: 16px 56px 17px 61px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
     }
   }
 }
 
 .mainProduct-infoItem {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin-bottom: 41px;
 
   &:first-child {
@@ -228,6 +255,7 @@ $rfs-breakpoint: 1500;
 
     color: #000000;
     margin: 0px;
+    width: 41%;
   }
 
   &__text {
@@ -277,6 +305,7 @@ $rfs-breakpoint: 1500;
     .product__carousel {
       min-width: 98%;
       height: fit-content;
+      width: auto;
     }
 
     .product__price .price__number_total {
@@ -288,6 +317,10 @@ $rfs-breakpoint: 1500;
 @media screen and (max-width: 500px) {
   .mainProduct-infoItem__caption {
     width: min-content;
+  }
+
+  .mainProduct-infoItem {
+    justify-content: space-between;
   }
 }
 
@@ -307,6 +340,8 @@ $rfs-breakpoint: 1500;
     justify-content: space-evenly;
     margin: 0px auto;
     padding: 0px;
+
+    width: 950px;
   }
 
   &__item {
@@ -332,6 +367,7 @@ $rfs-breakpoint: 1500;
 
   &__body {
     margin-top: 55px;
+    margin-bottom: 89px;
     .tab {
       &__item {
         display: none;
@@ -398,11 +434,19 @@ $rfs-breakpoint: 1500;
   }
 }
 
+.footer__wrap {
+  padding-top: 53px;
+}
+
 @media screen and (max-width: 1400px) {
   .mainProduct-Info {
     &__wrap {
       width: auto;
       margin: 0px 20px;
+    }
+
+    &__list {
+      width: auto;
     }
   }
 }
@@ -412,6 +456,9 @@ $rfs-breakpoint: 1500;
     .tab__item {
       img {
         width: 100%;
+        max-width: fit-content;
+
+        height: 70vh;
       }
       &.active {
         flex-wrap: wrap;

@@ -17,9 +17,12 @@
     width: 1291px;
     .logo {
       margin-right: 79px;
+      &__text {
+        margin: 0px;
+      }
     }
     .menu {
-      align-items: center;
+      align-items: end;
       display: flex;
       width: 999px;
       &__list {
@@ -93,6 +96,16 @@
 
       .menu__list {
         padding: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    &__top {
+      .menu {
+        margin: 0px 20px;
       }
     }
   }
