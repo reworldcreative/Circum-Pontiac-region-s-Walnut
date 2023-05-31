@@ -45,13 +45,14 @@
 </ul>
         <p class="top-panel__text">Ваша персональная скидка - 5%</p>
         <div>
-            <button class="logIn-btn" aria-label="login button" role="button">
+            <a href="#" class="logIn-btn" aria-label="login button" role="button">
                 <img class="logIn-btn__icon" src="img/man-user.svg" alt="man user icon" aria-hidden="true">
                 Вход
-            </button>
-            <button class="registration-btn" aria-label="registration button" role="button">
+            </a>
+            <a href="registration.html" class="registration-btn" aria-label="registration button" role="button">
                 Регистрация
-            </button>
+            </a>
+
 
             <select class="language-select" name="language-select" aria-description="language select">
     <option value="RU" selected aria-label="Russian">RU</option>
@@ -65,7 +66,7 @@
 
         <section class="main-header">
             <div class="main-header__wrap">
-                <a class="logo" href="#" target="_blank">
+                <a class="logo" href="index.html">
     <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
@@ -122,23 +123,23 @@
 
         <nav class="menu" role="navigation" aria-label="main menu">
     <ul class="menu__list">
-        <li class="menu__item active" aria-current="page" aria-selected="true">
-            <a href="index.html" class="menu__link" role="menuitem">Магазин</a>
+        <li class="menu__item active" aria-current="page" aria-selected="true" id="products">
+            <a href="products.html" class="menu__link" role="menuitem">Магазин</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item" id="about">
             <a href="about.html" class="menu__link" role="menuitem">О производстве</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item" id="payment">
             <a href="payment.html" class="menu__link" role="menuitem">Оплата и доставка</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item" id="wholesale">
             <a href="wholesale.html" class="menu__link" role="menuitem">Оптовым и корпоративным клиентам</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item" id="news">
             <a href="news.html" class="menu__link" role="menuitem">Новости и статьи</a>
         </li>
         <li class="menu__item">
-            <a href="#" class="menu__link" role="menuitem">Контакты</a>
+            <a href="#contacts" class="menu__link" role="menuitem">Контакты</a>
         </li>
     </ul>
 </nav>
@@ -180,7 +181,7 @@
     <span class="burger-btn__line" aria-hidden="true"></span>
     <span class="burger-btn__line" aria-hidden="true"></span>
 </button>
-            <a class="logo" href="#" target="_blank">
+            <a class="logo" href="index.html">
     <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
@@ -192,7 +193,7 @@
 
         <nav class="burger__menu" role="navigation" aria-label="main menu">
     <div class="burger__menu_head">
-        <a class="logo" href="#" target="_blank">
+        <a class="logo" href="index.html">
     <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
@@ -235,7 +236,7 @@
     </div>
     <ul class="burger__list">
         <li class="burger__item">
-            <a href="index.html" class="burger__link">Магазин</a>
+            <a href="products.html" class="burger__link">Магазин</a>
         </li>
         <li class="burger__item">
             <a href="about.html" class="burger__link">О производстве</a>
@@ -250,7 +251,7 @@
             <a href="news.html" class="burger__link">Новости и статьи</a>
         </li>
         <li class="burger__item">
-            <a href="#" class="burger__link">Контакты</a>
+            <a href="#contacts" class="burger__link">Контакты</a>
         </li>
     </ul>
 </nav>
@@ -383,7 +384,7 @@
                </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
     <address class="contacts__wrap">
         <div class="contacts__container">
             <h2 class="section-title contacts__title">Контакты</h2>
@@ -471,17 +472,17 @@
     <footer class="footer">
     <div class="footer__wrap">
         <div class="footer__top">
-            <a class="logo" href="#" target="_blank">
+            <a class="logo" href="index.html">
     <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
             <nav class="menu" role="navigation" aria-label="main menu">
     <ul class="menu__list">
         <li class="menu__item active" aria-current="page" aria-selected="true">
-            <a href="index.html" class="menu__link" role="menuitem" aria-current="page">Магазин</a>
+            <a href="products.html" class="menu__link" role="menuitem" aria-current="page">Магазин</a>
         </li>
         <li class="menu__item">
-            <a href="#" class="menu__link" role="menuitem">Корпоративным клиентам</a>
+            <a href="wholesale.html" class="menu__link" role="menuitem">Корпоративным клиентам</a>
         </li>
         <li class="menu__item">
             <a href="payment.html" class="menu__link" role="menuitem">Оплата и доставка</a>

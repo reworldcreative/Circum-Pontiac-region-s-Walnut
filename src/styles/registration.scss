@@ -1,0 +1,384 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
+.registrationForm {
+  margin-top: 46px;
+  margin-left: 16.3vw;
+
+  &__wrap {
+    display: flex;
+    // gap: 268px;
+    gap: 16.6%;
+  }
+
+  &__first-col {
+    // width: 29.5%;
+    width: 24.8vw;
+  }
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 100%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin: 0px;
+    margin-bottom: 19px;
+  }
+
+  &__container {
+    margin: 0px;
+    margin-bottom: 47px;
+    padding: 0px;
+    border: none;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__caption {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 188%;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  &__law-status {
+    margin: 0px;
+    margin-bottom: 42px;
+    padding: 0px;
+    border: none;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    input[type="radio"] {
+      visibility: hidden;
+      height: 0;
+      width: 0;
+    }
+
+    input[type="radio"] + label {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 113%;
+
+      color: #000000;
+      padding: 11px 30px 13px;
+    }
+
+    input[type="radio"]:checked + label {
+      border-bottom: 2.5px solid $accent;
+      font-weight: 700;
+      color: $main;
+    }
+
+    .lawPerson__lable {
+      margin-right: 38px;
+    }
+  }
+
+  &__personal-information {
+    margin: 0px;
+    // margin-bottom: 42px;
+    padding: 0px;
+    border: none;
+    display: grid;
+    gap: 13px;
+  }
+
+  input,
+  select {
+    border: 0.5px solid rgba(0, 0, 0, 0.15);
+    padding: 16px 17px 14px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    // line-height: 121%;
+    color: $main;
+    width: -webkit-fill-available;
+
+    &::placeholder {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 121%;
+      color: $main;
+    }
+  }
+
+  select {
+    outline: 0px;
+    -webkit-border-radius: 1px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-repeat: no-repeat;
+    background-position: right;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    // background-position-x: 95%;
+    // background-position-y: 63%;
+    background-position-x: 97%;
+    background-position-y: 55%;
+
+    background-size: 12px;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  input[type="checkbox"] {
+    width: auto;
+  }
+  .agree__wrap {
+    margin: 20px 0px;
+    .agree__text {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 246%;
+      letter-spacing: 0.01em;
+
+      color: #8a8a8a;
+      margin-left: 9px;
+
+      &_accent {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 246%;
+        letter-spacing: 0.01em;
+
+        color: $accent;
+      }
+    }
+  }
+
+  .continue-btn {
+    font-family: "Raleway", a;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 106%;
+
+    color: $main-white;
+    background: $accent;
+    border: 0.5px solid $accent;
+    padding: 17px 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .avata-img {
+    filter: invert(31%) sepia(26%) saturate(967%) hue-rotate(99deg)
+      brightness(105%) contrast(46%);
+  }
+
+  .avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    &__download {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 131%;
+
+      color: $main-white;
+      background: none;
+      border: none;
+      position: absolute;
+      border-bottom: 1.5px dashed $main-white;
+      padding: 0px 0px 3px;
+    }
+  }
+
+  &__second-col {
+    margin-top: 63px;
+    width: 40%;
+  }
+
+  .isFOP {
+    margin-top: 11px;
+  }
+}
+
+input[type="checkbox"] {
+  outline: 1.5px solid $accent;
+}
+
+.checkbox__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 246%;
+  letter-spacing: 0.01em;
+
+  color: #8a8a8a;
+  margin-left: 9px;
+}
+
+.naturalPerson__dop {
+  // display: none;
+  display: block;
+}
+
+.legalPerson__dop {
+  display: none;
+  input[type="radio"] {
+    height: 13px;
+    width: 13px;
+
+    appearance: none;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 1px $accent;
+    padding: 0px;
+  }
+
+  input[type="radio"]::before {
+    content: "";
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 50%;
+    left: -1px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em $accent;
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(0.7);
+    position: absolute;
+  }
+
+  input[type="radio"] {
+    display: inline-grid;
+    place-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.legalPerson__dop {
+  .isFOP {
+    margin-bottom: 9px;
+  }
+
+  &-col {
+    display: grid;
+    gap: 15px;
+  }
+  &-info,
+  &-address {
+    margin: 47px 0px 0px;
+    padding: 0px;
+    border: none;
+  }
+
+  &-caption {
+    margin-bottom: 21px;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 188%;
+
+    letter-spacing: 0.01em;
+
+    color: $main;
+  }
+}
+
+@media screen and (max-width: 1860px) {
+  .registrationForm {
+    &__first-col {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .registrationForm {
+    margin-left: 7vw;
+
+    &__wrap {
+      gap: 5%;
+    }
+    &__first-col {
+      width: 50%;
+    }
+
+    &__second-col {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .registrationForm {
+    &__wrap {
+      display: grid;
+    }
+    &__second-col {
+      order: -1;
+    }
+
+    &__first-col {
+      width: 90%;
+    }
+    &__second-col {
+      width: 90%;
+    }
+
+    &__law-status {
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -494,8 +494,12 @@ template {
 .header .main-header__text {
   margin-left: 16px;
 }
+.header .logIn-btn {
+  text-decoration: none;
+}
 .header .registration-btn {
   margin-left: 22px;
+  text-decoration: none;
 }
 .header .language-select {
   border: none;
@@ -1945,10 +1949,10 @@ template {
 .menu__item:last-child {
   margin-right: 0px;
 }
-.menu__item.active .menu__link {
+.menu__item.active .menu__link, .menu__item:active .menu__link {
   color: #337d5a;
 }
-.menu__item.active::after {
+.menu__item.active::after, .menu__item:active::after {
   position: absolute;
   content: "";
   width: 120%;

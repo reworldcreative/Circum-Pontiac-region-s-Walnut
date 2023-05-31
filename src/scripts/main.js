@@ -8,120 +8,19 @@ $(document).ready(function () {
       $(".burger-btn,.burger__menu").toggleClass("show");
     });
   }
+
+  if ($(".menu__list")) {
+    $(".menu__list")[0]
+      .querySelectorAll(".menu__item")
+      .forEach((el) => {
+        el.classList.remove("active");
+      });
+    const pageNmae = location.href.split("/").pop().split(".").shift();
+    if ($(".menu__list #" + pageNmae)[0]) {
+      $(".menu__list #" + pageNmae)[0].classList.add("active");
+    }
+  }
 });
-
-// fetch("http://localhost:1337/api/products")
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   });
-
-// https://fakestoreapi.com/products?limit=5
-
-// async function getProducts() {
-//   const productList = document.getElementById("product-list");
-//   const item = document.createElement("li");
-//   item.classList.add("productions__item");
-//   fetch("http://localhost:1337/api/products?populate=image")
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log(data.data[0].attributes);
-
-//       item.innerHTML =
-//         `<article class="product">
-// <div class="badge ` +
-//         data.data[0].attributes.badge +
-//         ` aria-label="Promotion: discount on goods">
-//     <p class="badge__text">` +
-//         data.data[0].attributes.badgeText +
-//         `</p>
-// </div>
-
-// <div class="product__carousel">
-//     <div class="swiper product__swiper">
-//         <button class="search" aria-label="scale image">
-//             <img src="img/magnifying-glass.svg" alt="search icon">
-//         </button>
-//         <div class="swiper-wrapper">
-//             <div class="swiper-slide">
-//                 <img class="product__image" src="` +
-//         "http://localhost:1337" +
-//         data.data[0].attributes.image.data[0].attributes.url +
-//         `" alt="product image">
-//             </div>
-//             <div class="swiper-slide">
-//                 <img class="product__image" src="` +
-//         "http://localhost:1337" +
-//         data.data[0].attributes.image.data[1].attributes.url +
-//         `" alt="walnut image">
-//             </div>
-//         </div>
-
-//         <div class="swiper-button-prev"></div>
-//         <div class="swiper-button-next"></div>
-//     </div>
-// </div>
-
-// <div class="product__content">
-//     <div class="product__text">
-//         <h3 class="product__title">` +
-//         data.data[0].attributes.category +
-//         `</h3>
-//         <p class="product__article">0091</p>
-//         <p class="product__discription"> ` +
-//         data.data[0].attributes.name +
-//         `</p>
-//     </div>
-
-//     <div class="product__info">
-//         <div class="weight">
-//             <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
-//             <p class="weight__number">Масса: <span class="weight__number_accent"> ` +
-//         data.data[0].attributes.weight +
-//         `</span></p>
-//         </div>
-//         <div class="package">
-//             <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
-//             <p class="package__type">Упаковка <span class="package__type_accent">` +
-//         data.data[0].attributes.packageType +
-//         `</span></p>
-//         </div>
-//     </div>
-
-//     <div class="product__price">
-//         <div class="price">
-//             <p class="price__number"><span class="price__number_text">Цена:</span><span
-//                     class="price__number_accent price__number_from">` +
-//         (data.data[0].attributes.from ? "от" : "") +
-//         `</span> <span
-//                     class="price__number_current">` +
-//         data.data[0].attributes.currentPrice +
-//         ` </span><span
-//                     class="price__number_accent">` +
-//         data.data[0].attributes.currency +
-//         `</span>
-//                 <span class="price__number_total">` +
-//         data.data[0].attributes.price +
-//         ` <span
-//                         class="price__number_muted">` +
-//         data.data[0].attributes.currency +
-//         `</span></span>
-//             </p>
-//         </div>
-
-//         <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
-//     </div>
-// </div>
-// </article>`;
-//       productList.appendChild(item);
-//     });
-// }
-
-// getProducts();
 
 if (document.getElementById("play-btn")) {
   // document.getElementById("play-btn").onclick = function (event) {
@@ -144,6 +43,10 @@ if (document.getElementById("play-btn")) {
   );
 }
 
+// window.addEventListener("load", (event) => {
+//   console.log("page is fully loaded");
+// });
+
 if ($(".search")) {
   $(document).on("click", ".search", function (target) {
     // $(".search").click(function (target) {
@@ -156,11 +59,13 @@ if ($(".search")) {
     ).toggleClass("scale");
   });
 
-  $(".product__image").mouseleave(function () {
-    for (let index = 0; index < $(".product__image").length; index++) {
-      $(".product__image")[index].classList.remove("scale");
-    }
-  });
+  if ($(".product__image")) {
+    $(".product__image").mouseleave(function () {
+      for (let index = 0; index < $(".product__image").length; index++) {
+        $(".product__image")[index].classList.remove("scale");
+      }
+    });
+  }
 }
 
 if ($(".tabs-navigation__item")) {
@@ -232,15 +137,37 @@ if ($(".mainProduct-Info__item")) {
   });
 }
 
-const productSwiper = new Swiper(".product__swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-});
+if (document.getElementById("legalPerson")) {
+  document.getElementById("legalPerson").addEventListener("click", (event) => {
+    // console.log($(".naturalPerson__dop")[0]);
+    $(".naturalPerson__dop")[0].style.display = "none";
+    $(".legalPerson__dop")[0].style.display = "block";
+  });
+}
+
+if (document.getElementById("naturalPerson")) {
+  document
+    .getElementById("naturalPerson")
+    .addEventListener("click", (event) => {
+      // console.log($(".naturalPerson__dop")[0]);
+      $(".naturalPerson__dop")[0].style.display = "block";
+      $(".legalPerson__dop")[0].style.display = "none";
+    });
+}
+
+if ($("#FOP-radio")[0]) {
+  $("#FOP-radio")[0].addEventListener("change", (event) => {
+    $(".legalPerson__dop_legal")[0].style.display = "none";
+    $(".legalPerson__dop_FOP")[0].style.display = "block";
+  });
+}
+
+if ($("#legalPerson-radio")[0]) {
+  $("#legalPerson-radio")[0].addEventListener("change", (event) => {
+    $(".legalPerson__dop_FOP")[0].style.display = "none";
+    $(".legalPerson__dop_legal")[0].style.display = "block";
+  });
+}
 
 const videoSwiper = new Swiper(".video__carousel", {
   // slidesPerView: "auto",
@@ -276,26 +203,12 @@ const newsSwiper = new Swiper(".news__carousel", {
   },
 });
 
-// const video = document.querySelectorAll(".video-carousel");
-// const slidesCount =
-//   $(".video-carousel").find(".video-carousel__slide").length - 1;
-// let currentSlide = 0;
-// video.forEach((el) =>
-//   el
-//     .getElementsByClassName("video-carousel__button-next")[0]
-//     .addEventListener("click", (event) => {
-//       currentSlide++;
-//       currentSlide = currentSlide > slidesCount ? 0 : currentSlide++;
-//       console.log(currentSlide);
-//     })
-// );
-
-// video.forEach((el) =>
-//   el
-//     .getElementsByClassName("video-carousel__button-prev")[0]
-//     .addEventListener("click", (event) => {
-//       currentSlide--;
-//       currentSlide = currentSlide < 0 ? slidesCount : currentSlide--;
-//       console.log(currentSlide);
-//     })
-// );
+const productSwiper = new Swiper(".product__swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+});

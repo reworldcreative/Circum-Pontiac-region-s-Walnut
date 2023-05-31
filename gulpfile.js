@@ -44,7 +44,7 @@ const paths = {
   src: {
     html: `${srcFolder}/*.html`,
     styles: `${srcFolder}/styles/*.scss`,
-    scripts: `${srcFolder}/scripts/main.js`,
+    scripts: `${srcFolder}/scripts/*.js`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     files: `${srcFolder}/**/*.*`,
@@ -150,7 +150,10 @@ function js(done) {
       webpack({
         mode: isBuild ? "production" : "development",
         output: {
-          filename: "main.min.js",
+          filename: `[name].min.js`,
+        },
+        optimization: {
+          minimize: true,
         },
       })
     )

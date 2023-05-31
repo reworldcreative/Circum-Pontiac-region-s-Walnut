@@ -20,7 +20,8 @@
       margin-right: 0px;
     }
 
-    &.active {
+    &.active,
+    &:active {
       .menu__link {
         color: $accent;
       }

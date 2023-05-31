@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.min.css">
-    <title>Оплата и доставка</title>
+    <title>Регистрация</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="styles/payment.min.css">
+    <link rel="stylesheet" href="styles/registration.min.css">
 </head>
 
 <body>
@@ -264,198 +264,164 @@
     <ul class="breadcrumb__list">
         <li><a class="breadcrumb__link" href="index.html">Главная</a></li>
         <img class="breadcrumb__arrow" src="img/right arrow.svg" alt="right arrow">
-        <li><a class="breadcrumb__link" href="#">Оплата и доставка</a></li>
+        <li><a class="breadcrumb__link" href="#">Регистрация</a></li>
     </ul>
 </nav>
 
-        <section class="banner-pay">
-            <div class="banner-pay__wrap">
-                <h2 class="banner-pay__caption">Оплата и доставка</h2>
-            </div>
-        </section>
+        <form class="registrationForm" id="registrationForm">
+            <h1 class="registrationForm__title">Регистрация</h1>
 
-        <section class="pay-tabs">
-    <div class="pay-tabs__wrap">
-        <div class="pay-tabs__container">
-            <div class="pay-tabs-navigation">
-                <ul class="pay-tabs-navigation__list">
-                    <li class="pay-tabs-navigation__item active" name="order">
-                        <img class="pay-tabs-navigation__icon" src="img/tabs/wallet.svg" alt="wallet icon">
-                        <h3 class="pay-tabs-navigation__caption">Оплата заказа</h3>
-                    </li>
+            <div class="registrationForm__wrap">
+                <div class="registrationForm__first-col">
+                    <fieldset class="registrationForm__container">
+                        <legend class="registrationForm__caption">1. Контактные данные</legend>
 
-                    <li class="pay-tabs-navigation__item" name="delivery">
-                        <img class="pay-tabs-navigation__icon" src="img/tabs/lorry.svg" alt="lorry icon">
-                        <h3 class="pay-tabs-navigation__caption">Доставка партии</h3>
-                    </li>
+                        <fieldset class="registrationForm__law-status">
 
-                    <li class="pay-tabs-navigation__item" name="returns">
-                        <img class="pay-tabs-navigation__icon" src="img/tabs/package.svg" alt="package">
-                        <h3 class="pay-tabs-navigation__caption">Возврат товара</h3>
-                    </li>
-                </ul>
-            </div>
+                            <input type="radio" name="lawPerson" id="naturalPerson" value="natural" checked />
+                            <label class="lawPerson__lable" for="naturalPerson">Физическое лицо</label>
 
-            <div class="pay-tabs__body">
-                <article class="pay-tabs__item active" id="order">
-                    <div class="pay-tabs__content">
-                        <h3 class="pay-tabs__title">Способы оплаты </h3>
-                        <div class="pay-tabs__block">
-                            <div class="pay-tabs__row">
-                                <img class="pay-tabs__icon" src="img/tabs/bank.svg" alt="bank icon">
-                                <h4 class="pay-tabs__block-caption">Безналичный расчет</h4>
-                            </div>
-                            <p class="pay-tabs__text">
-                                Вы можете выбрать “получить реквизиты”
-                                для дальнейшей оплаты на карту, или в терминалах.
-                            </p>
+                            <input type="radio" name="lawPerson" id="legalPerson" value="legal" />
+                            <label for="legalPerson">Юридическое лицо</label>
+
+                        </fieldset>
+                        <fieldset class="registrationForm__personal-information">
+                            <input type="text" id="name" name="name" placeholder="ФИО*">
+                            <input type="email" id="email" name="email" placeholder="Email*">
+                            <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset class="registrationForm__container">
+                        <legend class="registrationForm__caption">2. Адрес</legend>
+
+                        <div class="registrationForm__personal-information">
+                            <select name="country" id="country">
+                                <option value="" disabled selected>Страна</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="USA">USA</option>
+                                <option value="France">France</option>
+                            </select>
+
+                            <select name="area" id="area">
+                                <option value="" disabled selected>Область</option>
+                                <option value="area 1">area 1</option>
+                                <option value="area 2">area 2</option>
+                            </select>
+
+                            <input type="text" id="city" name="city" placeholder="Город*">
+                            <input type="text" id="address" name="address" placeholder="Адрес">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="registrationForm__container">
+                        <legend class="registrationForm__caption">3. Пароль</legend>
+                        <fieldset class="registrationForm__personal-information">
+                            <input type="password" id="password" name="password" placeholder="Пароль*">
+                            <input type="password" id="confirm-password" name="password"
+                                placeholder="Подтвердите пароль*">
+                        </fieldset>
+
+                        <div class="agree__wrap">
+                            <input type="checkbox" id="agree" name="agree">
+                            <label class="agree__text" for="agree">Я согласен с <span class="agree__text_accent">
+                                    Условиями
+                                    регистрации</span></label>
                         </div>
 
-                        <div class="pay-tabs__block">
-                            <div class="pay-tabs__row">
-                                <img class="pay-tabs__icon" src="img/tabs/card.svg" alt="card icon">
-                                <h4 class="pay-tabs__block-caption">Оплата с помощью банковской карты</h4>
-                            </div>
-                            <p class="pay-tabs__text">
-                                Оплатите Ваш заказ картой любого банка онлайн
-                                (LiqPay/Приват24)
-                            </p>
-                        </div>
+                        <button class="continue-btn" aria-lable="continue"
+                            aria-description="continue registration">Продолжить</button>
+                    </fieldset>
+                </div>
 
-                        <div class="pay-tabs__block">
-                            <div class="pay-tabs__row">
-                                <img class="pay-tabs__icon" src="img/tabs/walletFull.svg" alt="card icon">
-                                <h4 class="pay-tabs__block-caption">Наличный расчет</h4>
-                            </div>
-                            <p class="pay-tabs__text">
-                                Оплата заказов наложенным платежом в отделении
-                                Новой Почты, или наличными курьерами
-                            </p>
+                <div class="registrationForm__second-col">
+                    <div class="avatar">
+                        <img class="avata-img" src="img/avatar.png" alt="avatar">
+                        <button class="avatar__download">Загрузить фото</button>
+                    </div>
+
+                    <div class="naturalPerson__dop">
+                        <div class="isFOP">
+                            <input type="checkbox" id="FOP" name="FOP">
+                            <label class="checkbox__text" for="FOP">Являюсь ФОП</label>
                         </div>
                     </div>
-                    <img src="img/tabs/pay-tab 1.jpg"
-                        alt="hand holding a bank card in the background man holding a laptop on his lap">
-                </article>
 
-                <article class="pay-tabs__item" id="delivery">
-                    <div class="pay-tabs__content">
-                        <h3 class="pay-tabs__title">Способы доставки</h3>
-                        <div class="pay-tabs__block">
-                            <div class="pay-tabs__row">
-                                <img class="pay-tabs__icon" src="img/tabs/courier.svg" alt="courier icon">
-                                <h4 class="pay-tabs__block-caption">Курьером по Одессе</h4>
+                    <div class="legalPerson__dop">
+                        <div class="isFOP">
+                            <div>
+                                <input type="radio" id="legalPerson-radio" name="isFOP-radio" checked>
+                                <label class="checkbox__text" for="legalPerson-radio">Юр. лицо</label>
                             </div>
-                            <p class="pay-tabs__text">
-                                Доставка всегда включена в стоимость
-                            </p>
+
+                            <div>
+                                <input type="radio" id="FOP-radio" name="isFOP-radio">
+                                <label class="checkbox__text" for="FOP-radio">ФОП</label>
+                            </div>
                         </div>
 
-                        <div class="pay-tabs__block">
-                            <div class="pay-tabs__row">
-                                <img class="pay-tabs__icon" src="img/tabs/Nova Posta.svg" alt="Nova Posta icon">
-                                <h4 class="pay-tabs__block-caption">Доставка по Украине</h4>
-                            </div>
-                            <p class="pay-tabs__text">
-                                Доставка по всей Украине осуществляется
-                                Новой Почтой, за счет покупателя
-                            </p>
+                        <div class="legalPerson__dop_legal">
+                            <fieldset class="legalPerson__dop-info">
+                                <legend class="legalPerson__dop-caption">1. Реквизиты</legend>
+                                <input type="text" id="props" name="props" placeholder="ОКПО">
+                            </fieldset>
+
+                            <fieldset class="legalPerson__dop-address">
+                                <legend class="legalPerson__dop-caption">2. Юридический адрес</legend>
+                                <div class="legalPerson__dop-col">
+                                    <select name="country" id="legalPerson-country">
+                                        <option value="" disabled selected>Страна</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="USA">USA</option>
+                                        <option value="France">France</option>
+                                    </select>
+
+                                    <select name="area" id="legalPerson-area">
+                                        <option value="" disabled selected>Область</option>
+                                        <option value="area 1">area 1</option>
+                                        <option value="area 2">area 2</option>
+                                    </select>
+
+                                    <input type="text" id="legalPerson-city" name="city" placeholder="Город*">
+                                    <input type="text" id="legalPerson-address" name="address" placeholder="Адрес">
+                                    <input type="text" id="legalPerson-index" name="index" placeholder="Индекс">
+                                </div>
+                            </fieldset>
+
                         </div>
 
-                        <div class="pay-tabs__block">
-                            <div class="pay-tabs__row">
-                                <img class="pay-tabs__icon" src="img/tabs/box.svg" alt="package icon">
-                                <h4 class="pay-tabs__block-caption">Отправка товара</h4>
-                            </div>
-                            <p class="pay-tabs__text">
-                                Отправка товара, который есть в наличии,
-                                происходит в течении 2-4 рабочих дней
-                            </p>
+                        <div class="legalPerson__dop_FOP">
+                            <fieldset class="legalPerson__dop-info">
+                                <legend class="legalPerson__dop-caption">1. Реквизиты</legend>
+                                <input type="text" id="props-FOP" name="props" placeholder="ЕДРПО">
+                            </fieldset>
+                            <fieldset class="legalPerson__dop-address">
+                                <legend class="legalPerson__dop-caption">2. Адрес ФОП</legend>
+                                <div class="legalPerson__dop-col">
+                                    <select name="country" id="legalPerson-country">
+                                        <option value="" disabled selected>Страна</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="USA">USA</option>
+                                        <option value="France">France</option>
+                                    </select>
+
+                                    <select name="area" id="legalPerson-area-FOP">
+                                        <option value="" disabled selected>Область</option>
+                                        <option value="area 1">area 1</option>
+                                        <option value="area 2">area 2</option>
+                                    </select>
+
+                                    <input type="text" id="legalPerson-city-FOP" name="city" placeholder="Город*">
+                                    <input type="text" id="legalPerson-address-FOP" name="address" placeholder="Адрес">
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
-                    <img src="img/tabs/pay-tab 2.jpg" alt="a man loads boxes into a car">
-                </article>
 
-                <article class="pay-tabs__item" id="returns">
-                    <div class="pay-tabs__content">
-                        <h3 class="pay-tabs__title returns">Возврат товара</h3>
-
-                        <div class="pay-tabs__block">
-                            <p class="pay-tabs__text returns">
-                                Возврат товара осуществляется в соответствии с Законом Украины «О защите прав
-                                потребителей». В период установленного производителем срока гарантии Вы можете вернуть
-                                нам товар при таких условиях:
-                            </p>
-
-                            <ul class="pay-tabs__list">
-                                <li>
-                                    <p class="pay-tabs__text">Наличие документа от уполномоченного производителем
-                                        сервисного центра, где
-                                        указано, что дефект является существенным (товар ненадлежащего качества);</p>
-                                </li>
-
-                                <li>
-                                    <p class="pay-tabs__text">Сохранен гарантийный талон и документ, подтверждающий
-                                        оплату;</p>
-                                </li>
-
-                                <li>
-                                    <p class="pay-tabs__text">Целостность комплекта не нарушена.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <img src="img/tabs/pay-tab 3.jpg" alt="boxes">
-                </article>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </form>
 
-        <section class="statistic">
-    <div class="statistic__wrap">
-        <h2 class="section-title visibility-hidden" aria-hidden="true">statistic</h2>
-        <ul class="statistic__list">
-            <li class="statistic__item" aria-label="240 ha Mixed gardens">
-                <strong class="statistic__number">240<span class="statistic__number_unit">Га</span></strong>
-                <p class="statistic__text">Cмешанных <br> садов</p>
-            </li>
-
-            <li class="statistic__item" aria-label="1 ha Greenhouse complex">
-                <strong class="statistic__number">1<span class="statistic__number_unit">Га</span></strong>
-                <p class="statistic__text">Тепличного <br> комплекса</p>
-            </li>
-
-            <li class="statistic__item" aria-label="10 ha The first industrial rosehip plantation in Ukraine">
-                <strong class="statistic__number">10<span class="statistic__number_unit">Га</span></strong>
-                <p class="statistic__text">Первая промышленная плантация <br> шиповника в Украине</p>
-            </li>
-
-            <li class="statistic__item" aria-label="80% Seedling survival rate">
-                <strong class="statistic__number">80<span class="statistic__number_unit">%</span></strong>
-                <p class="statistic__text">Приживаемости <br> саженцев</p>
-            </li>
-        </ul>
-    </div>
-</section>
-        <section class="video-sec video">
-    <div class="video__wrap video-sec__wrap">
-        <h2 class="video__head">Наша главная цель - получить максимальную прибыль с одного гектара</h2>
-        <button class="video__button" id="play-btn" aria-label="Play video: Circum Pontiac region's Walnut">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-        <p class="video__text">
-            Cмотреть видео о производстве
-        </p>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/banner2.jpg" alt="banner">
-    </div>
-
-    <iframe class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
-        title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</section>
         <section class="contacts" id="contacts">
     <address class="contacts__wrap">
         <div class="contacts__container">

@@ -1846,277 +1846,303 @@ template {
   color: #8a8a8a;
 }
 
-.readMore {
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+.registrationForm {
+  margin-top: 46px;
+  margin-left: 16.3vw;
+}
+.registrationForm__wrap {
+  display: flex;
+  gap: 16.6%;
+}
+.registrationForm__first-col {
+  width: 24.8vw;
+}
+.registrationForm__title {
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 143%;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: #1a2f3f;
-}
-.readMore:hover {
-  color: #337d5a;
-}
-.readMore:hover .readMore__arrow {
-  filter: none;
-}
-.readMore__arrow {
-  filter: invert(0%) sepia(100%) saturate(8%) hue-rotate(163deg) brightness(90%) contrast(310%);
-  width: 18px;
-  margin-left: 7px;
-}
-
-.oneNews__wrap {
-  margin: 57px auto 86px;
-  width: fit-content;
-  display: flex;
-  gap: 40px;
-  width: 1292px;
-  padding-bottom: 76px;
-}
-.oneNews__container {
-  width: 990px;
-}
-.oneNews__title {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 32px;
-  line-height: 109%;
+  line-height: 100%;
   letter-spacing: 0.01em;
   color: #1a2f3f;
   margin: 0px;
-  margin-bottom: 12px;
-  width: 468px;
+  margin-bottom: 19px;
 }
-.oneNews__sub-title {
-  font-family: "Raleway", sans-serif;
+.registrationForm__container {
+  margin: 0px;
+  margin-bottom: 47px;
+  padding: 0px;
+  border: none;
+}
+.registrationForm__container:last-child {
+  margin-bottom: 0px;
+}
+.registrationForm__caption {
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 117%;
-  letter-spacing: 0.01em;
-  color: #1a2f3f;
-  width: 500px;
-  margin-top: 0px;
-  margin-bottom: 22px;
-}
-.oneNews__sub-title.first {
-  margin-top: 39px;
-}
-.oneNews__list-caption {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 175%;
+  font-size: 17px;
+  line-height: 188%;
   letter-spacing: 0.01em;
   color: #1a2f3f;
   margin-top: 0px;
-  margin-bottom: 11px;
+  margin-bottom: 20px;
 }
-.oneNews__date {
+.registrationForm__law-status {
+  margin: 0px;
+  margin-bottom: 42px;
+  padding: 0px;
+  border: none;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.registrationForm__law-status input[type=radio] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.registrationForm__law-status input[type=radio] + label {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
-  line-height: 147%;
-  letter-spacing: 0.01em;
-  color: #8a8a8a;
+  line-height: 113%;
+  color: #000000;
+  padding: 11px 30px 13px;
 }
-.oneNews__image {
-  margin-top: 29px;
-  margin-bottom: 20px;
+.registrationForm__law-status input[type=radio]:checked + label {
+  border-bottom: 2.5px solid #337d5a;
+  font-weight: 700;
+  color: #1a2f3f;
 }
-.oneNews__image img {
-  width: 990px;
-  height: 595px;
+.registrationForm__law-status .lawPerson__lable {
+  margin-right: 38px;
 }
-.oneNews__text {
-  font-family: "Raleway", sans-serif;
+.registrationForm__personal-information {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  display: grid;
+  gap: 13px;
+}
+.registrationForm input,
+.registrationForm select {
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  padding: 16px 17px 14px;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 156%;
+  font-size: 14px;
   color: #1a2f3f;
-  margin-top: 0px;
-  margin-bottom: 15px;
+  width: -webkit-fill-available;
 }
-.oneNews__list {
-  margin: 0px;
-  padding-left: 20px;
+.registrationForm input::placeholder,
+.registrationForm select::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 121%;
+  color: #1a2f3f;
 }
-.oneNews__list li {
-  color: #337d5a;
+.registrationForm select {
+  outline: 0px;
+  -webkit-border-radius: 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-position-x: 97%;
+  background-position-y: 55%;
+  background-size: 12px;
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
 }
-.oneNews__list li .oneNews__text {
-  margin-bottom: 3px;
-}
-.oneNews__more {
-  text-align: center;
-  margin-top: 50px;
+.registrationForm option[value=""][disabled] {
   display: none;
 }
-
-.sideNews {
-  width: 220px;
-  margin-top: 128px;
-  text-align: center;
-  background: #fcfcfc;
-  padding: 27px 20px 30px;
+.registrationForm input[type=checkbox] {
+  width: auto;
 }
-.sideNews__title {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 108%;
-  text-align: center;
-  letter-spacing: 0.01em;
-  color: #1a2f3f;
-  margin-top: 0px;
-  margin-bottom: 19px;
+.registrationForm .agree__wrap {
+  margin: 20px 0px;
 }
-.sideNews__list {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-.sideNews__item {
-  margin-bottom: 41px;
-}
-.sideNews__item:last-child {
-  margin-bottom: 0px;
-}
-.sideNews__image {
-  margin-bottom: 9px;
-  width: 220px;
-  height: 163px;
-}
-.sideNews__caption {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 119%;
-  letter-spacing: 0.01em;
-  color: #1a2f3f;
-  margin-top: 0px;
-  text-align: initial;
-  margin-bottom: 8px;
-}
-.sideNews__date {
+.registrationForm .agree__wrap .agree__text {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
-  line-height: 169%;
+  line-height: 246%;
   letter-spacing: 0.01em;
   color: #8a8a8a;
-  width: 100%;
-  display: block;
-  text-align: initial;
-  margin-bottom: 8px;
+  margin-left: 9px;
 }
-.sideNews__join {
-  margin-top: 20px;
-  padding: 43px 36px 29px;
-  background: #337d5a;
-  text-align: center;
-}
-.sideNews__join .join-caption {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin-bottom: 20px;
-  margin-top: 0px;
-}
-.sideNews__join .join-text {
-  font-family: "Raleway", sans-serif;
+.registrationForm .agree__wrap .agree__text_accent {
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 17px;
-  line-height: 20px;
-  text-align: center;
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  line-height: 246%;
+  letter-spacing: 0.01em;
+  color: #337d5a;
+}
+.registrationForm .continue-btn {
+  font-family: "Raleway", a;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 106%;
   color: #ffffff;
-  margin-bottom: 33px;
-  margin-top: 0px;
+  background: #337d5a;
+  border: 0.5px solid #337d5a;
+  padding: 17px 0px;
+  text-align: center;
+  width: 100%;
 }
-.sideNews__join .socials__list {
+.registrationForm .avata-img {
+  filter: invert(31%) sepia(26%) saturate(967%) hue-rotate(99deg) brightness(105%) contrast(46%);
+}
+.registrationForm .avatar {
+  position: relative;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: fit-content;
 }
-.sideNews__join .socials__icon {
-  filter: invert(100%) sepia(0%) saturate(7427%) hue-rotate(89deg) brightness(106%) contrast(91%);
+.registrationForm .avatar__download {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 131%;
+  color: #ffffff;
+  background: none;
+  border: none;
+  position: absolute;
+  border-bottom: 1.5px dashed #ffffff;
+  padding: 0px 0px 3px;
+}
+.registrationForm__second-col {
+  margin-top: 63px;
+  width: 40%;
+}
+.registrationForm .isFOP {
+  margin-top: 11px;
 }
 
-@media screen and (max-width: 1400px) {
-  .breadcrumb {
-    margin: 36px auto 0px 5vw;
+input[type=checkbox] {
+  outline: 1.5px solid #337d5a;
+}
+
+.checkbox__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 246%;
+  letter-spacing: 0.01em;
+  color: #8a8a8a;
+  margin-left: 9px;
+}
+
+.naturalPerson__dop {
+  display: block;
+}
+
+.legalPerson__dop {
+  display: none;
+}
+.legalPerson__dop input[type=radio] {
+  height: 13px;
+  width: 13px;
+  appearance: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #337d5a;
+  padding: 0px;
+}
+.legalPerson__dop input[type=radio]::before {
+  content: "";
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  left: -1px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #337d5a;
+}
+.legalPerson__dop input[type=radio]:checked::before {
+  transform: scale(0.7);
+  position: absolute;
+}
+.legalPerson__dop input[type=radio] {
+  display: inline-grid;
+  place-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.legalPerson__dop .isFOP {
+  margin-bottom: 9px;
+}
+.legalPerson__dop-col {
+  display: grid;
+  gap: 15px;
+}
+.legalPerson__dop-info, .legalPerson__dop-address {
+  margin: 47px 0px 0px;
+  padding: 0px;
+  border: none;
+}
+.legalPerson__dop-caption {
+  margin-bottom: 21px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 188%;
+  letter-spacing: 0.01em;
+  color: #1a2f3f;
+}
+
+@media screen and (max-width: 1860px) {
+  .registrationForm__first-col {
+    width: 35%;
   }
-  .oneNews__wrap {
-    margin: 57px 20px 86px;
-    width: auto;
-    max-width: fit-content;
-    gap: 20px;
+}
+@media screen and (max-width: 1600px) {
+  .registrationForm {
+    margin-left: 7vw;
   }
-  .oneNews__container {
-    width: 70%;
+  .registrationForm__wrap {
+    gap: 5%;
   }
-  .oneNews__image {
-    width: auto;
+  .registrationForm__first-col {
+    width: 50%;
   }
-  .oneNews__image img {
-    width: 100%;
-    height: auto;
-  }
-  .oneNews .sideNews {
-    width: auto;
+  .registrationForm__second-col {
+    width: 40%;
   }
 }
 @media screen and (max-width: 1000px) {
-  .oneNews__wrap {
-    display: block;
-    width: 100%;
-    margin-bottom: 0px;
+  .registrationForm__wrap {
+    display: grid;
   }
-  .oneNews__container {
-    width: 100%;
+  .registrationForm__second-col {
+    order: -1;
   }
-  .sideNews {
-    width: 100%;
-    margin-top: 30px;
-    padding: 10px;
+  .registrationForm__first-col {
+    width: 90%;
   }
-  .sideNews__list {
-    display: flex;
-    gap: 20px;
+  .registrationForm__second-col {
+    width: 90%;
   }
-  .sideNews__image {
-    width: 100%;
-    height: auto;
-  }
-}
-@media screen and (max-width: 600px) {
-  .oneNews__more {
-    display: block;
-  }
-  .oneNews__title {
-    width: auto;
-  }
-  .oneNews__sub-title {
-    width: auto;
-  }
-  .sideNews {
-    display: none;
+  .registrationForm__law-status {
+    flex-wrap: wrap;
   }
 }

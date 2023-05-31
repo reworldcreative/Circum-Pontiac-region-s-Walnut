@@ -155,8 +155,12 @@
 .header .main-header__text {
   margin-left: 16px;
 }
+.header .logIn-btn {
+  text-decoration: none;
+}
 .header .registration-btn {
   margin-left: 22px;
+  text-decoration: none;
 }
 .header .language-select {
   border: none;

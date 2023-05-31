@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Регистрация",
+"style":"registration",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Регистрация",
+        })
+
+        <form class="registrationForm" id="registrationForm">
+            <h1 class="registrationForm__title">Регистрация</h1>
+
+            <div class="registrationForm__wrap">
+                <div class="registrationForm__first-col">
+                    <fieldset class="registrationForm__container">
+                        <legend class="registrationForm__caption">1. Контактные данные</legend>
+
+                        <fieldset class="registrationForm__law-status">
+
+                            <input type="radio" name="lawPerson" id="naturalPerson" value="natural" checked />
+                            <label class="lawPerson__lable" for="naturalPerson">Физическое лицо</label>
+
+                            <input type="radio" name="lawPerson" id="legalPerson" value="legal" />
+                            <label for="legalPerson">Юридическое лицо</label>
+
+                        </fieldset>
+                        <fieldset class="registrationForm__personal-information">
+                            <input type="text" id="name" name="name" placeholder="ФИО*">
+                            <input type="email" id="email" name="email" placeholder="Email*">
+                            <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset class="registrationForm__container">
+                        <legend class="registrationForm__caption">2. Адрес</legend>
+
+                        <div class="registrationForm__personal-information">
+                            <select name="country" id="country">
+                                <option value="" disabled selected>Страна</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="USA">USA</option>
+                                <option value="France">France</option>
+                            </select>
+
+                            <select name="area" id="area">
+                                <option value="" disabled selected>Область</option>
+                                <option value="area 1">area 1</option>
+                                <option value="area 2">area 2</option>
+                            </select>
+
+                            <input type="text" id="city" name="city" placeholder="Город*">
+                            <input type="text" id="address" name="address" placeholder="Адрес">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="registrationForm__container">
+                        <legend class="registrationForm__caption">3. Пароль</legend>
+                        <fieldset class="registrationForm__personal-information">
+                            <input type="password" id="password" name="password" placeholder="Пароль*">
+                            <input type="password" id="confirm-password" name="password"
+                                placeholder="Подтвердите пароль*">
+                        </fieldset>
+
+                        <div class="agree__wrap">
+                            <input type="checkbox" id="agree" name="agree">
+                            <label class="agree__text" for="agree">Я согласен с <span class="agree__text_accent">
+                                    Условиями
+                                    регистрации</span></label>
+                        </div>
+
+                        <button class="continue-btn" aria-lable="continue"
+                            aria-description="continue registration">Продолжить</button>
+                    </fieldset>
+                </div>
+
+                <div class="registrationForm__second-col">
+                    <div class="avatar">
+                        <img class="avata-img" src="@img/avatar.png" alt="avatar">
+                        <button class="avatar__download">Загрузить фото</button>
+                    </div>
+
+                    <div class="naturalPerson__dop">
+                        <div class="isFOP">
+                            <input type="checkbox" id="FOP" name="FOP">
+                            <label class="checkbox__text" for="FOP">Являюсь ФОП</label>
+                        </div>
+                    </div>
+
+                    <div class="legalPerson__dop">
+                        <div class="isFOP">
+                            <div>
+                                <input type="radio" id="legalPerson-radio" name="isFOP-radio" checked>
+                                <label class="checkbox__text" for="legalPerson-radio">Юр. лицо</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="FOP-radio" name="isFOP-radio">
+                                <label class="checkbox__text" for="FOP-radio">ФОП</label>
+                            </div>
+                        </div>
+
+                        <div class="legalPerson__dop_legal">
+                            <fieldset class="legalPerson__dop-info">
+                                <legend class="legalPerson__dop-caption">1. Реквизиты</legend>
+                                <input type="text" id="props" name="props" placeholder="ОКПО">
+                            </fieldset>
+
+                            <fieldset class="legalPerson__dop-address">
+                                <legend class="legalPerson__dop-caption">2. Юридический адрес</legend>
+                                <div class="legalPerson__dop-col">
+                                    <select name="country" id="legalPerson-country">
+                                        <option value="" disabled selected>Страна</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="USA">USA</option>
+                                        <option value="France">France</option>
+                                    </select>
+
+                                    <select name="area" id="legalPerson-area">
+                                        <option value="" disabled selected>Область</option>
+                                        <option value="area 1">area 1</option>
+                                        <option value="area 2">area 2</option>
+                                    </select>
+
+                                    <input type="text" id="legalPerson-city" name="city" placeholder="Город*">
+                                    <input type="text" id="legalPerson-address" name="address" placeholder="Адрес">
+                                    <input type="text" id="legalPerson-index" name="index" placeholder="Индекс">
+                                </div>
+                            </fieldset>
+
+                        </div>
+
+                        <div class="legalPerson__dop_FOP">
+                            <fieldset class="legalPerson__dop-info">
+                                <legend class="legalPerson__dop-caption">1. Реквизиты</legend>
+                                <input type="text" id="props-FOP" name="props" placeholder="ЕДРПО">
+                            </fieldset>
+                            <fieldset class="legalPerson__dop-address">
+                                <legend class="legalPerson__dop-caption">2. Адрес ФОП</legend>
+                                <div class="legalPerson__dop-col">
+                                    <select name="country" id="legalPerson-country">
+                                        <option value="" disabled selected>Страна</option>
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="USA">USA</option>
+                                        <option value="France">France</option>
+                                    </select>
+
+                                    <select name="area" id="legalPerson-area-FOP">
+                                        <option value="" disabled selected>Область</option>
+                                        <option value="area 1">area 1</option>
+                                        <option value="area 2">area 2</option>
+                                    </select>
+
+                                    <input type="text" id="legalPerson-city-FOP" name="city" placeholder="Город*">
+                                    <input type="text" id="legalPerson-address-FOP" name="address" placeholder="Адрес">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
