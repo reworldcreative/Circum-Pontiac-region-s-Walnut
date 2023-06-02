@@ -1,0 +1,124 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/address";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
+.contacts__wrap {
+  padding-top: 83px;
+  padding-bottom: 52px;
+}
+
+.avatar {
+  margin-left: 29px;
+  width: 131.01px;
+  height: 170px;
+
+  &__wrap {
+    margin-top: 16px;
+  }
+}
+
+#companyContact {
+  display: none;
+}
+
+.avata-img {
+  filter: invert(31%) sepia(16%) saturate(997%) hue-rotate(100deg)
+    brightness(95%) contrast(87%);
+}
+
+.address {
+  // width: 1290px;
+  margin: 57px auto 0px;
+}
+
+.contactForm {
+  width: 37%;
+}
+
+.continue-btn {
+  margin: 0px;
+}
+
+.registrationForm__container {
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 1500px) {
+  .address {
+    width: auto;
+    margin: 57px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .contactForm {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contactForm {
+    width: 100%;
+    order: 2;
+  }
+
+  .address__sidebar {
+    width: 100%;
+  }
+
+  .address__wrap {
+    display: grid;
+    order: 1;
+  }
+
+  .sidebar {
+    display: flex;
+    gap: 15px;
+  }
+
+  .sidebar__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .address__head {
+    flex-wrap: wrap;
+  }
+
+  .address__head_second {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    flex-wrap: wrap;
+  }
+}

@@ -1718,6 +1718,12 @@ template {
   color: #ffffff;
   text-decoration: none;
 }
+.breadcrumb__middle {
+  display: none;
+}
+.breadcrumb__middle.show {
+  display: flex;
+}
 
 @media screen and (max-width: 1700px) {
   .breadcrumb {
@@ -2145,4 +2151,7 @@ input[type=checkbox] {
   .registrationForm__law-status {
     flex-wrap: wrap;
   }
+}
+.contacts__wrap {
+  padding-top: 89px;
 }

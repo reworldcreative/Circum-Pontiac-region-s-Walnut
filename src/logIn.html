@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Вход",
+"style":"logIn",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        middleLinkText:"",
+        show:"",
+        middleLink:"",
+        currentLinkText:"Вход",
+        })
+
+        <div class="password__wrap">
+            <h1 class="caption">Войти в личный кабинет</h1>
+            <form class="password">
+                <input id="emailAddress" type="email" placeholder="Email" />
+                <input type="password" id="Password" name="Password" placeholder="Пароль">
+
+                <a class="logIn__link" id="forgotPass" href="restorePassword.html"> Забыли пароль?</a>
+                <button class="continue-btn" aria-lable="continue"
+                    aria-description="continue registration">Войти</button>
+                <a class="logIn__link" id="registration" href="registration.html">Регистрация</a>
+            </form>
+        </div>
+
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Личный кабинет</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/cabinet.min.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__wrap">
+        <section class="top-panel">
+    <div class="top-panel__wrap">
+        <ul class="socials__list" role="list" aria-label="list of social links">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.facebook.com" target="_blank" aria-label="Facebook page">
+            <img role="presentation" class="socials__icon socials__icon_active" src="img/facebook-icon.svg"
+                alt="facebook icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.instagram.com" target="_blank" aria-label="Instagram page">
+            <img role="presentation" class="socials__icon" src="img/instagram-icon.svg" alt="instagram icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.youtube.com" target="_blank" aria-label="YouTube channel">
+            <img role="presentation" class="socials__icon" src="img/youtube-icon.svg" alt="youtube icon">
+        </a>
+    </li>
+</ul>
+        <p class="top-panel__text">Ваша персональная скидка - 5%</p>
+        <div>
+            <a href="#" class="logIn-btn" aria-label="login button" role="button">
+                <img class="logIn-btn__icon" src="img/man-user.svg" alt="man user icon" aria-hidden="true">
+                Вход
+            </a>
+            <a href="registration.html" class="registration-btn" aria-label="registration button" role="button">
+                Регистрация
+            </a>
+
+
+            <select class="language-select" name="language-select" aria-description="language select">
+    <option value="RU" selected aria-label="Russian">RU</option>
+    <option value="UA" aria-label="Ukrainian">UA</option>
+    <option value="EN" aria-label="English">EN</option>
+</select>
+
+        </div>
+    </div>
+</section>
+
+        <section class="main-header">
+            <div class="main-header__wrap">
+                <a class="logo" href="index.html">
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
+    <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
+</a>
+                <ul class="socials-fill__list" role="list" aria-label="list of social links">
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.viber.com" target="_blank" aria-label="Facebook page">
+            <img role="presentation" class="socials-fill__icon" src="img/viber-icon.svg" alt="viber icon">
+        </a>
+    </li>
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://web.telegram.org/k/" target="_blank" aria-label="Instagram page">
+            <img role="presentation" class="socials-fill__icon" src="img/telegram-icon.svg" alt="telegram icon">
+        </a>
+    </li>
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.whatsapp.com" target="_blank" aria-label="YouTube channel">
+            <img role="presentation" class="socials-fill__icon" src="img/whatsapp-icon.svg" alt="whatsapp icon">
+        </a>
+    </li>
+</ul>
+                <address>
+    <ul class="phones" role="list" aria-description="list of contact phones">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380447505011" aria-label="Phone: +38 (044) 750-50-11">
+                <span class="phones__code">
+                    +38 (044)
+                </span>
+                750-50-11
+            </a>
+        </li>
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380977755051" aria-label="Phone: +38 (097) 775-50-51">
+                <span class="phones__code">
+                    +38 (097)
+                </span>
+                775-50-51
+            </a>
+        </li>
+    </ul>
+</address>
+
+
+                <div class="main-header__container">
+                    <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
+
+                    <p class="main-header__text">Ждем Вашего звонка ежедневно с 9 до 18</p>
+                    <button class="basket" aria-description="basket of your shopping">
+    <span class="basket__count" aria-description="count of your shopping">0</span>
+    <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
+</button>
+                </div>
+            </div>
+        </section>
+
+        <nav class="menu" role="navigation" aria-label="main menu">
+    <ul class="menu__list">
+        <li class="menu__item active" aria-current="page" aria-selected="true" id="products">
+            <a href="products.html" class="menu__link" role="menuitem">Магазин</a>
+        </li>
+        <li class="menu__item" id="about">
+            <a href="about.html" class="menu__link" role="menuitem">О производстве</a>
+        </li>
+        <li class="menu__item" id="payment">
+            <a href="payment.html" class="menu__link" role="menuitem">Оплата и доставка</a>
+        </li>
+        <li class="menu__item" id="wholesale">
+            <a href="wholesale.html" class="menu__link" role="menuitem">Оптовым и корпоративным клиентам</a>
+        </li>
+        <li class="menu__item" id="news">
+            <a href="news.html" class="menu__link" role="menuitem">Новости и статьи</a>
+        </li>
+        <li class="menu__item">
+            <a href="#contacts" class="menu__link" role="menuitem">Контакты</a>
+        </li>
+    </ul>
+</nav>
+    </div>
+
+    <div class="header__wrap_mobile">
+        <div class="header__mobile_top">
+            <address>
+    <ul class="phones" role="list" aria-description="list of contact phones">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380447505011" aria-label="Phone: +38 (044) 750-50-11">
+                <span class="phones__code">
+                    +38 (044)
+                </span>
+                750-50-11
+            </a>
+        </li>
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380977755051" aria-label="Phone: +38 (097) 775-50-51">
+                <span class="phones__code">
+                    +38 (097)
+                </span>
+                775-50-51
+            </a>
+        </li>
+    </ul>
+</address>
+            <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
+            <select class="language-select" name="language-select" aria-description="language select">
+    <option value="RU" selected aria-label="Russian">RU</option>
+    <option value="UA" aria-label="Ukrainian">UA</option>
+    <option value="EN" aria-label="English">EN</option>
+</select>
+        </div>
+
+        <div class="header__mobile_main">
+            <button class="burger-btn" aria-label="Open the menu" aria-expanded="false">
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+</button>
+            <a class="logo" href="index.html">
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
+    <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
+</a>
+            <button class="basket" aria-description="basket of your shopping">
+    <span class="basket__count" aria-description="count of your shopping">0</span>
+    <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
+</button>
+        </div>
+
+        <nav class="burger__menu" role="navigation" aria-label="main menu">
+    <div class="burger__menu_head">
+        <a class="logo" href="index.html">
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
+    <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
+</a>
+
+        <button class="burger-btn" aria-label="Open the menu" aria-expanded="false">
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+    <span class="burger-btn__line" aria-hidden="true"></span>
+</button>
+    </div>
+
+    <div class="burger__menu_top">
+        <div>
+            <button class="logIn-btn" aria-label="login button" role="button">
+                <img class="logIn-btn__icon" src="img/man-user.svg" alt="man user icon" aria-hidden="true">
+                Вход
+            </button>
+            <button class="registration-btn" aria-label="registration button" role="button">
+                Регистрация
+            </button>
+        </div>
+        <ul class="socials__list" role="list" aria-label="list of social links">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.facebook.com" target="_blank" aria-label="Facebook page">
+            <img role="presentation" class="socials__icon socials__icon_active" src="img/facebook-icon.svg"
+                alt="facebook icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.instagram.com" target="_blank" aria-label="Instagram page">
+            <img role="presentation" class="socials__icon" src="img/instagram-icon.svg" alt="instagram icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.youtube.com" target="_blank" aria-label="YouTube channel">
+            <img role="presentation" class="socials__icon" src="img/youtube-icon.svg" alt="youtube icon">
+        </a>
+    </li>
+</ul>
+    </div>
+    <ul class="burger__list">
+        <li class="burger__item">
+            <a href="products.html" class="burger__link">Магазин</a>
+        </li>
+        <li class="burger__item">
+            <a href="about.html" class="burger__link">О производстве</a>
+        </li>
+        <li class="burger__item active">
+            <a href="payment.html" class="burger__link">Оплата и доставка</a>
+        </li>
+        <li class="burger__item">
+            <a href="wholesale.html" class="burger__link">Оптовым и корпоративным клиентам</a>
+        </li>
+        <li class="burger__item">
+            <a href="news.html" class="burger__link">Новости и статьи</a>
+        </li>
+        <li class="burger__item">
+            <a href="#contacts" class="burger__link">Контакты</a>
+        </li>
+    </ul>
+</nav>
+    </div>
+
+</header>
+
+    <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ul class="breadcrumb__list">
+        <li><a class="breadcrumb__link" href="index.html">Главная</a></li>
+
+        <div class="breadcrumb__middle show">
+            <img class="breadcrumb__arrow" src="img/right arrow.svg" alt="right arrow">
+            <li><a class="breadcrumb__link" href="">Личный кабинет</a></li>
+        </div>
+
+
+        <img class="breadcrumb__arrow" src="img/right arrow.svg" alt="right arrow">
+        <li><a class="breadcrumb__link" href="#">История транзакций</a></li>
+
+
+    </ul>
+</nav>
+
+
+
+        <div class="address">
+            <div class="address__head">
+                <h1 class="address__title">Учетная запись</h1>
+                <div class="address__head_second">
+                    <p class="address__text">Ваш личный менеджер Олег</p>
+                    <div class="address__phone">
+                        <img src="img/telephone.svg" alt="telephone icon">
+                        <a href="tel:+380677771412">+38 067 777 14 12</a>
+                    </div>
+                </div>
+                <p class="address__discount">Ваша персональная скидка - 5%</p>
+
+            </div>
+            <div class="address__wrap">
+                <aside class="address__sidebar">
+                    <nav class="sidebar">
+                        <div class="sidebar__container">
+                            <h2 class="sidebar__caption">Мои заказы</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item"><a href="cabinet.html" class="address__text">История
+                                        заказов</a>
+                                </li>
+                                <li class="sidebar__item active"><a href="tranzaction.html"
+                                        class="address__text">История
+                                        транзакций</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="sidebar__caption">Моя учетная запись</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item"><a href="contactInformation.html"
+                                        class="address__text">Контактная информация</a>
+                                </li>
+                                <li class="sidebar__item"><a href="password.html" class="address__text">Пароль</a></li>
+                                <li class="sidebar__item"><a href="personContact.html" class="address__text">Адрес
+                                        реквизиты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <div class="tranzaction">
+                    <div class="table__container">
+                        <table class="cabinet-table tranzaction-table">
+                            <tr>
+                                <th>
+                                    <div class="cabinet-table__header">
+                                        <p class="cabinet-table__caption">Добавлено</p>
+                                        <img src="img/down-arrow.svg" alt="down arrow">
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cabinet-table__header">
+                                        <p class="cabinet-table__caption">Статус</p>
+                                        <img src="img/down-arrow.svg" alt="down arrow">
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cabinet-table__header">
+                                        <p class="cabinet-table__caption">Сумма</p>
+                                        <img src="img/down-arrow.svg" alt="down arrow">
+                                    </div>
+                                </th>
+
+                                <th>
+                                    <div class="cabinet-table__header">
+                                    </div>
+                                </th>
+
+                            </tr>
+                            <tr>
+                                <td class="cabinet-table__text">3.05.2019</td>
+                                <td class="cabinet-table__text">Платеж принят</td>
+                                <td class="cabinet-table__text">2500 грн.</td>
+                                <td>
+                                    <div class="cabinet-table__buttons">
+                                        <button class="cabinet-table__button detaile-button active"><img
+                                                src="img/eye.svg" alt="eye icon"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cabinet-table__text">10.05.2019</td>
+                                <td class="cabinet-table__text">Платеж принят</td>
+                                <td class="cabinet-table__text">2400 грн.</td>
+                                <td>
+                                    <div class="cabinet-table__buttons">
+                                        <button class="cabinet-table__button detaile-button"><img src="img/eye.svg"
+                                                alt="eye icon"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="cabinet-table__bottom">У вас не было транзакций!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="contacts" id="contacts">
+    <address class="contacts__wrap">
+        <div class="contacts__container">
+            <h2 class="section-title contacts__title">Контакты</h2>
+            <div class="contacts__links">
+                <div class="contacts__phones">
+                    <img class="contacts__icon" src="img/telephone.svg" alt="telephone icon" aria-hidden="true">
+                    <address>
+    <ul class="phones" role="list" aria-description="list of contact phones">
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380447505011" aria-label="Phone: +38 (044) 750-50-11">
+                <span class="phones__code">
+                    +38 (044)
+                </span>
+                750-50-11
+            </a>
+        </li>
+        <li class="phones__item" role="listitem">
+            <a class="phones__link" href="tel:+380977755051" aria-label="Phone: +38 (097) 775-50-51">
+                <span class="phones__code">
+                    +38 (097)
+                </span>
+                775-50-51
+            </a>
+        </li>
+    </ul>
+</address>
+                </div>
+                <ul class="socials-fill__list" role="list" aria-label="list of social links">
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.viber.com" target="_blank" aria-label="Facebook page">
+            <img role="presentation" class="socials-fill__icon" src="img/viber-icon.svg" alt="viber icon">
+        </a>
+    </li>
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://web.telegram.org/k/" target="_blank" aria-label="Instagram page">
+            <img role="presentation" class="socials-fill__icon" src="img/telegram-icon.svg" alt="telegram icon">
+        </a>
+    </li>
+    <li class="socials-fill__item" role="listitem">
+        <a class="socials-fill__link" href="https://www.whatsapp.com" target="_blank" aria-label="YouTube channel">
+            <img role="presentation" class="socials-fill__icon" src="img/whatsapp-icon.svg" alt="whatsapp icon">
+        </a>
+    </li>
+</ul>
+            </div>
+
+            <div class="contacts__mail">
+                <img class="contacts__icon" src="img/envelope.svg" alt="envelope icon" aria-hidden="true">
+                <a class="contacts__mail-link" href="mailto:nuts@nbsc.com.ua">nuts@nbsc.com.ua</a>
+            </div>
+
+            <div class="contacts__office">
+                <img class="contacts__icon" src="img/house.svg" alt="house icon" aria-hidden="true">
+
+                <div>
+                    <h4 class="contacts__caption">Офис и отдел продаж</h4>
+                    <a href="https://goo.gl/maps/7JHC14Hu6sFhf3Wd6" target="_blank" aria-label="link to office location"
+                        class="contacts__location">Украина, г. Одесса, <br>
+                        ул. Космонавтов, 32</a>
+                </div>
+            </div>
+
+            <div class="contacts__production">
+                <img class="contacts__icon" src="img/tree.svg" alt="tree icon" aria-hidden="true">
+
+                <div>
+                    <h4 class="contacts__caption">Производство</h4>
+                    <a href="https://goo.gl/maps/cF5KG48Mpcm2TFLw5" target="_blank"
+                        aria-label="link to production location" class="contacts__location">Украина, Одесская обл,
+                        <br>с. Яськи, ул. Центральная, 232</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contacts__map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.8880943477598!2d30.712512015590093!3d46.43109757912429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633a7b20ed43b%3A0xfaab4e45d64743a!2z0YPQuy4g0JrQvtGB0LzQvtC90LDQstGC0L7QsiwgMzIsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1684495061467!5m2!1sru!2sua"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </address>
+</section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer__wrap">
+        <div class="footer__top">
+            <a class="logo" href="index.html">
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
+    <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
+</a>
+            <nav class="menu" role="navigation" aria-label="main menu">
+    <ul class="menu__list">
+        <li class="menu__item active" aria-current="page" aria-selected="true">
+            <a href="products.html" class="menu__link" role="menuitem" aria-current="page">Магазин</a>
+        </li>
+        <li class="menu__item">
+            <a href="wholesale.html" class="menu__link" role="menuitem">Корпоративным клиентам</a>
+        </li>
+        <li class="menu__item">
+            <a href="payment.html" class="menu__link" role="menuitem">Оплата и доставка</a>
+        </li>
+        <li class="menu__item">
+            <a href="about.html" class="menu__link" role="menuitem">О производстве</a>
+        </li>
+        <li class="menu__item">
+            <a href="news.html" class="menu__link" role="menuitem">Новости и статьи</a>
+        </li>
+        <li class="menu__item">
+            <a href="gallery.html" class="menu__link" role="menuitem">Галерея</a>
+        </li>
+    </ul>
+</nav>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="developer">Разработано <span class="developer_accent">AVADA <span
+                        class="developer_accent">MEDIA</span></span></p>
+            <p class="copyright">Copyright © 2019. Все права защищены</p>
+            <ul class="socials__list" role="list" aria-label="list of social links">
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.facebook.com" target="_blank" aria-label="Facebook page">
+            <img role="presentation" class="socials__icon socials__icon_active" src="img/facebook-icon.svg"
+                alt="facebook icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.instagram.com" target="_blank" aria-label="Instagram page">
+            <img role="presentation" class="socials__icon" src="img/instagram-icon.svg" alt="instagram icon">
+        </a>
+    </li>
+    <li class="socials__item" role="listitem">
+        <a class="socials__link" href="https://www.youtube.com" target="_blank" aria-label="YouTube channel">
+            <img role="presentation" class="socials__icon" src="img/youtube-icon.svg" alt="youtube icon">
+        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/address";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
+.contacts__wrap {
+  padding-top: 53px;
+}
+
+.cabinet-table {
+  text-align: center;
+  border-spacing: 0px;
+  height: fit-content;
+  &__header {
+    display: flex;
+
+    img {
+      margin-left: 6px;
+    }
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 200%;
+
+    color: $main;
+    margin: 0px;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 229%;
+
+    color: $main;
+    margin: 0px;
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgba(51, 125, 90, 0.1);
+  }
+
+  tr:first-child {
+    background: #fbfbfb;
+  }
+
+  th {
+    padding: 20px 39px 16px 29px;
+  }
+
+  td {
+    padding: 17px 0px 14px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    background: none;
+    border: none;
+
+    &.active {
+      img {
+        filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg)
+          brightness(102%) contrast(90%);
+      }
+    }
+  }
+
+  .detaile-button {
+    position: relative;
+
+    &:hover:before {
+      display: block;
+    }
+
+    &::before {
+      position: absolute;
+      content: "Просмотреть заказ";
+
+      display: none;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 108%;
+
+      text-align: center;
+
+      color: $main-white;
+      background-color: $accent;
+
+      width: 105px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 8px 8px 15px 8px;
+      transition: opacity 1s ease-in-out;
+
+      position: absolute;
+      z-index: 10;
+      left: -120%;
+      top: -45px;
+
+      clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 86%,
+        63% 86%,
+        52% 100%,
+        40% 85%,
+        0 86%
+      );
+    }
+  }
+
+  &__bottom {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 229%;
+
+    color: $main;
+    margin: 0px;
+    margin-top: 16px;
+    text-align: end;
+  }
+}
+
+.tranzaction {
+  width: 100%;
+}
+
+.tranzaction-table {
+  width: 100%;
+
+  .cabinet-table {
+    &__header {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .address {
+    width: auto;
+    margin: 45px 20px 0px;
+    &__wrap {
+      display: block;
+    }
+
+    &__sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .table__container {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .cabinet-table {
+    width: 100%;
+  }
+
+  .sidebar {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .address {
+    .sidebar {
+      display: block;
+    }
+  }
+}

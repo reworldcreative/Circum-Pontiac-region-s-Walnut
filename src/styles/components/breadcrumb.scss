@@ -36,6 +36,14 @@
     color: $main-white;
     text-decoration: none;
   }
+
+  &__middle {
+    display: none;
+
+    &.show {
+      display: flex;
+    }
+  }
 }
 
 @media screen and (max-width: 1700px) {

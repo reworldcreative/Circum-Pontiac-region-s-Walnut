@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Контактная информация",
+"style":"contactInformation",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        middleLinkText:"Личный кабинет",
+        show:"show",
+        middleLink:"",
+        currentLinkText:"Контактная информация",
+        })
+
+
+
+        <div class="address">
+
+
+            <div class="address__head">
+                <h1 class="address__title">Учетная запись</h1>
+                <div class="address__head_second">
+                    <p class="address__text">Ваш личный менеджер Олег</p>
+                    <div class="address__phone">
+                        <img src="@img/telephone.svg" alt="telephone icon">
+                        <a href="tel:+380677771412">+38 067 777 14 12</a>
+                    </div>
+                </div>
+                <p class="address__discount">Ваша персональная скидка - 5%</p>
+
+            </div>
+            <div class="address__wrap">
+                <aside class="address__sidebar">
+                    <nav class="sidebar">
+                        <div class="sidebar__container">
+                            <h2 class="sidebar__caption">Мои заказы</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item"><a href="cabinet.html" class="address__text">История
+                                        заказов</a>
+                                </li>
+                                <li class="sidebar__item"><a href="tranzaction.html" class="address__text">История
+                                        транзакций</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar__container">
+                            <h2 class="sidebar__caption">Моя учетная запись</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item active"><a href="contactInformation.html"
+                                        class="address__text">Контактная
+                                        информация</a>
+                                </li>
+                                <li class="sidebar__item"><a href="password.html" class="address__text">Пароль</a></li>
+                                <li class="sidebar__item"><a href="personContact.html" class="address__text">Адрес
+                                        реквизиты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+
+
+                <form class="contactForm" id="pedsonContact">
+                    <fieldset class="registrationForm__container">
+                        <input type="text" id="name" name="name" placeholder="ФИО*">
+                        <input type="email" id="email" name="email" placeholder="Email*">
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
+
+                        <button class="continue-btn" aria-lable="save"
+                            aria-description="save information">Сохранить</button>
+                    </fieldset>
+                </form>
+
+                <form class="contactForm" id="companyContact">
+                    <fieldset class="registrationForm__container">
+                        <input type="text" id="name" name="name" placeholder="Компания*">
+                        <input type="text" id="name" name="name" placeholder="Контактное лицо*">
+                        <input type="email" id="email" name="email" placeholder="Email*">
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
+
+                        <button class="continue-btn" aria-lable="save"
+                            aria-description="save information">Сохранить</button>
+                    </fieldset>
+                </form>
+
+                <div class="avatar__wrap">
+                    <div class="avatar">
+                        <img class="avata-img" src="@img/avatar.png" alt="avatar">
+                        <button class="avatar__download">Изменить фото</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

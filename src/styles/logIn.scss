@@ -1,0 +1,88 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/address";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
+.contacts__wrap {
+  padding-top: 53px;
+}
+
+.caption {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+
+  color: $main;
+  margin: 0px;
+}
+.password {
+  width: 410px;
+  margin-top: 40px;
+
+  gap: 15px;
+  display: grid;
+
+  &__wrap {
+    display: grid;
+    justify-content: center;
+    margin-top: 57px;
+    text-align: center;
+  }
+
+  .continue-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .password {
+    width: auto;
+  }
+
+  .password__wrap {
+    margin: 57px 20px 0px;
+  }
+}
+
+.logIn__link {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 246%;
+  letter-spacing: 0.01em;
+
+  color: $accent;
+}
+
+#forgotPass {
+  text-decoration: none;
+}

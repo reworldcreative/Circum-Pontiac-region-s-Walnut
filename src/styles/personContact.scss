@@ -1,0 +1,240 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/address";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
+.contacts__wrap {
+  padding-top: 53px;
+}
+
+// .address {
+//   //   margin-top: 45px;
+//   //   justify-content: center;
+//   //   display: grid;
+//   width: 1290px;
+//   margin: 45px auto 0px;
+
+//   &__head {
+//     display: flex;
+
+//     &_second {
+//       margin-left: 77px;
+//     }
+//   }
+
+//   &__text {
+//     margin: 0px;
+//     font-family: "Raleway", sans-serif;
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 200%;
+
+//     letter-spacing: 0.01em;
+//     text-decoration: none;
+
+//     color: $main;
+//   }
+
+//   &__phone {
+//     img {
+//       margin-right: 2px;
+//     }
+
+//     a {
+//       text-decoration: none;
+//       color: $accent;
+//     }
+//   }
+
+//   &__wrap {
+//     margin-top: 42px;
+//     display: flex;
+//   }
+
+//   &__sidebar {
+//     width: 25.5%;
+//   }
+
+//   .sidebar {
+//     // margin-right: 100px;
+//     &__caption {
+//       font-family: "Raleway", sans-serif;
+//       font-style: normal;
+//       font-weight: 700;
+//       font-size: 18px;
+//       line-height: 178%;
+//       letter-spacing: 0.01em;
+
+//       color: $main;
+//       margin-top: 0px;
+//       margin-bottom: 7px;
+//     }
+
+//     &__container {
+//       margin-bottom: 30px;
+//     }
+
+//     &__list {
+//       list-style: none;
+//       margin: 0px;
+//       padding: 0px;
+//     }
+
+//     &__item {
+//       &.active {
+//         a {
+//           color: $accent;
+//           border-bottom: 2px solid $accent;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.addressForm {
+  //   margin-right: 77px;
+  width: 37%;
+  &__wrap {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    margin-bottom: 47px;
+
+    &_info {
+      display: grid;
+      gap: 13px;
+    }
+  }
+
+  &__fiz {
+    display: none;
+  }
+}
+
+.address-banner {
+  background-image: url("@img/contact-banner.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  width: 440px;
+  height: 852px;
+  margin-top: 41px;
+  margin-left: 47px;
+  display: grid;
+  align-items: center;
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 105%;
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    width: fit-content;
+    margin: 0px auto 21px;
+  }
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    // width: fit-content;
+    width: 80%;
+    margin: 0px auto;
+  }
+}
+
+.continue-btn {
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 1400px) {
+  .address-banner {
+    display: none;
+  }
+
+  .address {
+    margin: 45px 30px 0px;
+    width: auto;
+  }
+
+  .address__sidebar {
+    width: 25%;
+  }
+
+  .addressForm {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .address__sidebar {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .address__wrap {
+    display: block;
+  }
+
+  .address__sidebar {
+    width: 100%;
+  }
+
+  .sidebar {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .addressForm {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .address__head {
+    flex-wrap: wrap;
+  }
+  .address__title {
+    width: 100%;
+  }
+  .address__head_second {
+    margin: 0px;
+  }
+}

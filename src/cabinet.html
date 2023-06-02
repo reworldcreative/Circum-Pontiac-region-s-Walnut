@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Личный кабинет",
+"style":"cabinet",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        middleLinkText:"Личный кабинет",
+        show:"show",
+        middleLink:"",
+        currentLinkText:"История заказов",
+        })
+
+
+
+        <div class="address">
+            <div class="address__head">
+                <h1 class="address__title">Учетная запись</h1>
+                <div class="address__head_second">
+                    <p class="address__text">Ваш личный менеджер Олег</p>
+                    <div class="address__phone">
+                        <img src="@img/telephone.svg" alt="telephone icon">
+                        <a href="tel:+380677771412">+38 067 777 14 12</a>
+                    </div>
+                </div>
+                <p class="address__discount">Ваша персональная скидка - 5%</p>
+
+            </div>
+            <div class="address__wrap">
+                <aside class="address__sidebar">
+                    <nav class="sidebar">
+                        <div class="sidebar__container">
+                            <h2 class="sidebar__caption">Мои заказы</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item active"><a href="cabinet.html" class="address__text">История
+                                        заказов</a>
+                                </li>
+                                <li class="sidebar__item"><a href="tranzaction.html" class="address__text">История
+                                        транзакций</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="sidebar__caption">Моя учетная запись</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item"><a href="contactInformation.html"
+                                        class="address__text">Контактная информация</a>
+                                </li>
+                                <li class="sidebar__item"><a href="password.html" class="address__text">Пароль</a></li>
+                                <li class="sidebar__item"><a href="personContact.html" class="address__text">Адрес
+                                        реквизиты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <div class="table__container">
+                    <table class="cabinet-table">
+                        <tr>
+                            <th>
+                                <div class="cabinet-table__header">
+                                    <p class="cabinet-table__caption">№ Заказа</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cabinet-table__header">
+                                    <p class="cabinet-table__caption">Дата</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cabinet-table__header">
+                                    <p class="cabinet-table__caption">Кол - во товаров</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cabinet-table__header">
+                                    <p class="cabinet-table__caption">Статус</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cabinet-table__header">
+                                    <p class="cabinet-table__caption">Стоимость</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="cabinet-table__header">
+                                    <p class="cabinet-table__caption">Функции</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="cabinet-table__text">23</td>
+                            <td class="cabinet-table__text">3.05.2019</td>
+                            <td class="cabinet-table__text">13</td>
+                            <td class="cabinet-table__text">Отправлено</td>
+                            <td class="cabinet-table__text">2500 грн.</td>
+                            <td>
+                                <div class="cabinet-table__buttons">
+                                    <button class="cabinet-table__button detaile-button active"><img src="@img/eye.svg"
+                                            alt="eye icon"></button>
+                                    <button class="cabinet-table__button"><img src="@img/copy.svg"
+                                            alt="copy icon"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cabinet-table__text">24</td>
+                            <td class="cabinet-table__text">10.05.2019</td>
+                            <td class="cabinet-table__text">15</td>
+                            <td class="cabinet-table__text">В ожидании</td>
+                            <td class="cabinet-table__text">2400 грн.</td>
+                            <td>
+                                <div class="cabinet-table__buttons">
+                                    <button class="cabinet-table__button detaile-button"><img src="@img/eye.svg"
+                                            alt="eye icon"></button>
+                                    <button class="cabinet-table__button"><img src="@img/copy.svg"
+                                            alt="copy icon"></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

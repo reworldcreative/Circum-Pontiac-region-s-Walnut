@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Адрес и реквизиты",
+"style":"personContact",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        currentLinkText:"Адрес и реквизиты",
+        })
+
+        <div class="address">
+            <div class="address__head">
+                <h1 class="address__title">Учетная запись</h1>
+                <div class="address__head_second">
+                    <p class="address__text">Ваш личный менеджер Олег</p>
+                    <div class="address__phone">
+                        <img src="@img/telephone.svg" alt="telephone icon">
+                        <a href="tel:+380677771412">+38 067 777 14 12</a>
+                    </div>
+                </div>
+            </div>
+            <div class="address__wrap">
+                <aside class="address__sidebar">
+                    <nav class="sidebar">
+                        <div class="sidebar__container">
+                            <h2 class="sidebar__caption">Мои заказы</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item"><a href="cabinet.html" class="address__text">История
+                                        заказов</a></li>
+                                <li class="sidebar__item"><a href="tranzaction.html" class="address__text">История
+                                        транзакций</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="sidebar__caption">Моя учетная запись</h2>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__item"><a href="contactInformation.html"
+                                        class="address__text">Контактная информация</a>
+                                </li>
+                                <li class="sidebar__item"><a href="password.html" class="address__text">Пароль</a></li>
+                                <li class="sidebar__item active"><a href="personContact.html"
+                                        class="address__text">Адрес реквизиты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <form class="addressForm" id="addressForm">
+                    <fieldset class="addressForm__wrap">
+                        <legend class="address__caption">1. Реквизиты</legend>
+                        <input type="text" id="requiz" name="requiz" placeholder="ОКПО">
+                    </fieldset>
+
+                    <fieldset class="addressForm__wrap">
+                        <legend class="address__caption">2. Адрес</legend>
+
+                        <div class="addressForm__wrap_info">
+                            <select name="country" id="addressCountry">
+                                <option value="" disabled selected>Страна</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="USA">USA</option>
+                                <option value="France">France</option>
+                            </select>
+
+                            <select name="area" id="addressArea">
+                                <option value="" disabled selected>Область</option>
+                                <option value="area 1">area 1</option>
+                                <option value="area 2">area 2</option>
+                            </select>
+
+                            <input type="text" id="addressCity" name="city" placeholder="Город*">
+                            <input type="text" id="address_address" name="address" placeholder="Адрес">
+                    </fieldset>
+
+                    <fieldset class="addressForm__wrap">
+                        <legend class="address__caption">3. Юридический адрес</legend>
+
+                        <div class="addressForm__wrap_info">
+                            <select name="country" id="addressCountry">
+                                <option value="" disabled selected>Страна</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="USA">USA</option>
+                                <option value="France">France</option>
+                            </select>
+
+                            <select name="area" id="addressArea">
+                                <option value="" disabled selected>Область</option>
+                                <option value="area 1">area 1</option>
+                                <option value="area 2">area 2</option>
+                            </select>
+
+                            <input type="text" id="addressCity" name="city" placeholder="Город*">
+                            <input type="text" id="address_address" name="address" placeholder="Адрес">
+                            <input type="text" id="legalPerson-index" name="index" placeholder="Индекс">
+
+                            <button class="continue-btn" aria-lable="save"
+                                aria-description="save information">Сохранить</button>
+                    </fieldset>
+                </form>
+
+                <form class="addressForm addressForm__fiz" id="addressForm">
+
+                    <fieldset class="addressForm__wrap">
+                        <legend class="address__caption">Адрес</legend>
+
+                        <div class="addressForm__wrap_info">
+                            <select name="country" id="addressCountry">
+                                <option value="" disabled selected>Страна</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="USA">USA</option>
+                                <option value="France">France</option>
+                            </select>
+
+                            <select name="area" id="addressArea">
+                                <option value="" disabled selected>Область</option>
+                                <option value="area 1">area 1</option>
+                                <option value="area 2">area 2</option>
+                            </select>
+
+                            <input type="text" id="addressCity" name="city" placeholder="Город*">
+                            <input type="text" id="address_address" name="address" placeholder="Адрес">
+                    </fieldset>
+                </form>
+
+                <div class="address-banner">
+                    <div>
+                        <h2 class="address-banner__caption">Орех Причерноморья</h2>
+                        <p class="address-banner__text">Единственный в Украине сад
+                            совместного выращивания
+                            фундука и грецкого ореха</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

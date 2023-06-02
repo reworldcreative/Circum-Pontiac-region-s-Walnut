@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Корзина",
+"style":"basket",
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        @@include('html/Breadcrumbs/Breadcrumbs.html',{
+        lastLink:"index.html",
+        lastLinkText:"Главная",
+        middleLinkText:"",
+        show:"",
+        middleLink:"",
+        currentLinkText:"Корзина",
+        })
+
+        <div class="address">
+            <div class="address__head">
+                <h1 class="address__title">Корзина</h1>
+                <div class="address__head_second">
+                    <p class="address__text">Ваш личный менеджер Олег</p>
+                    <div class="address__phone">
+                        <img src="@img/telephone.svg" alt="telephone icon">
+                        <a href="tel:+380677771412">+38 067 777 14 12</a>
+                    </div>
+                </div>
+                <p class="address__discount">Ваша персональная скидка - 5%</p>
+
+            </div>
+            <div>
+                <div class="table__container">
+                    <table class="order-table">
+                        <tr>
+                            <th>
+                                <div class="order-table__header">
+                                    <p class="order-table__caption">Товар</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="order-table__header">
+                                    <p class="order-table__caption">Кол - во</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="order-table__header">
+                                    <p class="order-table__caption">Кол - во</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                            <th>
+                                <div class="order-table__header">
+                                    <p class="order-table__caption">Итоговая стоимость</p>
+                                    <img src="@img/down-arrow.svg" alt="down arrow">
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="order-table__text">Орех соленый 80г.</td>
+                            <td class="order-table__text">
+                                <div class="number-counter">
+                                    <span class="minus">&lt;</span>
+                                    <input type="text" value="1" />
+                                    <span class="plus">></span>
+                                </div>
+                            </td>
+                            <td class="order-table__text">25 грн.</td>
+                            <td class="order-table__text">100 грн.</td>
+                        </tr>
+                        <tr>
+                            <td class="order-table__text">Орех соленый 80г.</td>
+                            <td class="order-table__text">
+                                <div class="number-counter">
+                                    <span class="minus">&lt;</span>
+                                    <input type="text" value="1" />
+                                    <span class="plus">></span>
+                                </div>
+                            </td>
+                            <td class="order-table__text">25 грн.</td>
+                            <td class="order-table__text">25 грн.</td>
+                        </tr>
+                        <tr>
+                            <td class="order-table__text">Орех соленый 80г.</td>
+                            <td class="order-table__text">
+                                <div class="number-counter">
+                                    <span class="minus">&lt;</span>
+                                    <input type="text" value="1" />
+                                    <span class="plus">></span>
+                                </div>
+                            </td>
+                            <td class="order-table__text">25 грн.</td>
+                            <td class="order-table__text">25 грн.</td>
+                        </tr>
+                        <tr>
+                            <td class="order-table__text">Орех соленый 80г.</td>
+                            <td class="order-table__text">
+                                <div class="number-counter">
+                                    <span class="minus">&lt;</span>
+                                    <input type="text" value="1" />
+                                    <span class="plus">></span>
+                                </div>
+                            </td>
+                            <td class="order-table__text">25 грн.</td>
+                            <td class="order-table__text">25 грн.</td>
+                        </tr>
+                    </table>
+
+                    <div class="order-table__bottom">
+                        <div>
+                            <a href="products.html" class="back__button" aria-label="back to shop">
+                                <img class="back__arrow" src="@img/right arrow.svg" alt="arrow">
+                                Продолжить покупки
+                            </a>
+                        </div>
+
+                        <div class="second">
+                            <div class="price">
+                                <p class="price__caption">Всего</p>
+                                <p class="price__number">175</p>
+                                <p class="price__currency">грн.</p>
+                            </div>
+                            @@include('html/actionButton.html',{
+                            title:"Оформить заказ",
+                            description:"order",
+                            lable:"order",
+                            })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order">
+                    <h2 class="order__caption">Для оформления заказа необходимо</h2>
+
+                    <div class="order__text">
+                        <a id="loginLink" href="logIn.html">Авторизоваться</a>или<a id="registrationLink"
+                            href="registration.html">Зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @@include('html/contacts.html',{})
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
