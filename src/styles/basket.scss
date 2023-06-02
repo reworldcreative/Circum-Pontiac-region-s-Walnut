@@ -34,6 +34,10 @@ $rfs-breakpoint: 1500;
 .table__container {
   margin-top: 33px;
 }
+
+.order-number {
+  display: none;
+}
 .order-table {
   text-align: center;
   border-spacing: 0px;
@@ -303,6 +307,124 @@ $rfs-breakpoint: 1500;
 
     #loginLink {
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .address {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .order-table__bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .second {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .order-table th {
+    padding: 20px 9px 16px 9px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .address__head {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .address__head_second {
+    margin: 0px;
+  }
+
+  .table__container {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .number-counter {
+    width: 25%;
+  }
+
+  .order__text {
+    flex-wrap: wrap;
+  }
+}
+
+.backet-succes {
+  position: relative;
+
+  // display: block;
+  display: none;
+
+  &__wrap {
+    width: 100%;
+    z-index: 20;
+    margin: 217px auto 179px;
+    position: absolute;
+  }
+
+  &__image {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 71%;
+    letter-spacing: 0.01em;
+
+    color: $main-white;
+    margin: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: $main-white;
+    margin: 0px auto;
+    width: 425px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .backet-succes {
+    &__wrap {
+      margin: 10% auto;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .backet-succes {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .backet-succes {
+    &__text {
+      width: auto;
     }
   }
 }

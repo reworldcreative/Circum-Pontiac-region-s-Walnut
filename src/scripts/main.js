@@ -169,6 +169,14 @@ if ($("#legalPerson-radio")[0]) {
   });
 }
 
+if ($(".basket")) {
+  Array.from($(".basket")).forEach((element) => {
+    element.addEventListener("click", (event) => {
+      $(".basket__pop-up")[0].classList.toggle("show");
+    });
+  });
+}
+
 const videoSwiper = new Swiper(".video__carousel", {
   // slidesPerView: "auto",
 

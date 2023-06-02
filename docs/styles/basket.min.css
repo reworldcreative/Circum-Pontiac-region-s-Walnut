@@ -689,6 +689,111 @@ template {
     outline: 1px solid #93b474;
   }
 }
+.basket__container {
+  position: relative;
+}
+
+.basket__pop-up {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1.5px solid #337d5a;
+  padding: 30px 31px 25px;
+  z-index: 60;
+  width: 468px;
+  left: auto;
+  right: 0px;
+  top: 40px;
+}
+.basket__pop-up.show {
+  display: block;
+}
+.basket__pop-up .second {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.basket__pop-up .second .price {
+  display: flex;
+  margin-right: 28px;
+  align-items: center;
+}
+.basket__pop-up .second .price__caption {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 178%;
+  color: #1a2f3f;
+  margin-right: 9px;
+}
+.basket__pop-up .second .price__number {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 145%;
+  color: #337d5a;
+  margin-right: 4px;
+}
+.basket__pop-up .second .price__currency {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 229%;
+  color: #337d5a;
+}
+.basket__pop-up .second .action-btn {
+  padding: 17px 20px;
+}
+
+.basket__list {
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  padding: 12px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  justify-content: space-around;
+}
+.basket__list:first-child {
+  padding-top: 0px;
+}
+.basket__list .number-counter {
+  width: fit-content;
+}
+.basket__list .number-counter input {
+  width: 44px;
+  padding: 0px;
+}
+.basket__list .close-btn {
+  background: none;
+  border: none;
+}
+.basket__list .close-btn__icon {
+  color: #c4c4c4;
+  font-size: 20px;
+}
+.basket__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 136%;
+  color: #1a2f3f;
+}
+
+@media screen and (max-width: 600px) {
+  .basket__pop-up {
+    width: auto;
+    padding: 30px 10px 25px;
+  }
+  .basket__list {
+    gap: 20px;
+  }
+}
 .burger-btn {
   display: grid;
   padding: 0px;
@@ -2432,6 +2537,10 @@ main option[value=""][disabled] {
   margin-top: 33px;
 }
 
+.order-number {
+  display: none;
+}
+
 .order-table {
   text-align: center;
   border-spacing: 0px;
@@ -2650,4 +2759,100 @@ main option[value=""][disabled] {
 }
 .order__text #loginLink {
   text-decoration: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .address {
+    width: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .order-table__bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .order-table__bottom .second {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .order-table th {
+    padding: 20px 9px 16px 9px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .address__head {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .address__head_second {
+    margin: 0px;
+  }
+  .table__container {
+    width: 100%;
+    overflow: scroll;
+  }
+  .number-counter {
+    width: 25%;
+  }
+  .order__text {
+    flex-wrap: wrap;
+  }
+}
+.backet-succes {
+  position: relative;
+  display: none;
+}
+.backet-succes__wrap {
+  width: 100%;
+  z-index: 20;
+  margin: 217px auto 179px;
+  position: absolute;
+}
+.backet-succes__image {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.backet-succes__caption {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 71%;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.backet-succes__text {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin: 0px auto;
+  width: 425px;
+}
+
+@media screen and (max-width: 1500px) {
+  .backet-succes__wrap {
+    margin: 10% auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .backet-succes {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .backet-succes__text {
+    width: auto;
+  }
 }

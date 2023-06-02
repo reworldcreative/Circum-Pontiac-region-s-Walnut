@@ -18,9 +18,10 @@
         currentLinkText:"Корзина",
         })
 
-        <div class="address">
+        <div class="address backet">
             <div class="address__head">
                 <h1 class="address__title">Корзина</h1>
+                <h1 class="address__title order-number">Заказ <span class="order-number__number">№1245</span></h1>
                 <div class="address__head_second">
                     <p class="address__text">Ваш личный менеджер Олег</p>
                     <div class="address__phone">
@@ -49,7 +50,7 @@
                             </th>
                             <th>
                                 <div class="order-table__header">
-                                    <p class="order-table__caption">Кол - во</p>
+                                    <p class="order-table__caption">Цена за товар</p>
                                     <img src="@img/down-arrow.svg" alt="down arrow">
                                 </div>
                             </th>
@@ -144,6 +145,14 @@
             </div>
         </div>
 
+        <div class="backet-succes">
+            <div class="backet-succes__wrap">
+                <h2 class="backet-succes__caption">Благодарим Вас за заказ!</h2>
+                <p class="backet-succes__text">Наши менеджеры свяжутся с Вами
+                    в ближайшее время</p>
+            </div>
+            <img class="backet-succes__image" src="@img/banner 8.jpg" alt="banner nuts">
+        </div>
 
         @@include('html/contacts.html',{})
     </main>

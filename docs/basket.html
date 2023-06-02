@@ -113,10 +113,66 @@
                     <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
 
                     <p class="main-header__text">Ждем Вашего звонка ежедневно с 9 до 18</p>
-                    <button class="basket" aria-description="basket of your shopping">
-    <span class="basket__count" aria-description="count of your shopping">0</span>
-    <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
-</button>
+                    <div class="basket__container">
+    <button class="basket" aria-description="basket of your shopping">
+        <span class="basket__count" aria-description="count of your shopping">0</span>
+        <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
+    </button>
+
+    <div class="basket__pop-up">
+        <ul class="basket__list">
+            <li>
+                <p class="basket__text">Орех соленый 80г.</p>
+            </li>
+            <li>
+                <div class="number-counter">
+                    <span class="minus">&lt;</span>
+                    <input type="text" value="4" />
+                    <span class="plus">></span>
+                </div>
+            </li>
+
+            <li>
+                <p class="basket__text">100 грн.</p>
+            </li>
+
+            <li>
+                <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
+                        aria-hidden="true">X</span></button>
+            </li>
+        </ul>
+        <ul class="basket__list">
+            <li>
+                <p class="basket__text">Орех соленый 80г.</p>
+            </li>
+            <li>
+                <div class="number-counter">
+                    <span class="minus">&lt;</span>
+                    <input type="text" value="8" />
+                    <span class="plus">></span>
+                </div>
+            </li>
+
+            <li>
+                <p class="basket__text">80 грн.</p>
+            </li>
+
+            <li>
+                <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
+                        aria-hidden="true">X</span></button>
+            </li>
+        </ul>
+
+        <div class="second">
+            <div class="price">
+                <p class="price__caption">Всего</p>
+                <p class="price__number">175</p>
+                <p class="price__currency">грн.</p>
+            </div>
+            <button class="action-btn" aria-lable="go to backet" aria-description="go to backet">Перейти в корзину</button>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </section>
@@ -185,10 +241,66 @@
     <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
-            <button class="basket" aria-description="basket of your shopping">
-    <span class="basket__count" aria-description="count of your shopping">0</span>
-    <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
-</button>
+            <div class="basket__container">
+    <button class="basket" aria-description="basket of your shopping">
+        <span class="basket__count" aria-description="count of your shopping">0</span>
+        <img class="basket__icon" src="img/bag.svg" alt="bag icon" aria-hidden="true">
+    </button>
+
+    <div class="basket__pop-up">
+        <ul class="basket__list">
+            <li>
+                <p class="basket__text">Орех соленый 80г.</p>
+            </li>
+            <li>
+                <div class="number-counter">
+                    <span class="minus">&lt;</span>
+                    <input type="text" value="4" />
+                    <span class="plus">></span>
+                </div>
+            </li>
+
+            <li>
+                <p class="basket__text">100 грн.</p>
+            </li>
+
+            <li>
+                <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
+                        aria-hidden="true">X</span></button>
+            </li>
+        </ul>
+        <ul class="basket__list">
+            <li>
+                <p class="basket__text">Орех соленый 80г.</p>
+            </li>
+            <li>
+                <div class="number-counter">
+                    <span class="minus">&lt;</span>
+                    <input type="text" value="8" />
+                    <span class="plus">></span>
+                </div>
+            </li>
+
+            <li>
+                <p class="basket__text">80 грн.</p>
+            </li>
+
+            <li>
+                <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
+                        aria-hidden="true">X</span></button>
+            </li>
+        </ul>
+
+        <div class="second">
+            <div class="price">
+                <p class="price__caption">Всего</p>
+                <p class="price__number">175</p>
+                <p class="price__currency">грн.</p>
+            </div>
+            <button class="action-btn" aria-lable="go to backet" aria-description="go to backet">Перейти в корзину</button>
+        </div>
+    </div>
+</div>
         </div>
 
         <nav class="burger__menu" role="navigation" aria-label="main menu">
@@ -277,9 +389,10 @@
     </ul>
 </nav>
 
-        <div class="address">
+        <div class="address backet">
             <div class="address__head">
                 <h1 class="address__title">Корзина</h1>
+                <h1 class="address__title order-number">Заказ <span class="order-number__number">№1245</span></h1>
                 <div class="address__head_second">
                     <p class="address__text">Ваш личный менеджер Олег</p>
                     <div class="address__phone">
@@ -308,7 +421,7 @@
                             </th>
                             <th>
                                 <div class="order-table__header">
-                                    <p class="order-table__caption">Кол - во</p>
+                                    <p class="order-table__caption">Цена за товар</p>
                                     <img src="img/down-arrow.svg" alt="down arrow">
                                 </div>
                             </th>
@@ -399,6 +512,14 @@
             </div>
         </div>
 
+        <div class="backet-succes">
+            <div class="backet-succes__wrap">
+                <h2 class="backet-succes__caption">Благодарим Вас за заказ!</h2>
+                <p class="backet-succes__text">Наши менеджеры свяжутся с Вами
+                    в ближайшее время</p>
+            </div>
+            <img class="backet-succes__image" src="img/banner 8.jpg" alt="banner nuts">
+        </div>
 
         <section class="contacts" id="contacts">
     <address class="contacts__wrap">
