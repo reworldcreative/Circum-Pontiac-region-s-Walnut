@@ -1,0 +1,473 @@
+$rfs-breakpoint: 1500;
+@import "rfs/scss.scss";
+@import "normalize";
+@import "variables";
+
+@import "header";
+@import "./components/burger";
+@import "footer";
+@import "./components/actionButton";
+@import "./components/menu";
+@import "./components/moreInfoBtn";
+@import "./components/breadcrumb";
+@import "./components/address";
+@import "./components/contacts";
+
+.breadcrumb {
+  position: relative;
+  margin: 51px auto 0px 315px;
+
+  &__link {
+    color: #8a8a8a;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .breadcrumb {
+    margin: 36px auto 0px 5vw;
+  }
+}
+
+.contacts__wrap {
+  padding-top: 53px;
+}
+
+.table__container {
+  margin-top: 33px;
+}
+
+.order-table {
+  text-align: center;
+  border-spacing: 0px;
+  height: fit-content;
+  width: 100%;
+  &__header {
+    display: flex;
+    justify-content: center;
+
+    img {
+      margin-left: 6px;
+    }
+  }
+
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 200%;
+
+    color: $main;
+    margin: 0px;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 229%;
+
+    color: $main;
+    margin: 0px;
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgba(51, 125, 90, 0.1);
+  }
+
+  tr:first-child {
+    background: #fbfbfb;
+  }
+
+  th {
+    padding: 20px 39px 16px 29px;
+  }
+
+  td {
+    padding: 17px 0px 14px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    background: none;
+    border: none;
+
+    &.active {
+      img {
+        filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg)
+          brightness(102%) contrast(90%);
+      }
+    }
+  }
+
+  .detaile-button {
+    position: relative;
+
+    &:hover:before {
+      display: block;
+    }
+
+    &::before {
+      position: absolute;
+      content: "Просмотреть заказ";
+
+      display: none;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 108%;
+
+      text-align: center;
+
+      color: $main-white;
+      background-color: $accent;
+
+      width: 105px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 8px 8px 15px 8px;
+      transition: opacity 1s ease-in-out;
+
+      position: absolute;
+      z-index: 10;
+      left: -120%;
+      top: -45px;
+
+      clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 86%,
+        63% 86%,
+        52% 100%,
+        40% 85%,
+        0 86%
+      );
+    }
+  }
+
+  &__bottom {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 229%;
+
+    color: $main;
+    margin: 0px;
+    margin-top: 16px;
+    text-align: end;
+  }
+
+  &__bottom {
+    margin-top: 29px;
+    display: flex;
+    justify-content: end;
+
+    .action-btn {
+      padding: 18px 60px;
+    }
+
+    .second {
+      display: flex;
+
+      .price {
+        display: flex;
+        margin-right: 28px;
+        align-items: center;
+
+        &__caption {
+          font-family: "Raleway", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 178%;
+
+          color: $main;
+          margin-right: 9px;
+        }
+
+        &__number {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 145%;
+
+          color: $accent;
+          margin-right: 4px;
+        }
+
+        &__currency {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 229%;
+
+          color: $accent;
+        }
+      }
+    }
+  }
+}
+
+.number-counter {
+  width: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0px auto;
+  input {
+    padding: 2px 17px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 229%;
+    color: #1a2f3f;
+    text-align: center;
+  }
+  .plus,
+  .minus {
+    font-size: 17px;
+    color: #8a8a8a;
+    cursor: pointer;
+  }
+}
+
+.order {
+  text-align: center;
+  margin-top: 50px;
+  &__caption {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 114%;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 178%;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin: 0px;
+    gap: 8px;
+    display: flex;
+    margin: 0px auto;
+    width: fit-content;
+
+    a {
+      color: $accent;
+    }
+
+    #loginLink {
+      text-decoration: none;
+    }
+  }
+}
+
+.contact-information {
+  &__form {
+    width: 474px;
+  }
+  &__container {
+    margin: 0px;
+    margin-bottom: 45px;
+    padding: 0px;
+    border: none;
+    gap: 15px;
+    display: grid;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__caption {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 188%;
+    letter-spacing: 0.01em;
+
+    color: $main;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.radio {
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+    input[type="radio"] {
+      width: auto;
+    }
+
+    input[type="radio"] {
+      height: 13px;
+      width: 13px;
+
+      appearance: none;
+      border-radius: 50%;
+
+      box-shadow: 0 0 0 1px $accent;
+      padding: 0px;
+    }
+
+    input[type="radio"]::before {
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      border-radius: 50%;
+      left: -1px;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em $accent;
+    }
+
+    input[type="radio"]:checked::before {
+      transform: scale(0.7);
+      position: absolute;
+    }
+
+    input[type="radio"] {
+      display: inline-grid;
+      place-content: center;
+      align-items: center;
+      position: relative;
+    }
+  }
+
+  &__lable {
+    margin-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 121%;
+
+    color: $main;
+  }
+}
+
+.continue-btn {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 106%;
+
+  color: $main-white;
+  background: $accent;
+  border: 0.5px solid $accent;
+  padding: 17px 47px;
+  text-align: center;
+  // width: 100%;
+  margin: 0px;
+  margin-top: 36px;
+}
+
+.delivery-badge {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 12px;
+
+  letter-spacing: 0.06em;
+
+  color: $main-white;
+  background: url("@img/badge-new.svg");
+  padding: 7px 17px 6px 5px;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-left: 10px;
+}
+
+.courier-info {
+  display: block;
+}
+
+.newPost-info {
+  display: none;
+
+  //   display: grid;
+  gap: 15px;
+}
+
+.person-info {
+  display: grid;
+  gap: 15px;
+}
+
+.company-info {
+  display: none;
+  //   display: grid;
+  gap: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+  .address {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .order-table__bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .second {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .order-table th {
+    padding: 20px 9px 16px 9px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .address__head {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .address__head_second {
+    margin: 0px;
+  }
+
+  .table__container {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .number-counter {
+    width: 25%;
+  }
+
+  .order__text {
+    flex-wrap: wrap;
+  }
+
+  .contact-information__form {
+    width: 100%;
+  }
+}
