@@ -146,17 +146,17 @@ function scss(done) {
 function js(done) {
   gulp
     .src(paths.src.scripts, { sourcemaps: isDev })
-    .pipe(
-      webpack({
-        mode: isBuild ? "production" : "development",
-        output: {
-          filename: `[name].min.js`,
-        },
-        optimization: {
-          minimize: true,
-        },
-      })
-    )
+    // .pipe(
+    //   webpack({
+    //     mode: isBuild ? "production" : "development",
+    //     output: {
+    //       filename: `[name].min.js`,
+    //     },
+    //     optimization: {
+    //       minimize: true,
+    //     },
+    //   })
+    // )
 
     .pipe(gulp.dest(paths.build.scripts));
   done();

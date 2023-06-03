@@ -70,7 +70,7 @@ $rfs-breakpoint: 1500;
 
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
 
