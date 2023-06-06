@@ -1,19 +1,26 @@
 <section class="video-sec video">
-    <div class="video__wrap video-sec__wrap">
-        <h2 class="video__head">@@title</h2>
-        <button class="video__button" id="play-btn" aria-label="Play video: Circum Pontiac region's Walnut">
+    <div class="video__youtube" data-youtube>
+        <div class="video__wrap video-sec__wrap">
+            <h2 class="video__head">@@title</h2>
+            <!-- <button class="video__button" id="play-btn" aria-label="Play video: Circum Pontiac region's Walnut">
             <img src="@img/play-icon.svg" alt="play video button icon">
-        </button>
-        <p class="video__text">
-            @@text
-        </p>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="@@banner" alt="banner">
-    </div>
+        </button> -->
 
-    <iframe loading="lazy" class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
+            <button class="video__button" id="play-btn" aria-label="Play video: Circum Pontiac region's Walnut"
+                data-youtube-button="https://www.youtube.com/embed/hT4O8VI__XE">
+                <img src="@img/play-icon.svg" alt="play video button icon">
+            </button>
+            <p class="video__text">
+                @@text
+            </p>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="@@banner" alt="banner">
+        </div>
+
+        <!-- <iframe loading="lazy" class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
         title="Circum Pontiac region's Walnut video" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+        allowfullscreen></iframe> -->
+    </div>
 </section>

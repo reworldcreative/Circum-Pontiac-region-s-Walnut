@@ -5,8 +5,8 @@
     </button>
 
     <div class="basket__pop-up">
-        <ul class="basket__list">
-            <li>
+        <!-- <ul class="basket__list">
+            <li class="basket__name">
                 <p class="basket__text">Орех соленый 80г.</p>
             </li>
             <li>
@@ -17,7 +17,11 @@
                 </div>
             </li>
 
-            <li>
+            <li class="price visibility-hidden">
+                <p class="price-number">21</p>
+            </li>
+
+            <li class="price-amount">
                 <p class="basket__text">100 грн.</p>
             </li>
 
@@ -27,7 +31,7 @@
             </li>
         </ul>
         <ul class="basket__list">
-            <li>
+            <li class="basket__name">
                 <p class="basket__text">Орех соленый 80г.</p>
             </li>
             <li>
@@ -38,7 +42,11 @@
                 </div>
             </li>
 
-            <li>
+            <li class="price visibility-hidden">
+                <p class="price-number">21</p>
+            </li>
+
+            <li class="price-amount">
                 <p class="basket__text">80 грн.</p>
             </li>
 
@@ -46,12 +54,18 @@
                 <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
                         aria-hidden="true">X</span></button>
             </li>
-        </ul>
+        </ul> -->
 
-        <div class="second">
-            <div class="price">
+        <div class="second" id="total-price">
+            <!-- <div class="price">
                 <p class="price__caption">Всего</p>
                 <p class="price__number">175</p>
+                <p class="price__currency">грн.</p>
+            </div> -->
+
+            <div class="price">
+                <p class="price__caption">Всего</p>
+                <p class="price__number">0</p>
                 <p class="price__currency">грн.</p>
             </div>
             @@include('actionButton.html',{

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.min.css?_v=20230603165508">
+    <link rel="stylesheet" href="styles/style.min.css">
     <title>Орех Причерноморья</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap&_v=20230603165508"
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
 
     <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230603165508" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="styles/style.min.css?_v=20230603165508">
-    <link rel="stylesheet" href="styles/products.min.css?_v=20230603165508">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/products.min.css">
 </head>
 
 <body>
@@ -67,7 +67,7 @@
         <section class="main-header">
             <div class="main-header__wrap">
                 <a class="logo" href="index.html">
-    <picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo"></picture>
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
                 <ul class="socials-fill__list" role="list" aria-label="list of social links">
@@ -110,7 +110,8 @@
 
 
                 <div class="main-header__container">
-                    <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
+                    <button id="@@id" class="action-btn" aria-lable="call us" aria-description="Request a call"
+    type="button">Заказать звонок</button>
 
                     <p class="main-header__text">Ждем Вашего звонка ежедневно с 9 до 18</p>
                     <div class="basket__container">
@@ -120,8 +121,8 @@
     </button>
 
     <div class="basket__pop-up">
-        <ul class="basket__list">
-            <li>
+        <!-- <ul class="basket__list">
+            <li class="basket__name">
                 <p class="basket__text">Орех соленый 80г.</p>
             </li>
             <li>
@@ -132,7 +133,11 @@
                 </div>
             </li>
 
-            <li>
+            <li class="price visibility-hidden">
+                <p class="price-number">21</p>
+            </li>
+
+            <li class="price-amount">
                 <p class="basket__text">100 грн.</p>
             </li>
 
@@ -142,7 +147,7 @@
             </li>
         </ul>
         <ul class="basket__list">
-            <li>
+            <li class="basket__name">
                 <p class="basket__text">Орех соленый 80г.</p>
             </li>
             <li>
@@ -153,7 +158,11 @@
                 </div>
             </li>
 
-            <li>
+            <li class="price visibility-hidden">
+                <p class="price-number">21</p>
+            </li>
+
+            <li class="price-amount">
                 <p class="basket__text">80 грн.</p>
             </li>
 
@@ -161,15 +170,22 @@
                 <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
                         aria-hidden="true">X</span></button>
             </li>
-        </ul>
+        </ul> -->
 
-        <div class="second">
-            <div class="price">
+        <div class="second" id="total-price">
+            <!-- <div class="price">
                 <p class="price__caption">Всего</p>
                 <p class="price__number">175</p>
                 <p class="price__currency">грн.</p>
+            </div> -->
+
+            <div class="price">
+                <p class="price__caption">Всего</p>
+                <p class="price__number">0</p>
+                <p class="price__currency">грн.</p>
             </div>
-            <button class="action-btn" aria-lable="go to backet" aria-description="go to backet">Перейти в корзину</button>
+            <button id="@@id" class="action-btn" aria-lable="go to backet" aria-description="go to backet"
+    type="button">Перейти в корзину</button>
         </div>
     </div>
 </div>
@@ -223,7 +239,8 @@
         </li>
     </ul>
 </address>
-            <button class="action-btn" aria-lable="call us" aria-description="Request a call">Заказать звонок</button>
+            <button id="@@id" class="action-btn" aria-lable="call us" aria-description="Request a call"
+    type="button">Заказать звонок</button>
             <select class="language-select" name="language-select" aria-description="language select">
     <option value="RU" selected aria-label="Russian">RU</option>
     <option value="UA" aria-label="Ukrainian">UA</option>
@@ -238,7 +255,7 @@
     <span class="burger-btn__line" aria-hidden="true"></span>
 </button>
             <a class="logo" href="index.html">
-    <picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo"></picture>
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
             <div class="basket__container">
@@ -248,8 +265,8 @@
     </button>
 
     <div class="basket__pop-up">
-        <ul class="basket__list">
-            <li>
+        <!-- <ul class="basket__list">
+            <li class="basket__name">
                 <p class="basket__text">Орех соленый 80г.</p>
             </li>
             <li>
@@ -260,7 +277,11 @@
                 </div>
             </li>
 
-            <li>
+            <li class="price visibility-hidden">
+                <p class="price-number">21</p>
+            </li>
+
+            <li class="price-amount">
                 <p class="basket__text">100 грн.</p>
             </li>
 
@@ -270,7 +291,7 @@
             </li>
         </ul>
         <ul class="basket__list">
-            <li>
+            <li class="basket__name">
                 <p class="basket__text">Орех соленый 80г.</p>
             </li>
             <li>
@@ -281,7 +302,11 @@
                 </div>
             </li>
 
-            <li>
+            <li class="price visibility-hidden">
+                <p class="price-number">21</p>
+            </li>
+
+            <li class="price-amount">
                 <p class="basket__text">80 грн.</p>
             </li>
 
@@ -289,15 +314,22 @@
                 <button class="close-btn" aria-label="delete element"><span class="close-btn__icon"
                         aria-hidden="true">X</span></button>
             </li>
-        </ul>
+        </ul> -->
 
-        <div class="second">
-            <div class="price">
+        <div class="second" id="total-price">
+            <!-- <div class="price">
                 <p class="price__caption">Всего</p>
                 <p class="price__number">175</p>
                 <p class="price__currency">грн.</p>
+            </div> -->
+
+            <div class="price">
+                <p class="price__caption">Всего</p>
+                <p class="price__number">0</p>
+                <p class="price__currency">грн.</p>
             </div>
-            <button class="action-btn" aria-lable="go to backet" aria-description="go to backet">Перейти в корзину</button>
+            <button id="@@id" class="action-btn" aria-lable="go to backet" aria-description="go to backet"
+    type="button">Перейти в корзину</button>
         </div>
     </div>
 </div>
@@ -306,7 +338,7 @@
         <nav class="burger__menu" role="navigation" aria-label="main menu">
     <div class="burger__menu_head">
         <a class="logo" href="index.html">
-    <picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo"></picture>
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
 
@@ -403,20 +435,20 @@
 
         <div class="buttons">
             <div class="buttons__select">
-                <select class="taste" name="select" required>
+                <select class="taste" name="select" id="tasteSelect" required>
                     <option value="" disabled selected>Вкус</option>
-                    <option value="1">сладкий</option>
-                    <option value="2">соленый</option>
+                    <option value="sweet">сладкий</option>
+                    <option value="salty">соленый</option>
                 </select>
 
-                <select class="mass" name="select" required>
+                <select class="mass" name="select" id="massSelect" required>
                     <option value="" disabled selected>Масса</option>
                     <option value="1">до 40</option>
                     <option value="2">> 40</option>
                 </select>
             </div>
 
-            <button class="cost">
+            <button class="cost" type="button">
                 Стоимость
                 <span class="cost-down">
                     <img src="img/right arrow.svg" alt="down arrow">
@@ -428,9 +460,10 @@
         </div>
 
         <div>
-            <button class="action-btn" aria-lable="apply" aria-description="apply settings">Применить</button>
+            <button id="applySort" class="action-btn" aria-lable="apply" aria-description="apply settings"
+    type="button">Применить</button>
 
-            <button class="clear-button">
+            <button class="clear-button" type="button">
                 <span class="clear-button__icon" aria-hidden="true">X</span>Сбросить
             </button>
         </div>
@@ -465,10 +498,10 @@
             </button>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <picture><source srcset="img/KOND.webp" type="image/webp"><img class="product__image" src="img/KOND.png" alt="product image"></picture>
+                    <img class="product__image" src="img/KOND.png" alt="product image">
                 </div>
                 <div class="swiper-slide">
-                    <picture><source srcset="img/walnut.webp" type="image/webp"><img class="product__image" src="img/walnut.webp" alt="walnut image"></picture>
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
                 </div>
             </div>
 
@@ -481,7 +514,9 @@
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            <a class="product-link" href="productPage.html">
+                <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            </a>
         </div>
 
 
@@ -507,7 +542,8 @@
                 </p>
             </div>
 
-            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+            <button id="@@id" class="action-btn" aria-lable="buy" aria-description="buy product"
+    type="button">Купить</button>
         </div>
     </div>
 </article>
@@ -529,10 +565,10 @@
             </button>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <picture><source srcset="img/SOLODKY.webp" type="image/webp"><img class="product__image" src="img/SOLODKY.png" alt="product image"></picture>
+                    <img class="product__image" src="img/SOLODKY.png" alt="product image">
                 </div>
                 <div class="swiper-slide">
-                    <picture><source srcset="img/walnut.webp" type="image/webp"><img class="product__image" src="img/walnut.webp" alt="walnut image"></picture>
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
                 </div>
             </div>
 
@@ -545,7 +581,9 @@
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            <a class="product-link" href="productPage.html">
+                <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            </a>
         </div>
 
 
@@ -571,7 +609,8 @@
                 </p>
             </div>
 
-            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+            <button id="@@id" class="action-btn" aria-lable="buy" aria-description="buy product"
+    type="button">Купить</button>
         </div>
     </div>
 </article>
@@ -593,10 +632,10 @@
             </button>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <picture><source srcset="img/SOLONY.webp" type="image/webp"><img class="product__image" src="img/SOLONY.png" alt="product image"></picture>
+                    <img class="product__image" src="img/SOLONY.png" alt="product image">
                 </div>
                 <div class="swiper-slide">
-                    <picture><source srcset="img/walnut.webp" type="image/webp"><img class="product__image" src="img/walnut.webp" alt="walnut image"></picture>
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
                 </div>
             </div>
 
@@ -609,7 +648,9 @@
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            <a class="product-link" href="productPage.html">
+                <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            </a>
         </div>
 
 
@@ -635,7 +676,8 @@
                 </p>
             </div>
 
-            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+            <button id="@@id" class="action-btn" aria-lable="buy" aria-description="buy product"
+    type="button">Купить</button>
         </div>
     </div>
 </article>
@@ -657,10 +699,10 @@
             </button>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <picture><source srcset="img/milky.webp" type="image/webp"><img class="product__image" src="img/milky.png" alt="product image"></picture>
+                    <img class="product__image" src="img/milky.png" alt="product image">
                 </div>
                 <div class="swiper-slide">
-                    <picture><source srcset="img/walnut.webp" type="image/webp"><img class="product__image" src="img/walnut.webp" alt="walnut image"></picture>
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
                 </div>
             </div>
 
@@ -673,7 +715,9 @@
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            <a class="product-link" href="productPage.html">
+                <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            </a>
         </div>
 
 
@@ -699,7 +743,8 @@
                 </p>
             </div>
 
-            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+            <button id="@@id" class="action-btn" aria-lable="buy" aria-description="buy product"
+    type="button">Купить</button>
         </div>
     </div>
 </article>
@@ -721,10 +766,10 @@
             </button>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <picture><source srcset="img/SOLODKY-milky.webp" type="image/webp"><img class="product__image" src="img/SOLODKY-milky.png" alt="product image"></picture>
+                    <img class="product__image" src="img/SOLODKY-milky.png" alt="product image">
                 </div>
                 <div class="swiper-slide">
-                    <picture><source srcset="img/walnut.webp" type="image/webp"><img class="product__image" src="img/walnut.webp" alt="walnut image"></picture>
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
                 </div>
             </div>
 
@@ -737,7 +782,9 @@
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            <a class="product-link" href="productPage.html">
+                <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            </a>
         </div>
 
 
@@ -763,7 +810,8 @@
                 </p>
             </div>
 
-            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+            <button id="@@id" class="action-btn" aria-lable="buy" aria-description="buy product"
+    type="button">Купить</button>
         </div>
     </div>
 </article>
@@ -785,10 +833,10 @@
             </button>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <picture><source srcset="img/SOLONY-milky.webp" type="image/webp"><img class="product__image" src="img/SOLONY-milky.png" alt="product image"></picture>
+                    <img class="product__image" src="img/SOLONY-milky.png" alt="product image">
                 </div>
                 <div class="swiper-slide">
-                    <picture><source srcset="img/walnut.webp" type="image/webp"><img class="product__image" src="img/walnut.webp" alt="walnut image"></picture>
+                    <img class="product__image" src="img/walnut.webp" alt="walnut image">
                 </div>
             </div>
 
@@ -801,7 +849,9 @@
         <div class="product__text">
             <h3 class="product__title">Грецкий орех</h3>
             <p class="product__article">Арт: 0091</p>
-            <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            <a class="product-link" href="productPage.html">
+                <p class="product__discription">Орех сладкий, классический, очищенный</p>
+            </a>
         </div>
 
 
@@ -827,7 +877,8 @@
                 </p>
             </div>
 
-            <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+            <button id="@@id" class="action-btn" aria-lable="buy" aria-description="buy product"
+    type="button">Купить</button>
         </div>
     </div>
 </article>
@@ -1003,7 +1054,7 @@
     <div class="footer__wrap">
         <div class="footer__top">
             <a class="logo" href="index.html">
-    <picture><source srcset="img/logo.webp" type="image/webp"><img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo"></picture>
+    <img class="logo__img" src="img/logo.png" alt="Circum Pontiac region's Walnut logo">
     <p class="logo__text">ОРЕХ ПРИЧЕРНОМОРЬЯ</p>
 </a>
             <nav class="menu" role="navigation" aria-label="main menu">
@@ -1055,17 +1106,17 @@
         </div>
     </div>
 </footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230603165508"
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230603165508"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- <script src="scripts/main.min.js?_v=20230603165508"></script> -->
-    <script src="scripts/main.js?_v=20230603165508"></script>
-    <script src="scripts/video.js?_v=20230603165508"></script>
-    <script src="scripts/Products.js?_v=20230603165508"></script>
-    <!-- <script src="scripts/videoPlayer.js?_v=20230603165508"></script> -->
+    <!-- <script src="scripts/main.min.js"></script> -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/video.js"></script>
+    <script src="scripts/Products.js"></script>
+    <!-- <script src="scripts/videoPlayer.js"></script> -->
 </body>
 
 </html>

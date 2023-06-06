@@ -9,9 +9,20 @@
 // https://fakestoreapi.com/products?limit=5
 
 let globalData;
+let filter = "";
+var path = "http://localhost:1337/api/products?populate=image";
 
-async function getProducts() {
-  fetch("http://localhost:1337/api/products?populate=image")
+//зростання цін
+// http://localhost:1337/api/products?populate=image&sort=currentPrice
+
+//спадання цін
+// http://localhost:1337/api/products?populate=image&sort=currentPrice%3Adesc
+
+//вибір за смаком
+// http://localhost:1337/api/products?populate=image&filters[taste][$eqi]=sweet
+
+async function getProducts(path) {
+  fetch(path)
     .then((response) => {
       return response.json();
     })
@@ -56,12 +67,18 @@ function createProductList(globalData) {
         <h3 class="product__title">` +
         element.attributes.category +
         `</h3>
-        <p class="product__article">00` +
+        <p class="product__article">` +
         element.id +
         `</p>
+        <a class="product-link" href="productPage.html` +
+        "?id" +
+        element.id +
+        '"' +
+        `>
         <p class="product__discription"> ` +
         element.attributes.name +
         `</p>
+        </a>
     </div>
 
     <div class="product__info">
@@ -125,125 +142,134 @@ function createProductList(globalData) {
   }
 }
 
-function createProductPage(element) {
-  const productItem = document.getElementById("mainProduct");
-  if (productItem) {
-    productItem.replaceChildren();
+getProducts(path);
 
-    const product = document.createElement("article");
-    product.classList.add("mainProduct__wrap");
-    product.innerHTML =
-      `<div class="product__carousel">
-        <div class="swiper product__swiper">
-            <button class="search" aria-label="scale image">
-                <img src="./img/magnifying-glass.svg" alt="search icon">
-            </button>
-            <div class="swiper-wrapper">
+Array.from($(".product .action-btn")).forEach((element) => {
+  element.addEventListener("click", (event) => {
+    var price;
+    var productName;
+    var weight;
+    price = $(event.target.parentElement)
+      .children(".price")
+      .children(".price__number")
+      .children(".price__number_current")
+      .text();
+    productName = $(event.target.parentElement)
+      .siblings(".product__text")
+      .children(".product-link")
+      .children(".product__discription")
+      .text();
+    weight = $(event.target.parentElement)
+      .siblings(".product__info")
+      .children(".weight")
+      .children(".weight__number")
+      .children(".weight__number_accent")
+      .text();
 
-            </div>
+    const basket = $(".basket__pop-up");
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-    <div class="mainProduct__discription">
-                    <div class="mainProduct__type-wrap">
-                        <p class="mainProduct__type">` +
-      element.attributes.category +
-      `</p>
-                        <p class="mainProduct__article">Арт: 00` +
-      element.id +
-      `</p>
-                    </div>
-
-                    <h2 class="mainProduct__name">` +
-      element.attributes.name +
-      `</h2>
-      <div class="mainProduct__infoList">
-                        <div class="mainProduct-infoItem">
-    <h3 class="mainProduct-infoItem__caption">Состав:</h3>
-    <p class="mainProduct-infoItem__text">` +
-      element.attributes.consist +
-      `</p>
-</div>
-
-                        <div class="mainProduct-infoItem">
-    <h3 class="mainProduct-infoItem__caption">Масса нетто:</h3>
-    <p class="mainProduct-infoItem__text">` +
-      element.attributes.weight +
-      `г.</p>
-</div>
-
-                        <div class="mainProduct-infoItem">
-    <h3 class="mainProduct-infoItem__caption">Энергетическая ценность:</h3>
-    <p class="mainProduct-infoItem__text">` +
-      element.attributes.calorie +
-      ` Ккал.</p>
-</div>
-
-                        <div class="mainProduct-infoItem">
-    <h3 class="mainProduct-infoItem__caption">Срок годности:</h3>
-    <p class="mainProduct-infoItem__text">` +
-      element.attributes.term +
-      ` месяцев, с даты расфасовки (указана на упаковке)</p>
-</div>
-                    </div>
-                    <div class="mainProduct__alert">
-                    <div class="alert__icon">
-                        <img src="img/exclamation point.svg" alt="exclamation point icon">
-                    </div>
-
-                    <p class="alert__text">` +
-      element.attributes.keeping +
-      `</p>
+    function createBasketElement(parent) {
+      const item = document.createElement("ul");
+      item.classList.add("basket__list");
+      item.innerHTML =
+        `
+            <li class="basket__name">
+                <p class="basket__text">` +
+        productName +
+        " " +
+        weight +
+        ` </p>
+            </li>
+            <li>
+                <div class="number-counter">
+                    <span class="minus">&lt;</span>
+                    <input type="text" value="1">
+                    <span class="plus">&gt;</span>
                 </div>
+            </li>
 
-                <div class="product__price">
-                <div class="price">
-                <p class="price__number"><span class="price__number_text">Цена:</span><span
-                        class="price__number_accent price__number_from">` +
-      (element.attributes.from ? "от" : "") +
-      `</span> <span
-                        class="price__number_current">` +
-      element.attributes.currentPrice +
-      ` </span><span
-                        class="price__number_accent">` +
-      element.attributes.currency +
-      `</span>
-                    <span class="price__number_total">` +
-      (element.attributes.price ? element.attributes.price : "") +
-      ` <span class="price__number_muted">` +
-      (element.attributes.price ? element.attributes.currency : "") +
-      `</span></span>
-                </p>
-            </div>
+            <li class="price visibility-hidden">
+                <p class="price-number">` +
+        price +
+        `</p>
+            </li>
 
-                        <button class="action-btn" aria-lable="order" aria-description="order product">Заказать</button>
-                    </div>
-                    </div>
-    `;
+            <li class="price-amount">
+                <p class="basket__text">` +
+        price +
+        ` грн.</p>
+            </li>
 
-    productItem.appendChild(product);
+            <li>
+                <button class="close-btn" aria-label="delete element"><span class="close-btn__icon" aria-hidden="true">X</span></button>
+            </li>
+      `;
+      parent.insertBefore(item, parent.firstChild);
 
-    element.attributes.image.data.forEach((element) => {
-      const carouselItem = document.createElement("div");
-      if (carouselItem) {
-        carouselItem.classList.add("swiper-slide");
-        carouselItem.innerHTML =
-          `<img class="product__image" src="` +
-          "http://localhost:1337" +
-          element.attributes.url +
-          `" alt="product image">`;
-        productItem
-          .querySelector(".product__carousel .swiper-wrapper")
-          .appendChild(carouselItem);
+      var numberCounter = item.querySelector(".number-counter");
+      var input = numberCounter.querySelector("input");
+
+      function minusClick() {
+        var count = parseInt(input.value) - 1;
+        count = count < 1 ? 1 : count;
+        input.value = count;
+        updatePriceAmount(count);
+        updatePrice();
+        var basketPopup = document.querySelector(".basket__pop-up");
+        localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
       }
-    });
-    initSlider();
-  }
-}
 
-getProducts();
+      function plusClick() {
+        var count = parseInt(input.value) + 1;
+        input.value = count;
+        updatePriceAmount(count);
+        updatePrice();
+        var basketPopup = document.querySelector(".basket__pop-up");
+        localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+      }
+
+      var minusButton = numberCounter.querySelector(".minus");
+      var plusButton = numberCounter.querySelector(".plus");
+      function updatePriceAmount(count) {
+        var price = parseInt(item.querySelector(".price-number").textContent);
+        var amountElement = item.querySelector(".price-amount .basket__text");
+        amountElement.textContent = price * count + " грн.";
+      }
+      minusButton.addEventListener("click", minusClick);
+      plusButton.addEventListener("click", plusClick);
+      updatePrice();
+
+      $(".close-btn").on("click", function () {
+        var index = $(this).closest(".basket__list").index();
+        $(this)
+          .closest(".basket__pop-up")
+          .find(".basket__list")
+          .eq(index)
+          .remove();
+
+        var basketPopUp = $(".basket__pop-up");
+        var basketCount = $(".basket__count");
+        $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
+
+        var basketPopup = document.querySelector(".basket__pop-up");
+        localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+      });
+
+      Array.from($(".basket__count")).forEach((element) => {
+        var basketPopUp = $(".basket__pop-up");
+        var basketCount = $(".basket__count");
+        $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
+      });
+    }
+
+    Array.from(basket).forEach((element) => {
+      createBasketElement(element);
+    });
+
+    var basketPopup = document.querySelector(".basket__pop-up");
+    localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+  });
+});
 
 function initSlider() {
   const productSwiper = new Swiper(".product__swiper", {
@@ -269,7 +295,7 @@ const longPollCallback = () => {
   if (globalData) {
     // console.log(globalData);
     createProductList(globalData);
-    createProductPage(globalData.data[0]);
+    // createProductPage(globalData.data[0]);
   } else {
     setTimeout(longPollCallback, 500);
   }
@@ -305,4 +331,73 @@ if ($(".search")) {
       }
     });
   }
+}
+
+if ($(".cost").length > 0) {
+  $(".cost")[0].addEventListener("click", (event) => {
+    $(".cost-down")[0].classList.toggle("active");
+    $(".cost-up")[0].classList.toggle("active");
+    if ($(".cost-down")[0].classList.contains("active")) {
+      // path =
+      //   "http://localhost:1337/api/products?populate=image&sort=currentPrice%3Adesc";
+      filter = filter.replace("&sort=currentPrice", "");
+      filter = filter + "&sort=currentPrice%3Adesc";
+    } else if ($(".cost-up")[0].classList.contains("active")) {
+      // path =
+      //   "http://localhost:1337/api/products?populate=image&sort=currentPrice";
+      filter = filter.replace("&sort=currentPrice%3Adesc", "");
+      filter = filter + "&sort=currentPrice";
+    }
+
+    path = "http://localhost:1337/api/products?populate=image" + filter;
+    getProducts(path);
+    setTimeout(() => {
+      longPollCallback();
+    }, 500);
+  });
+}
+
+if ($(".clear-button").length > 0) {
+  $(".clear-button")[0].addEventListener("click", (event) => {
+    $(".taste").val("");
+    $(".mass").val("");
+    $(".cost-down")[0].classList.remove("active");
+    $(".cost-up")[0].classList.add("active");
+
+    path = "http://localhost:1337/api/products?populate=image";
+    getProducts(path);
+    setTimeout(() => {
+      longPollCallback();
+    }, 500);
+  });
+}
+
+if ($("#applySort").length > 0) {
+  $("#applySort")[0].addEventListener("click", (event) => {
+    // if ($("#tasteSelect")[0].value) {
+    //   path =
+    //     "http://localhost:1337/api/products?populate=image&filters[taste][$eqi]=" +
+    //     $("#tasteSelect")[0].value;
+    // }
+
+    if ($("#tasteSelect")[0].value) {
+      filter = "&filters[taste][$eqi]=" + $("#tasteSelect")[0].value;
+    }
+
+    if ($("#massSelect")[0].value == 1) {
+      // path =
+      //   "http://localhost:1337/api/products?populate=image&filters[weight][$lt]=40";
+      filter = filter + "&filters[weight][$lt]=40";
+    } else if ($("#massSelect")[0].value == 2) {
+      // path =
+      //   "http://localhost:1337/api/products?populate=image&filters[weight][$gte]=40";
+      filter = filter + "&filters[weight][$gte]=40";
+    }
+
+    path = "http://localhost:1337/api/products?populate=image" + filter;
+    getProducts(path);
+    setTimeout(() => {
+      longPollCallback();
+    }, 500);
+  });
 }

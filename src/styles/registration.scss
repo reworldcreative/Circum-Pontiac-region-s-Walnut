@@ -213,6 +213,13 @@ $rfs-breakpoint: 1500;
   .avata-img {
     filter: invert(31%) sepia(26%) saturate(967%) hue-rotate(99deg)
       brightness(105%) contrast(46%);
+
+    width: 100%;
+    height: 100%;
+
+    &.loaded {
+      filter: none;
+    }
   }
 
   .avatar {
@@ -221,6 +228,8 @@ $rfs-breakpoint: 1500;
     justify-content: center;
     align-items: center;
     width: fit-content;
+    width: 135px;
+    height: 170px;
     &__download {
       font-family: "Montserrat", sans-serif;
       font-style: normal;

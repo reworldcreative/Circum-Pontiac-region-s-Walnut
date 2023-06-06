@@ -33,9 +33,10 @@
 
                         </fieldset>
                         <fieldset class="registrationForm__personal-information">
-                            <input type="text" id="name" name="name" placeholder="ФИО*">
-                            <input type="email" id="email" name="email" placeholder="Email*">
-                            <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
+                            <input type="text" id="name" name="mname" placeholder="ФИО*" required />
+                            <input type="email" id="email" name="email" placeholder="Email*" required />
+                            <input type="tel" id="phone" name="phone" placeholder="Телефон*" required />
+
                         </fieldset>
                     </fieldset>
 
@@ -67,6 +68,7 @@
                             <input type="password" id="password" name="password" placeholder="Пароль*">
                             <input type="password" id="confirm-password" name="password"
                                 placeholder="Подтвердите пароль*">
+                            <span id="registration-errorPass-message" style="display: none; color:red;"></span>
                         </fieldset>
 
                         <div class="agree__wrap">
@@ -74,17 +76,22 @@
                             <label class="agree__text" for="agree">Я согласен с <span class="agree__text_accent">
                                     Условиями
                                     регистрации</span></label>
+                            <span id="registration-errorAgree-message" style="display: none; color:red;"></span>
                         </div>
 
-                        <button class="continue-btn" aria-lable="continue"
+                        <span id="registration-error-message" style="display: none; color:red;"></span>
+                        <button id="registration-btn" type="button" class="continue-btn" aria-lable="continue"
                             aria-description="continue registration">Продолжить</button>
                     </fieldset>
                 </div>
 
                 <div class="registrationForm__second-col">
                     <div class="avatar">
-                        <img class="avata-img" src="@img/avatar.png" alt="avatar">
-                        <button class="avatar__download">Загрузить фото</button>
+                        <img id="avatarImg" class="avata-img" src="@img/avatar.png" alt="avatar">
+                        <label class="avatar__download" for="avatarFile" id="fileLabel">Загрузить фото</label>
+                        <input type="file" id="avatarFile" name="filename" accept="image/*" style="display: none;">
+
+                        <!-- <input type="file" class="avatar__download">Загрузить фото</input> -->
                     </div>
 
                     <div class="naturalPerson__dop">

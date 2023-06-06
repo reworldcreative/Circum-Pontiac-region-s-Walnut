@@ -1,24 +1,30 @@
 <section class="video">
-    <div class="video__wrap">
-        <h1 class="video__head">Орех Причерноморья</h1>
-        <p class="video__text">
-            Единственный в Украине сад совместного
-            выращивание фундука и грецкого ореха
-        </p>
+    <div class="video__youtube" data-youtube>
+        <div class="video__wrap">
+            <h1 class="video__head">Орех Причерноморья</h1>
+            <p class="video__text">
+                Единственный в Украине сад совместного
+                выращивание фундука и грецкого ореха
+            </p>
 
-        <button class="video__button" id="play-btn" aria-label="play video">
-            <img src="@img/play-icon.svg" alt="play video button icon">
-        </button>
-    </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <!-- <img src="@img/main-banner.jpg" alt="banner"> -->
-        <img src="@@banner" alt="banner">
-    </div>
-    <!-- <video class="video__video" preload="none" poster="@img/main-banner.jpg"
+            <!-- <button class="video__button" id="play-btn" aria-label="play video">
+                <img src="@img/play-icon.svg" alt="play video button icon">
+            </button> -->
+            <button class="video__button" id="play-btn" aria-label="Play video: Circum Pontiac region's Walnut"
+                data-youtube-button="https://www.youtube.com/embed/hT4O8VI__XE">
+                <img src="@img/play-icon.svg" alt="play video button icon">
+            </button>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <!-- <img src="@img/main-banner.jpg" alt="banner"> -->
+            <img src="@@banner" alt="banner" class="video__placeholder">
+        </div>
+        <!-- <video class="video__video" preload="none" poster="@img/main-banner.jpg"
         src="https://www.youtube.com/embed/hT4O8VI__XE" type="video/mp4"></video> -->
 
-    <iframe loading="lazy" aria-label="walnut video" class="video__video" preload="none"
+        <!-- <iframe loading="lazy" aria-label="walnut video" class="video__video" preload="none"
         src="https://www.youtube.com/embed/hT4O8VI__XE" title="Circum Pontiac region's Walnut video" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen type="video/mp4"></iframe>
+        allowfullscreen type="video/mp4"></iframe> -->
+    </div>
 </section>

@@ -70,6 +70,9 @@
 .product {
   width: 406px;
 
+  &-link {
+    text-decoration: none;
+  }
   &.active,
   &:hover {
     // border: 1.5px solid $contrast;

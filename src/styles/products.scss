@@ -78,6 +78,12 @@ $rfs-breakpoint: 1500;
   .shop {
     padding: 14.5px 43px 17.5px;
   }
+
+  &__item {
+    .product-link {
+      text-decoration: none;
+    }
+  }
 }
 
 .products-about {

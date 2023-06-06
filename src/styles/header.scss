@@ -183,6 +183,30 @@ $rfs-breakpoint: 1500;
   }
 }
 
+.number-counter {
+  width: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0px auto;
+  input {
+    padding: 2px 17px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 229%;
+    color: #1a2f3f;
+    text-align: center;
+  }
+  .plus,
+  .minus {
+    font-size: 17px;
+    color: #8a8a8a;
+    cursor: pointer;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .header {
     &__wrap {
@@ -361,71 +385,76 @@ $rfs-breakpoint: 1500;
   }
 }
 
-.basket__container {
-  position: relative;
-}
-
-.basket__pop-up {
-  display: none;
-  position: absolute;
-  background-color: $main-white;
-  border: 1.5px solid $accent;
-  padding: 30px 31px 25px;
-
-  z-index: 60;
-  width: 468px;
-  left: auto;
-  right: 0px;
-  top: 40px;
-
-  &.show {
-    display: block;
+.basket {
+  &__container {
+    position: relative;
   }
-  .second {
-    display: flex;
-    align-items: center;
-    justify-content: end;
 
-    .price {
-      display: flex;
-      margin-right: 28px;
-      align-items: center;
+  &__pop-up {
+    display: none;
+    position: absolute;
+    background-color: $main-white;
+    border: 1.5px solid $accent;
+    padding: 30px 31px 25px;
 
-      &__caption {
-        font-family: "Raleway", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 178%;
+    z-index: 60;
+    width: 468px;
+    left: auto;
+    right: 0px;
+    top: 40px;
 
-        color: $main;
-        margin-right: 9px;
-      }
+    max-height: 300px;
+    overflow: scroll;
 
-      &__number {
-        font-family: "Montserrat", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 145%;
-
-        color: $accent;
-        margin-right: 4px;
-      }
-
-      &__currency {
-        font-family: "Montserrat", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 229%;
-
-        color: $accent;
-      }
+    &.show {
+      display: block;
     }
+    .second {
+      display: flex;
+      align-items: center;
+      justify-content: end;
 
-    .action-btn {
-      padding: 17px 20px;
+      .price {
+        display: flex;
+        margin-right: 28px;
+        align-items: center;
+
+        &__caption {
+          font-family: "Raleway", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 178%;
+
+          color: $main;
+          margin-right: 9px;
+        }
+
+        &__number {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 145%;
+
+          color: $accent;
+          margin-right: 4px;
+        }
+
+        &__currency {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 229%;
+
+          color: $accent;
+        }
+      }
+
+      .action-btn {
+        padding: 17px 20px;
+      }
     }
   }
 }
@@ -464,6 +493,10 @@ $rfs-breakpoint: 1500;
     }
   }
 
+  &__name {
+    max-width: 140px;
+  }
+
   &__text {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -485,5 +518,9 @@ $rfs-breakpoint: 1500;
     &__list {
       gap: 20px;
     }
+  }
+
+  .number-counter {
+    width: 25%;
   }
 }

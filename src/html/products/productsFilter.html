@@ -7,20 +7,20 @@
 
         <div class="buttons">
             <div class="buttons__select">
-                <select class="taste" name="select" required>
+                <select class="taste" name="select" id="tasteSelect" required>
                     <option value="" disabled selected>Вкус</option>
-                    <option value="1">сладкий</option>
-                    <option value="2">соленый</option>
+                    <option value="sweet">сладкий</option>
+                    <option value="salty">соленый</option>
                 </select>
 
-                <select class="mass" name="select" required>
+                <select class="mass" name="select" id="massSelect" required>
                     <option value="" disabled selected>Масса</option>
                     <option value="1">до 40</option>
                     <option value="2">> 40</option>
                 </select>
             </div>
 
-            <button class="cost">
+            <button class="cost" type="button">
                 Стоимость
                 <span class="cost-down">
                     <img src="@img/right arrow.svg" alt="down arrow">
@@ -36,9 +36,10 @@
             title:"Применить",
             description:"apply settings",
             lable:"apply",
+            id:"applySort",
             })
 
-            <button class="clear-button">
+            <button class="clear-button" type="button">
                 <span class="clear-button__icon" aria-hidden="true">X</span>Сбросить
             </button>
         </div>

@@ -6,6 +6,7 @@
 })
 
 <body>
+
     @@include('html/header.html',{})
 
     <main>
@@ -24,10 +25,12 @@
                 <input id="emailAddress" type="email" placeholder="Email" />
                 <input type="password" id="Password" name="Password" placeholder="Пароль">
 
+                <span id="error-message" style="display: none; color:red;"></span>
                 <a class="logIn__link" id="forgotPass" href="restorePassword.html"> Забыли пароль?</a>
-                <button class="continue-btn" aria-lable="continue"
-                    aria-description="continue registration">Войти</button>
+                <button id="loginButton" class="continue-btn" aria-lable="continue"
+                    aria-description="continue registration" type="button">Войти</button>
                 <a class="logIn__link" id="registration" href="registration.html">Регистрация</a>
+
             </form>
         </div>
 
@@ -44,6 +47,8 @@
 
     <!-- <script src="scripts/main.min.js"></script> -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/registration.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 
 </html>

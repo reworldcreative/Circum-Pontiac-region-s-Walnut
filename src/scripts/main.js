@@ -1,5 +1,8 @@
-// import * as functions from "./modules/functions.js";
+// import {isWebp} from "./modules/functions.js";
 // functions.isWebp();
+
+// import { counter } from "./counter.js";
+const jwtFromStorage = localStorage.getItem("jwt");
 
 function isWebp() {
   function testWebP(callback) {
@@ -25,6 +28,70 @@ function isWebp() {
 
 isWebp();
 
+function updatePrice() {
+  $(".basket__pop-up").each(function () {
+    var totalPrice = 0;
+    var $priceAmounts = $(this).find(".price-amount");
+
+    $priceAmounts.each(function () {
+      var price =
+        parseInt(
+          $(this).children(".basket__text").text().replace(" грн.", "")
+        ) || 0;
+      totalPrice += price;
+    });
+
+    var $priceNumber = $(this).find(".price__number");
+    $priceNumber.text(totalPrice);
+  });
+}
+
+function counter() {
+  var price;
+
+  function minusClick() {
+    price = $(this.parentElement.parentElement)
+      .siblings(".price")
+      .children(".price-number")
+      .text();
+    var $input = $(this).parent().find("input");
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    $(this.parentElement.parentElement)
+      .siblings(".price-amount")
+      .children(".basket__text")
+      .text(price * $input.val() + "грн.");
+    updatePrice();
+    return false;
+  }
+
+  function plusClick() {
+    price = $(this.parentElement.parentElement)
+      .siblings(".price")
+      .children(".price-number")
+      .text();
+    var $input = $(this).parent().find("input");
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    $(this.parentElement.parentElement)
+      .siblings(".price-amount")
+      .children(".basket__text")
+      .text(price * $input.val() + "грн.");
+    updatePrice();
+    return false;
+  }
+
+  $(".number-counter .minus").each(function () {
+    $(this).click(minusClick);
+  });
+
+  $(".number-counter .plus").each(function () {
+    $(this).click(plusClick);
+  });
+}
+// localStorage.clear();
 $(document).ready(function () {
   if ($(".burger-btn")) {
     $(".burger-btn").click(function (event) {
@@ -43,203 +110,48 @@ $(document).ready(function () {
       $(".menu__list #" + pageNmae)[0].classList.add("active");
     }
   }
+
+  var savedBasketPopupHTML = localStorage.getItem("basketPopupHTML");
+
+  if (savedBasketPopupHTML) {
+    var existingBasketPopup = document.querySelector(".basket__pop-up");
+    existingBasketPopup.innerHTML = savedBasketPopupHTML;
+
+    Array.from($(".basket__count")).forEach((element) => {
+      var basketPopUp = $(".basket__pop-up");
+      var basketCount = $(".basket__count");
+      $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
+    });
+
+    Array.from($(".close-btn")).forEach((element) => {
+      element.addEventListener("click", (event) => {
+        event.target.parentElement.parentElement.parentElement.remove();
+        updatePrice();
+      });
+    });
+  }
+
+  counter();
 });
+
+function countTotal() {
+  if ($("$total-price")) {
+    $("$total-price").text();
+  }
+}
 
 if ($(".basket")) {
   Array.from($(".basket")).forEach((element) => {
     element.addEventListener("click", (event) => {
+      updatePrice();
       $(".basket__pop-up")[0].classList.toggle("show");
     });
   });
+
+  Array.from($(".close-btn")).forEach((element) => {
+    element.addEventListener("click", (event) => {
+      event.target.parentElement.parentElement.parentElement.remove();
+      updatePrice();
+    });
+  });
 }
-
-// if (document.getElementById("play-btn")) {
-//   // document.getElementById("play-btn").onclick = function (event) {
-//   //   fadeImage(event);
-//   // };
-
-//   // function fadeImage(event) {
-//   //   document.getElementById("poster-image").style.zIndex = "0";
-//   //   document.getElementById("video").style.zIndex = "30";
-//   // }
-
-//   const video = document.querySelectorAll(".video__button");
-
-//   video.forEach((el) =>
-//     el.addEventListener("click", (event) => {
-//       event.currentTarget.parentElement.parentElement.getElementsByTagName(
-//         "iframe"
-//       )[0].style.zIndex = "40";
-//     })
-//   );
-// }
-
-// window.addEventListener("load", (event) => {
-//   console.log("page is fully loaded");
-// });
-
-// if ($(".search")) {
-//   $(document).on("click", ".search", function (target) {
-//     // $(".search").click(function (target) {
-//     // target.currentTarget.parentElement.id
-//     $(
-//       "#" +
-//         target.currentTarget.parentElement.getElementsByTagName("div")[0].id +
-//         " " +
-//         ".swiper-slide-active .product__image"
-//     ).toggleClass("scale");
-//   });
-
-//   if ($(".product__image")) {
-//     $(".product__image").mouseleave(function () {
-//       for (let index = 0; index < $(".product__image").length; index++) {
-//         $(".product__image")[index].classList.remove("scale");
-//       }
-//     });
-//   }
-// }
-
-// if ($(".tabs-navigation__item")) {
-//   $(".tabs-navigation__item").click(function (el) {
-//     console.log(el.currentTarget.getAttribute("name"));
-
-//     var i, tabcontent, tablinks;
-
-//     tabcontent = document.getElementsByClassName("tabs__item");
-//     for (i = 0; i < tabcontent.length; i++) {
-//       tabcontent[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("tabs-navigation__item");
-//     for (i = 0; i < tablinks.length; i++) {
-//       tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-
-//     document.getElementById(
-//       el.currentTarget.getAttribute("name")
-//     ).style.display = "flex";
-
-//     el.currentTarget.className += " active";
-//   });
-// }
-
-// if ($(".pay-tabs-navigation__item")) {
-//   $(".pay-tabs-navigation__item").click(function (el) {
-//     console.log(el.currentTarget.getAttribute("name"));
-
-//     var i, tabcontent, tablinks;
-
-//     tabcontent = document.getElementsByClassName("pay-tabs__item");
-//     for (i = 0; i < tabcontent.length; i++) {
-//       tabcontent[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("pay-tabs-navigation__item");
-//     for (i = 0; i < tablinks.length; i++) {
-//       tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-
-//     document.getElementById(
-//       el.currentTarget.getAttribute("name")
-//     ).style.display = "flex";
-
-//     el.currentTarget.className += " active";
-//   });
-// }
-
-// if ($(".mainProduct-Info__item")) {
-//   $(".mainProduct-Info__item").click(function (el) {
-//     console.log(el.currentTarget.getAttribute("name"));
-
-//     var i, tabcontent, tablinks;
-
-//     tabcontent = document.getElementsByClassName("tab__item");
-//     for (i = 0; i < tabcontent.length; i++) {
-//       tabcontent[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("mainProduct-Info__item");
-//     for (i = 0; i < tablinks.length; i++) {
-//       tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-
-//     document.getElementById(
-//       el.currentTarget.getAttribute("name")
-//     ).style.display = "flex";
-
-//     el.currentTarget.className += " active";
-//   });
-// }
-
-// if (document.getElementById("legalPerson")) {
-//   document.getElementById("legalPerson").addEventListener("click", (event) => {
-//     // console.log($(".naturalPerson__dop")[0]);
-//     $(".naturalPerson__dop")[0].style.display = "none";
-//     $(".legalPerson__dop")[0].style.display = "block";
-//   });
-// }
-
-// if (document.getElementById("naturalPerson")) {
-//   document
-//     .getElementById("naturalPerson")
-//     .addEventListener("click", (event) => {
-//       // console.log($(".naturalPerson__dop")[0]);
-//       $(".naturalPerson__dop")[0].style.display = "block";
-//       $(".legalPerson__dop")[0].style.display = "none";
-//     });
-// }
-
-// if ($("#FOP-radio")[0]) {
-//   $("#FOP-radio")[0].addEventListener("change", (event) => {
-//     $(".legalPerson__dop_legal")[0].style.display = "none";
-//     $(".legalPerson__dop_FOP")[0].style.display = "block";
-//   });
-// }
-
-// if ($("#legalPerson-radio")[0]) {
-//   $("#legalPerson-radio")[0].addEventListener("change", (event) => {
-//     $(".legalPerson__dop_FOP")[0].style.display = "none";
-//     $(".legalPerson__dop_legal")[0].style.display = "block";
-//   });
-// }
-
-// const videoSwiper = new Swiper(".video__carousel", {
-//   // slidesPerView: "auto",
-
-//   navigation: {
-//     nextEl: ".video__swiper-button-next",
-//     prevEl: ".video__swiper-button-prev",
-//   },
-//   // effect: "slide",
-// });
-
-// const newsSwiper = new Swiper(".news__carousel", {
-//   // slidesPerView: 3,
-//   spaceBetween: 30,
-//   navigation: {
-//     nextEl: ".news-next",
-//     prevEl: ".news-prev",
-//   },
-
-//   breakpoints: {
-//     300: {
-//       slidesPerView: 1,
-//     },
-//     620: {
-//       slidesPerView: 1.5,
-//     },
-//     900: {
-//       slidesPerView: 2,
-//     },
-//     1300: {
-//       slidesPerView: 3,
-//     },
-//   },
-// });
-
-// const productSwiper = new Swiper(".product__swiper", {
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   observer: true,
-//   observeParents: true,
-//   observeSlideChildren: true,
-// });
