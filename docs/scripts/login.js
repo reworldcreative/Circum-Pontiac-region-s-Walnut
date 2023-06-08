@@ -12,6 +12,8 @@ if ($("#loginButton").length > 0) {
     }).then((data) => {
       if (!data.error) {
         localStorage.setItem("jwt", data.jwt);
+
+        localStorage.setItem("user", JSON.stringify(data.user));
         window.location.replace("cabinet.html");
         const jwtFromStorage = checkJwtInLocalStorage();
       } else {

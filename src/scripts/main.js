@@ -131,6 +131,17 @@ $(document).ready(function () {
     });
   }
 
+  var savedBasketData = localStorage.getItem("basketData");
+  if (savedBasketData) {
+    var basketData = JSON.parse(savedBasketData);
+    var basketListItems = document.querySelectorAll(".basket__list");
+
+    basketListItems.forEach(function (item, index) {
+      var quantityInput = item.querySelector(".number-counter input");
+      quantityInput.value = basketData[index].quantity;
+    });
+  }
+
   counter();
 });
 
@@ -154,4 +165,20 @@ if ($(".basket")) {
       updatePrice();
     });
   });
+}
+
+async function postData(url = "", data = {}) {
+  const response = await fetch(url, {
+    method: "POST",
+    mode: "cors",
+    cache: "no-cache",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+    referrerPolicy: "no-referrer",
+    body: JSON.stringify(data),
+  });
+  return await response.json();
 }

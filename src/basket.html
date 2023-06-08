@@ -35,7 +35,7 @@
             <div>
                 <div class="table__container">
                     <table class="order-table">
-                        <tr>
+                        <tr class="order-table__head">
                             <th>
                                 <div class="order-table__header">
                                     <p class="order-table__caption">Товар</p>
@@ -61,7 +61,7 @@
                                 </div>
                             </th>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td class="order-table__text">Орех соленый 80г.</td>
                             <td class="order-table__text">
                                 <div class="number-counter">
@@ -70,8 +70,8 @@
                                     <span class="plus">></span>
                                 </div>
                             </td>
-                            <td class="order-table__text">25 грн.</td>
-                            <td class="order-table__text">100 грн.</td>
+                            <td class="order-table__text order-price">25 грн.</td>
+                            <td class="order-table__text order-total">100 грн.</td>
                         </tr>
                         <tr>
                             <td class="order-table__text">Орех соленый 80г.</td>
@@ -82,8 +82,8 @@
                                     <span class="plus">></span>
                                 </div>
                             </td>
-                            <td class="order-table__text">25 грн.</td>
-                            <td class="order-table__text">25 грн.</td>
+                            <td class="order-table__text order-price">25 грн.</td>
+                            <td class="order-table__text order-total">25 грн.</td>
                         </tr>
                         <tr>
                             <td class="order-table__text">Орех соленый 80г.</td>
@@ -94,8 +94,8 @@
                                     <span class="plus">></span>
                                 </div>
                             </td>
-                            <td class="order-table__text">25 грн.</td>
-                            <td class="order-table__text">25 грн.</td>
+                            <td class="order-table__text order-price">25 грн.</td>
+                            <td class="order-table__text order-total">25 грн.</td>
                         </tr>
                         <tr>
                             <td class="order-table__text">Орех соленый 80г.</td>
@@ -106,9 +106,9 @@
                                     <span class="plus">></span>
                                 </div>
                             </td>
-                            <td class="order-table__text">25 грн.</td>
-                            <td class="order-table__text">25 грн.</td>
-                        </tr>
+                            <td class="order-table__text order-price">25 грн.</td>
+                            <td class="order-table__text order-total">25 грн.</td>
+                        </tr> -->
                     </table>
 
                     <div class="order-table__bottom">
@@ -125,11 +125,13 @@
                                 <p class="price__number">175</p>
                                 <p class="price__currency">грн.</p>
                             </div>
-                            @@include('html/actionButton.html',{
+                            <!-- @@include('html/actionButton.html',{
                             title:"Оформить заказ",
                             description:"order",
                             lable:"order",
-                            })
+                            }) -->
+                            <button id="order-btn" class="action-btn" aria-lable="order" aria-description="order"
+                                type="button">Оформить заказ</button>
                         </div>
                     </div>
                 </div>
@@ -145,7 +147,7 @@
             </div>
         </div>
 
-        <div class="backet-succes">
+        <div class="backet-succes" id="backet-succes">
             <div class="backet-succes__wrap">
                 <h2 class="backet-succes__caption">Благодарим Вас за заказ!</h2>
                 <p class="backet-succes__text">Наши менеджеры свяжутся с Вами
@@ -166,6 +168,7 @@
 
     <!-- <script src="scripts/main.min.js"></script> -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/basket.js"></script>
 </body>
 
 </html>

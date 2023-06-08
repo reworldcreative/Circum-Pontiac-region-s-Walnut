@@ -2613,14 +2613,14 @@ main option[value=""][disabled] {
   background: none;
   border: none;
 }
-.cabinet-table__button.active img {
-  filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg) brightness(102%) contrast(90%);
-}
 .cabinet-table .detaile-button {
   position: relative;
 }
 .cabinet-table .detaile-button:hover:before {
   display: block;
+}
+.cabinet-table .detaile-button:hover img {
+  filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg) brightness(102%) contrast(90%);
 }
 .cabinet-table .detaile-button::before {
   position: absolute;

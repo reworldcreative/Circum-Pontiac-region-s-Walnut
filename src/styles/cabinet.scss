@@ -90,12 +90,12 @@ $rfs-breakpoint: 1500;
     background: none;
     border: none;
 
-    &.active {
-      img {
-        filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg)
-          brightness(102%) contrast(90%);
-      }
-    }
+    // &.active {
+    //   img {
+    //     filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg)
+    //       brightness(102%) contrast(90%);
+    //   }
+    // }
   }
 
   .detaile-button {
@@ -103,6 +103,13 @@ $rfs-breakpoint: 1500;
 
     &:hover:before {
       display: block;
+    }
+
+    &:hover {
+      img {
+        filter: invert(39%) sepia(14%) saturate(1463%) hue-rotate(99deg)
+          brightness(102%) contrast(90%);
+      }
     }
 
     &::before {

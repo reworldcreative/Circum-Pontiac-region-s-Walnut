@@ -139,137 +139,220 @@ function createProductList(globalData) {
     });
 
     initSlider();
+    addProducts();
   }
 }
 
 getProducts(path);
+var basketData = [];
+function addProducts() {
+  Array.from($(".product .action-btn")).forEach((element) => {
+    element.addEventListener("click", (event) => {
+      var price;
+      var productName;
+      var weight;
+      price = $(event.target.parentElement)
+        .children(".price")
+        .children(".price__number")
+        .children(".price__number_current")
+        .text();
+      productName = $(event.target.parentElement)
+        .siblings(".product__text")
+        .children(".product-link")
+        .children(".product__discription")
+        .text();
+      weight = $(event.target.parentElement)
+        .siblings(".product__info")
+        .children(".weight")
+        .children(".weight__number")
+        .children(".weight__number_accent")
+        .text();
 
-Array.from($(".product .action-btn")).forEach((element) => {
-  element.addEventListener("click", (event) => {
-    var price;
-    var productName;
-    var weight;
-    price = $(event.target.parentElement)
-      .children(".price")
-      .children(".price__number")
-      .children(".price__number_current")
-      .text();
-    productName = $(event.target.parentElement)
-      .siblings(".product__text")
-      .children(".product-link")
-      .children(".product__discription")
-      .text();
-    weight = $(event.target.parentElement)
-      .siblings(".product__info")
-      .children(".weight")
-      .children(".weight__number")
-      .children(".weight__number_accent")
-      .text();
+      const basket = $(".basket__pop-up");
 
-    const basket = $(".basket__pop-up");
+      function createBasketElement(parent) {
+        const item = document.createElement("ul");
+        item.classList.add("basket__list");
+        item.innerHTML =
+          `
+              <li class="basket__name">
+                  <p class="basket__text">` +
+          productName +
+          " " +
+          weight +
+          ` </p>
+              </li>
+              <li>
+                  <div class="number-counter">
+                      <span class="minus">&lt;</span>
+                      <input type="text" value="1">
+                      <span class="plus">&gt;</span>
+                  </div>
+              </li>
+  
+              <li class="price visibility-hidden">
+                  <p class="price-number">` +
+          price +
+          `</p>
+              </li>
+  
+              <li class="price-amount">
+                  <p class="basket__text">` +
+          price +
+          ` грн.</p>
+              </li>
+  
+              <li>
+                  <button class="close-btn" aria-label="delete element"><span class="close-btn__icon" aria-hidden="true">X</span></button>
+              </li>
+        `;
+        parent.insertBefore(item, parent.firstChild);
 
-    function createBasketElement(parent) {
-      const item = document.createElement("ul");
-      item.classList.add("basket__list");
-      item.innerHTML =
-        `
-            <li class="basket__name">
-                <p class="basket__text">` +
-        productName +
-        " " +
-        weight +
-        ` </p>
-            </li>
-            <li>
-                <div class="number-counter">
-                    <span class="minus">&lt;</span>
-                    <input type="text" value="1">
-                    <span class="plus">&gt;</span>
-                </div>
-            </li>
+        var numberCounter = item.querySelector(".number-counter");
+        var input = numberCounter.querySelector("input");
 
-            <li class="price visibility-hidden">
-                <p class="price-number">` +
-        price +
-        `</p>
-            </li>
+        function minusClick() {
+          var count = parseInt(input.value) - 1;
+          count = count < 1 ? 1 : count;
+          input.value = count;
+          updatePriceAmount(count);
+          updatePrice();
 
-            <li class="price-amount">
-                <p class="basket__text">` +
-        price +
-        ` грн.</p>
-            </li>
+          var basketPopup = document.querySelector(".basket__pop-up");
+          localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
 
-            <li>
-                <button class="close-btn" aria-label="delete element"><span class="close-btn__icon" aria-hidden="true">X</span></button>
-            </li>
-      `;
-      parent.insertBefore(item, parent.firstChild);
+          var basketListItems = basketPopup.querySelectorAll(".basket__list");
+          var basketData = [];
 
-      var numberCounter = item.querySelector(".number-counter");
-      var input = numberCounter.querySelector("input");
+          basketListItems.forEach(function (item) {
+            var name = item
+              .querySelector(".basket__name .basket__text")
+              .textContent.trim();
+            var quantity = parseInt(
+              item.querySelector(".number-counter input").value
+            );
+            var price = parseFloat(
+              item
+                .querySelector(".price-amount .basket__text")
+                .textContent.trim()
+            );
+            var priceNumber = parseFloat(
+              item.querySelector(".price .price-number").textContent.trim()
+            );
 
-      function minusClick() {
-        var count = parseInt(input.value) - 1;
-        count = count < 1 ? 1 : count;
-        input.value = count;
-        updatePriceAmount(count);
+            basketData.push({
+              name: name,
+              quantity: quantity,
+              price: price,
+              priceNumber: priceNumber,
+            });
+          });
+
+          localStorage.setItem("basketData", JSON.stringify(basketData));
+        }
+
+        function plusClick() {
+          var count = parseInt(input.value) + 1;
+          input.value = count;
+          updatePriceAmount(count);
+          updatePrice();
+
+          var basketPopup = document.querySelector(".basket__pop-up");
+          localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+
+          var basketListItems = basketPopup.querySelectorAll(".basket__list");
+          var basketData = [];
+          basketListItems.forEach(function (item) {
+            var name = item
+              .querySelector(".basket__name .basket__text")
+              .textContent.trim();
+            var quantity = parseInt(
+              item.querySelector(".number-counter input").value
+            );
+            var price = parseFloat(
+              item
+                .querySelector(".price-amount .basket__text")
+                .textContent.trim()
+            );
+            var priceNumber = parseFloat(
+              item.querySelector(".price .price-number").textContent.trim()
+            );
+
+            basketData.push({
+              name: name,
+              quantity: quantity,
+              price: price,
+              priceNumber: priceNumber,
+            });
+          });
+
+          localStorage.setItem("basketData", JSON.stringify(basketData));
+        }
+
+        var minusButton = numberCounter.querySelector(".minus");
+        var plusButton = numberCounter.querySelector(".plus");
+        function updatePriceAmount(count) {
+          var price = parseInt(item.querySelector(".price-number").textContent);
+          var amountElement = item.querySelector(".price-amount .basket__text");
+          amountElement.textContent = price * count + " грн.";
+        }
+        minusButton.addEventListener("click", minusClick);
+        plusButton.addEventListener("click", plusClick);
         updatePrice();
-        var basketPopup = document.querySelector(".basket__pop-up");
-        localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+
+        $(".close-btn").on("click", function () {
+          var index = $(this).closest(".basket__list").index();
+          $(this)
+            .closest(".basket__pop-up")
+            .find(".basket__list")
+            .eq(index)
+            .remove();
+
+          var basketPopUp = $(".basket__pop-up");
+          var basketCount = $(".basket__count");
+          $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
+
+          var basketPopup = document.querySelector(".basket__pop-up");
+          localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+        });
+
+        Array.from($(".basket__count")).forEach((element) => {
+          var basketPopUp = $(".basket__pop-up");
+          var basketCount = $(".basket__count");
+          $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
+        });
       }
 
-      function plusClick() {
-        var count = parseInt(input.value) + 1;
-        input.value = count;
-        updatePriceAmount(count);
-        updatePrice();
-        var basketPopup = document.querySelector(".basket__pop-up");
-        localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
-      }
-
-      var minusButton = numberCounter.querySelector(".minus");
-      var plusButton = numberCounter.querySelector(".plus");
-      function updatePriceAmount(count) {
-        var price = parseInt(item.querySelector(".price-number").textContent);
-        var amountElement = item.querySelector(".price-amount .basket__text");
-        amountElement.textContent = price * count + " грн.";
-      }
-      minusButton.addEventListener("click", minusClick);
-      plusButton.addEventListener("click", plusClick);
-      updatePrice();
-
-      $(".close-btn").on("click", function () {
-        var index = $(this).closest(".basket__list").index();
-        $(this)
-          .closest(".basket__pop-up")
-          .find(".basket__list")
-          .eq(index)
-          .remove();
-
-        var basketPopUp = $(".basket__pop-up");
-        var basketCount = $(".basket__count");
-        $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
-
-        var basketPopup = document.querySelector(".basket__pop-up");
-        localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+      Array.from(basket).forEach((element) => {
+        createBasketElement(element);
       });
 
-      Array.from($(".basket__count")).forEach((element) => {
-        var basketPopUp = $(".basket__pop-up");
-        var basketCount = $(".basket__count");
-        $(basketCount[0]).text(basketPopUp[0].childElementCount - 1);
-      });
-    }
+      var basketPopup = document.querySelector(".basket__pop-up");
 
-    Array.from(basket).forEach((element) => {
-      createBasketElement(element);
+      localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
+
+      var name = $(".basket__name .basket__text")[0].textContent.trim();
+      var quantity = parseInt($(".number-counter input")[0].value);
+      var price = parseFloat(
+        $(".price-amount .basket__text")[0].textContent.trim()
+      );
+      var priceNumber = parseFloat(
+        $(".price .price-number")[0].textContent.trim()
+      );
+
+      basketData.push({
+        name: name,
+        quantity: quantity,
+        price: price,
+        priceNumber: priceNumber,
+      });
+
+      localStorage.setItem("basketData", JSON.stringify(basketData));
     });
-
-    var basketPopup = document.querySelector(".basket__pop-up");
-    localStorage.setItem("basketPopupHTML", basketPopup.innerHTML);
   });
-});
+}
+
+addProducts();
 
 function initSlider() {
   const productSwiper = new Swiper(".product__swiper", {

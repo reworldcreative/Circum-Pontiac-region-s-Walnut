@@ -68,70 +68,74 @@ if ($(".avatar").length > 0) {
 
 // localStorage.clear();
 
-$("#registration-btn")[0].addEventListener("click", (event) => {
-  const registrationName = $("#name")[0].value;
-  const registrationEmail = $("#email")[0].value;
-  const registrationPhone = $("#phone")[0].value;
+if ($("#registration-btn")[0]) {
+  $("#registration-btn")[0].addEventListener("click", (event) => {
+    const registrationName = $("#name")[0].value;
+    const registrationEmail = $("#email")[0].value;
+    const registrationPhone = $("#phone")[0].value;
 
-  const registrationCountry = $("#country")[0].value;
-  const registrationArea = $("#area")[0].value;
+    const registrationCountry = $("#country")[0].value;
+    const registrationArea = $("#area")[0].value;
 
-  const registrationCity = $("#city")[0].value;
-  const registrationAddress = $("#address")[0].value;
+    const registrationCity = $("#city")[0].value;
+    const registrationAddress = $("#address")[0].value;
 
-  const registrationPassword = $("#password")[0].value;
-  const registrationConfirmPassword = $("#confirm-password")[0].value;
-  const registrationIsFOP = $("#FOP")[0].checked;
+    const registrationPassword = $("#password")[0].value;
+    const registrationConfirmPassword = $("#confirm-password")[0].value;
+    const registrationIsFOP = $("#FOP")[0].checked;
 
-  const registrationAvatar = $("#avatarFile")[0].files[0];
-  // const registrationAvatar = $("#avatarImg")[0].src;
-  const registrationAgree = $("#agree")[0].checked;
+    const registrationAvatar = $("#avatarFile")[0].files[0];
+    // const registrationAvatar = $("#avatarImg")[0].src;
+    const registrationAgree = $("#agree")[0].checked;
 
-  if (
-    registrationPassword == registrationConfirmPassword &&
-    registrationPassword !== "" &&
-    registrationConfirmPassword !== ""
-  ) {
-    $("#registration-errorPass-message").hide();
+    if (
+      registrationPassword == registrationConfirmPassword &&
+      registrationPassword !== "" &&
+      registrationConfirmPassword !== ""
+    ) {
+      $("#registration-errorPass-message").hide();
 
-    if (registrationAgree) {
-      $("#registration-errorAgree-message").hide();
-      postData("http://localhost:1337/api/auth/local/register", {
-        username: registrationName,
-        email: registrationEmail,
-        password: registrationPassword,
-        country: registrationCountry,
-        phone: registrationPhone,
-        area: registrationArea,
-        city: registrationCity,
-        address: registrationAddress,
-        isFOP: registrationIsFOP,
-      }).then((data) => {
-        if (!data.error) {
-          $("#registration-error-message").hide();
-          // localStorage.setItem("jwt", data.jwt);
-          // window.location.replace("cabinet.html");
-          // const jwtFromStorage = checkJwtInLocalStorage();
-        } else {
-          $("#registration-error-message").text(
-            data.error.details.errors
-              ? data.error.details.errors[0].message
-              : data.error.message
-          );
-          $("#registration-error-message").show();
-        }
-      });
+      if (registrationAgree) {
+        $("#registration-errorAgree-message").hide();
+        postData("http://localhost:1337/api/auth/local/register", {
+          username: registrationName,
+          email: registrationEmail,
+          password: registrationPassword,
+          country: registrationCountry,
+          phone: registrationPhone,
+          area: registrationArea,
+          city: registrationCity,
+          address: registrationAddress,
+          isFOP: registrationIsFOP,
+        }).then((data) => {
+          if (!data.error) {
+            $("#registration-error-message").hide();
+            localStorage.setItem("jwt", data.jwt);
+            localStorage.setItem("user", JSON.stringify(data.user));
+            window.location.replace("cabinet.html");
+
+            const jwtFromStorage = checkJwtInLocalStorage();
+          } else {
+            $("#registration-error-message").text(
+              data.error.details.errors
+                ? data.error.details.errors[0].message
+                : data.error.message
+            );
+            $("#registration-error-message").show();
+          }
+        });
+      } else {
+        $("#registration-errorAgree-message").text(
+          "необхідно поготитися з Условиями регистрации"
+        );
+        $("#registration-errorAgree-message").show();
+      }
     } else {
-      $("#registration-errorAgree-message").text(
-        "необхідно поготитися з Условиями регистрации"
-      );
-      $("#registration-errorAgree-message").show();
+      $("#registration-errorPass-message").text("паролі не співпадають");
+      $("#registration-errorPass-message").show();
     }
-  } else {
-    $("#registration-errorPass-message").text("паролі не співпадають");
-    $("#registration-errorPass-message").show();
-  }
-});
+  });
+}
 
 // postData("http://localhost:1337/api/auth/local/register", {
 //   username: "Strapi user",
