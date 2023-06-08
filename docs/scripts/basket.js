@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var savedBasketData = localStorage.getItem("basketData");
+  var deliveryValue = localStorage.getItem("deliveryValue");
+  var paymentValue = localStorage.getItem("paymentValue");
 
   if (savedBasketData) {
     var basketData = JSON.parse(savedBasketData);
@@ -152,6 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 customerName: userName,
                 totalPrice: orderTotalPrice,
                 items: products,
+                payment: paymentValue,
+                delivery: deliveryValue,
                 user: userId,
               },
             }),
