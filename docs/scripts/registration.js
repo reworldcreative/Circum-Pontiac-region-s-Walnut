@@ -97,17 +97,20 @@ if ($("#registration-btn")[0]) {
 
       if (registrationAgree) {
         $("#registration-errorAgree-message").hide();
-        postData("http://localhost:1337/api/auth/local/register", {
-          username: registrationName,
-          email: registrationEmail,
-          password: registrationPassword,
-          country: registrationCountry,
-          phone: registrationPhone,
-          area: registrationArea,
-          city: registrationCity,
-          address: registrationAddress,
-          isFOP: registrationIsFOP,
-        }).then((data) => {
+        postData(
+          "https://strapi-production-5725.up.railway.app/api/auth/local/register",
+          {
+            username: registrationName,
+            email: registrationEmail,
+            password: registrationPassword,
+            country: registrationCountry,
+            phone: registrationPhone,
+            area: registrationArea,
+            city: registrationCity,
+            address: registrationAddress,
+            isFOP: registrationIsFOP,
+          }
+        ).then((data) => {
           if (!data.error) {
             $("#registration-error-message").hide();
             localStorage.setItem("jwt", data.jwt);

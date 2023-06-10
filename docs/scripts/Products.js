@@ -10,7 +10,12 @@
 
 let globalData;
 let filter = "";
-var path = "http://localhost:1337/api/products?populate=image";
+// var path = "http://localhost:1337/api/products?populate=image";
+var path =
+  "https://strapi-production-5725.up.railway.app/api/products?populate=image";
+
+// локальний - глобальний
+//http://localhost:1337  =  https://strapi-production-5725.up.railway.app
 
 //зростання цін
 // http://localhost:1337/api/products?populate=image&sort=currentPrice
@@ -67,7 +72,7 @@ function createProductList(globalData) {
         <h3 class="product__title">` +
         element.attributes.category +
         `</h3>
-        <p class="product__article">` +
+        <p class="product__article">Арт: ` +
         element.id +
         `</p>
         <a class="product-link" href="productPage.html` +
@@ -128,7 +133,7 @@ function createProductList(globalData) {
           carouselItem.classList.add("swiper-slide");
           carouselItem.innerHTML =
             `<img class="product__image" src="` +
-            "http://localhost:1337" +
+            "https://strapi-production-5725.up.railway.app" +
             element.attributes.url +
             `" alt="product image">`;
           item
@@ -432,7 +437,9 @@ if ($(".cost").length > 0) {
       filter = filter + "&sort=currentPrice";
     }
 
-    path = "http://localhost:1337/api/products?populate=image" + filter;
+    path =
+      "https://strapi-production-5725.up.railway.app/api/products?populate=image" +
+      filter;
     getProducts(path);
     setTimeout(() => {
       longPollCallback();
@@ -447,7 +454,8 @@ if ($(".clear-button").length > 0) {
     $(".cost-down")[0].classList.remove("active");
     $(".cost-up")[0].classList.add("active");
 
-    path = "http://localhost:1337/api/products?populate=image";
+    path =
+      "https://strapi-production-5725.up.railway.app/api/products?populate=image";
     getProducts(path);
     setTimeout(() => {
       longPollCallback();
@@ -477,7 +485,9 @@ if ($("#applySort").length > 0) {
       filter = filter + "&filters[weight][$gte]=40";
     }
 
-    path = "http://localhost:1337/api/products?populate=image" + filter;
+    path =
+      "https://strapi-production-5725.up.railway.app/api/products?populate=image" +
+      filter;
     getProducts(path);
     setTimeout(() => {
       longPollCallback();

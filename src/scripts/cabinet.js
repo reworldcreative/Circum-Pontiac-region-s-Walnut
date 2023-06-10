@@ -19,7 +19,7 @@ async function getProducts(id) {
 
   try {
     const response = await fetch(
-      `http://localhost:1337/api/users/${id}?populate=*`,
+      `https://strapi-production-5725.up.railway.app/api/users/${id}?populate=*`,
       {
         headers: {
           Authorization: `Bearer ${jwt}`,

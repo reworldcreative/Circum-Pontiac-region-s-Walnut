@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 if ($("#loginButton").length > 0) {
   $("#loginButton")[0].addEventListener("click", (event) => {
-    postData("http://localhost:1337/api/auth/local", {
+    postData("https://strapi-production-5725.up.railway.app/api/auth/local", {
       identifier: $("#emailAddress")[0].value,
       password: $("#Password")[0].value,
     }).then((data) => {

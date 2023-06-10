@@ -19,7 +19,8 @@ if ($(".mainProduct-Info__item")) {
   });
 }
 
-var path = "http://localhost:1337/api/products?populate=image";
+var path =
+  "https://strapi-production-5725.up.railway.app/api/products?populate=image";
 async function getProducts(path) {
   fetch(path)
     .then((response) => {
@@ -147,7 +148,7 @@ function createProductPage(element) {
         carouselItem.classList.add("swiper-slide");
         carouselItem.innerHTML =
           `<img class="product__image" src="` +
-          "http://localhost:1337" +
+          "https://strapi-production-5725.up.railway.app" +
           element.attributes.url +
           `" alt="product image">`;
         productItem

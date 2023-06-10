@@ -160,7 +160,10 @@ document.addEventListener("DOMContentLoaded", function () {
               },
             }),
           };
-          fetch("http://localhost:1337/api/orders", requestOptions)
+          fetch(
+            "https://strapi-production-5725.up.railway.app/api/orders",
+            requestOptions
+          )
             .then((response) => response.json())
             .then((data) => {
               if (data) {
