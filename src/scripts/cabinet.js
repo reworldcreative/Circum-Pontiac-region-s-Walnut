@@ -18,14 +18,11 @@ async function getProducts(id) {
   }
 
   try {
-    const response = await fetch(
-      `https://strapi-production-5725.up.railway.app/api/users/${id}?populate=*`,
-      {
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-        },
-      }
-    );
+    const response = await fetch(pathToServer + `/api/users/${id}?populate=*`, {
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    });
 
     if (response.ok) {
       const data = await response.json();

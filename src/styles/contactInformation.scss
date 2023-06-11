@@ -37,7 +37,6 @@ $rfs-breakpoint: 1500;
   margin-left: 29px;
   width: 131.01px;
   height: 170px;
-
   &__wrap {
     margin-top: 16px;
   }
@@ -48,6 +47,8 @@ $rfs-breakpoint: 1500;
 }
 
 .avata-img {
+  max-width: 135px;
+  max-height: 170px;
   filter: invert(31%) sepia(16%) saturate(997%) hue-rotate(100deg)
     brightness(95%) contrast(87%);
 }

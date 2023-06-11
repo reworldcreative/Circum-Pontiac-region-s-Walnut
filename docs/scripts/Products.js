@@ -11,8 +11,7 @@
 let globalData;
 let filter = "";
 // var path = "http://localhost:1337/api/products?populate=image";
-var path =
-  "https://strapi-production-5725.up.railway.app/api/products?populate=image";
+var path = pathToServer + "/api/products?populate=image";
 
 // локальний - глобальний
 //http://localhost:1337  =  https://strapi-production-5725.up.railway.app
@@ -133,7 +132,8 @@ function createProductList(globalData) {
           carouselItem.classList.add("swiper-slide");
           carouselItem.innerHTML =
             `<img class="product__image" src="` +
-            "https://strapi-production-5725.up.railway.app" +
+            pathToServer +
+            // "https://strapi-production-5725.up.railway.app" +
             element.attributes.url +
             `" alt="product image">`;
           item
@@ -437,9 +437,7 @@ if ($(".cost").length > 0) {
       filter = filter + "&sort=currentPrice";
     }
 
-    path =
-      "https://strapi-production-5725.up.railway.app/api/products?populate=image" +
-      filter;
+    path = pathToServer + "/api/products?populate=image" + filter;
     getProducts(path);
     setTimeout(() => {
       longPollCallback();
@@ -454,8 +452,7 @@ if ($(".clear-button").length > 0) {
     $(".cost-down")[0].classList.remove("active");
     $(".cost-up")[0].classList.add("active");
 
-    path =
-      "https://strapi-production-5725.up.railway.app/api/products?populate=image";
+    path = pathToServer + "/api/products?populate=image";
     getProducts(path);
     setTimeout(() => {
       longPollCallback();
@@ -485,9 +482,7 @@ if ($("#applySort").length > 0) {
       filter = filter + "&filters[weight][$gte]=40";
     }
 
-    path =
-      "https://strapi-production-5725.up.railway.app/api/products?populate=image" +
-      filter;
+    path = pathToServer + "/api/products?populate=image" + filter;
     getProducts(path);
     setTimeout(() => {
       longPollCallback();

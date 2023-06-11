@@ -73,7 +73,7 @@
                         <input type="email" id="email" name="email" placeholder="Email*">
                         <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
 
-                        <button class="continue-btn" aria-lable="save"
+                        <button type="button" class="continue-btn" aria-lable="save"
                             aria-description="save information">Сохранить</button>
                     </fieldset>
                 </form>
@@ -85,7 +85,7 @@
                         <input type="email" id="email" name="email" placeholder="Email*">
                         <input type="tel" id="phone" name="phone" placeholder="Телефон*" />
 
-                        <button class="continue-btn" aria-lable="save"
+                        <button type="button" class="continue-btn" aria-lable="save"
                             aria-description="save information">Сохранить</button>
                     </fieldset>
                 </form>
@@ -93,7 +93,10 @@
                 <div class="avatar__wrap">
                     <div class="avatar">
                         <img class="avata-img" src="@img/avatar.png" alt="avatar">
-                        <button class="avatar__download">Изменить фото</button>
+                        <!-- <button type="button" class="avatar__download">Изменить фото</button> -->
+                        <label class="avatar__download" aria-lable="save" aria-description="save information"
+                            class="avatar__download" for="avatarFile" id="fileLabel">Изменить фото</label>
+                        <input type="file" id="avatarFile" name="filename" accept="image/*" style="display: none;">
                     </div>
                 </div>
             </div>
@@ -111,6 +114,7 @@
 
     <!-- <script src="scripts/main.min.js"></script> -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/contactInformation.js"></script>
 </body>
 
 </html>

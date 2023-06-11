@@ -3,6 +3,8 @@
 
 // import { counter } from "./counter.js";
 const jwtFromStorage = localStorage.getItem("jwt");
+var pathToServer = "https://strapi-production-5725.up.railway.app";
+// var pathToServer = "http://localhost:1337";
 
 function isWebp() {
   function testWebP(callback) {

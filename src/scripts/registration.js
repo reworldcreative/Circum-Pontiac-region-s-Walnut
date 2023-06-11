@@ -70,6 +70,27 @@ if ($(".avatar").length > 0) {
 
 if ($("#registration-btn")[0]) {
   $("#registration-btn")[0].addEventListener("click", (event) => {
+    async function uploadImage(file) {
+      try {
+        const formData = new FormData();
+        formData.append("files", file);
+
+        const response = await fetch(pathToServer + "/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) {
+          throw new Error("Upload failed");
+        }
+
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        throw new Error(error);
+      }
+    }
+
     const registrationName = $("#name")[0].value;
     const registrationEmail = $("#email")[0].value;
     const registrationPhone = $("#phone")[0].value;
@@ -84,7 +105,7 @@ if ($("#registration-btn")[0]) {
     const registrationConfirmPassword = $("#confirm-password")[0].value;
     const registrationIsFOP = $("#FOP")[0].checked;
 
-    const registrationAvatar = $("#avatarFile")[0].files[0];
+    var registrationAvatar;
     // const registrationAvatar = $("#avatarImg")[0].src;
     const registrationAgree = $("#agree")[0].checked;
 
@@ -96,37 +117,49 @@ if ($("#registration-btn")[0]) {
       $("#registration-errorPass-message").hide();
 
       if (registrationAgree) {
-        $("#registration-errorAgree-message").hide();
-        postData(
-          "https://strapi-production-5725.up.railway.app/api/auth/local/register",
-          {
-            username: registrationName,
-            email: registrationEmail,
-            password: registrationPassword,
-            country: registrationCountry,
-            phone: registrationPhone,
-            area: registrationArea,
-            city: registrationCity,
-            address: registrationAddress,
-            isFOP: registrationIsFOP,
-          }
-        ).then((data) => {
-          if (!data.error) {
-            $("#registration-error-message").hide();
-            localStorage.setItem("jwt", data.jwt);
-            localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.replace("cabinet.html");
+        const fileInput = document.getElementById("avatarFile");
+        const file = fileInput.files[0];
+        uploadImage(file)
+          .then((data) => {
+            // Обробка успішного завантаження зображення
+            registrationAvatar = data[0].url;
 
-            const jwtFromStorage = checkJwtInLocalStorage();
-          } else {
-            $("#registration-error-message").text(
-              data.error.details.errors
-                ? data.error.details.errors[0].message
-                : data.error.message
-            );
-            $("#registration-error-message").show();
-          }
-        });
+            $("#registration-errorAgree-message").hide();
+            postData(pathToServer + "/api/auth/local/register", {
+              username: registrationName,
+              email: registrationEmail,
+              password: registrationPassword,
+              country: registrationCountry,
+              phone: registrationPhone,
+              area: registrationArea,
+              city: registrationCity,
+              address: registrationAddress,
+              isFOP: registrationIsFOP,
+              // avatar: pathToServer + registrationAvatar,
+              avatarLink: registrationAvatar,
+            }).then((data) => {
+              if (!data.error) {
+                $("#registration-error-message").hide();
+                localStorage.setItem("jwt", data.jwt);
+                localStorage.setItem("user", JSON.stringify(data.user));
+                window.location.replace("cabinet.html");
+
+                const jwtFromStorage = checkJwtInLocalStorage();
+              } else {
+                $("#registration-error-message").text(
+                  data.error.details.errors
+                    ? data.error.details.errors[0].message
+                    : data.error.message
+                );
+                $("#registration-error-message").show();
+              }
+            });
+            // console.log(data);
+          })
+          .catch((error) => {
+            // Обробка помилки
+            // console.error(error);
+          });
       } else {
         $("#registration-errorAgree-message").text(
           "необхідно поготитися з Условиями регистрации"
