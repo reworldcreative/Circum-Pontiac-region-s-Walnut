@@ -157,7 +157,10 @@ if ($(".basket")) {
   Array.from($(".basket")).forEach((element) => {
     element.addEventListener("click", (event) => {
       updatePrice();
-      $(".basket__pop-up")[0].classList.toggle("show");
+      // $(".basket__pop-up")[0].classList.toggle("show");
+      Array.from($(".basket__pop-up")).forEach((element) => {
+        element.classList.toggle("show");
+      });
     });
   });
 
