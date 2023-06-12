@@ -524,3 +524,11 @@ $rfs-breakpoint: 1500;
     width: 25%;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .basket {
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}
