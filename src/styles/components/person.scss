@@ -167,8 +167,11 @@
 @media screen and (max-width: 800px) {
   .person {
     &__photo {
-      width: 90%;
-      height: auto;
+      // width: 90%;
+      // height: auto;
+
+      width: 50%;
+      height: 450px;
       margin: 0px;
     }
 
@@ -190,6 +193,15 @@
       &::after {
         content: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .person {
+    &__photo {
+      width: 70%;
+      height: auto;
     }
   }
 }

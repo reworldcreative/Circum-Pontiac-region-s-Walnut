@@ -177,6 +177,9 @@
     max-height: 100%;
     height: 100%;
 
+    display: flex;
+    margin: 0px auto;
+
     // &:not(:hover) {
     //   transform: scale(1);
     // }

@@ -76,6 +76,10 @@
     }
     &__image {
       height: 500px;
+
+      img {
+        object-fit: cover;
+      }
     }
   }
 }

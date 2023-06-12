@@ -65,6 +65,12 @@
       &__wrap {
         padding: 122px 0px 0px;
       }
+
+      .poster-image {
+        img {
+          object-fit: cover;
+        }
+      }
     }
   }
 }

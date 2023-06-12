@@ -110,8 +110,22 @@
 
 @media screen and (max-width: 800px) {
   .video {
+    height: 480px;
     &__text {
       width: auto;
     }
+    &__wrap {
+      padding: 65px 0px 29px;
+    }
+    .poster-image {
+      height: inherit;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .video__placeholder {
+    object-fit: cover;
   }
 }
