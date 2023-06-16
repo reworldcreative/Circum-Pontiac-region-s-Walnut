@@ -25,7 +25,7 @@
             })
         </div>
 
-        <div class="swiper video__carousel">
+        <!-- <div class="swiper video__carousel">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <iframe loading="lazy" preload="none" class="video__item"
@@ -51,6 +51,47 @@
                     <img src="@img/right arrow.svg" alt="arrow">
                 </div>
             </div>
+        </div> -->
+        <div class="swiper video__carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="video__youtube" data-youtube>
+                        <div class="video__wrap">
+                            <button class="video__button" id="play-btn"
+                                aria-label="Play video: Nut farming and harvesting"
+                                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                                <img src="@img/play-icon.svg" alt="play video button icon">
+                            </button>
+                        </div>
+                        <div class="poster-image" id="poster-image" aria-hidden="true">
+                            <img src="@img/aboutBanner.jpg" alt="banner" class="video__placeholder">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video__youtube" data-youtube>
+                        <div class="video__wrap">
+                            <button class="video__button" id="play-btn"
+                                aria-label="Play video: California Walnut Processing"
+                                data-youtube-button="https://www.youtube.com/embed/al68eQXB4FQ">
+                                <img src="@img/play-icon.svg" alt="play video button icon">
+                            </button>
+                        </div>
+                        <div class="poster-image" id="poster-image" aria-hidden="true">
+                            <img src="@img/aboutBanner.jpg" alt="banner" class="video__placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video__navigation">
+                <div class="video__swiper-button-prev">
+                    <img src="@img/right arrow.svg" alt="arrow">
+                </div>
+                <div class="video__swiper-button-next">
+                    <img src="@img/right arrow.svg" alt="arrow">
+                </div>
+            </div>
         </div>
-    </div>
+
 </section>

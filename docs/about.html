@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.min.css?_v=20230612175638">
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230616181913">
     <title>О компании</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap&_v=20230612175638"
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap&_v=20230616181913"
         rel="stylesheet">
 
     <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230612175638" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230616181913" />
 
-    <link rel="stylesheet" href="styles/style.min.css?_v=20230612175638">
-    <link rel="stylesheet" href="styles/about.min.css?_v=20230612175638">
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230616181913">
+    <link rel="stylesheet" href="styles/about.min.css?_v=20230616181913">
 </head>
 
 <body>
@@ -487,7 +487,7 @@
 </a>
         </div>
 
-        <div class="swiper video__carousel">
+        <!-- <div class="swiper video__carousel">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <iframe loading="lazy" preload="none" class="video__item"
@@ -513,8 +513,49 @@
                     <img src="img/right arrow.svg" alt="arrow">
                 </div>
             </div>
+        </div> -->
+        <div class="swiper video__carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="video__youtube" data-youtube>
+                        <div class="video__wrap">
+                            <button class="video__button" id="play-btn"
+                                aria-label="Play video: Nut farming and harvesting"
+                                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                                <img src="img/play-icon.svg" alt="play video button icon">
+                            </button>
+                        </div>
+                        <div class="poster-image" id="poster-image" aria-hidden="true">
+                            <picture><source srcset="img/aboutBanner.webp" type="image/webp"><img src="img/aboutBanner.jpg" alt="banner" class="video__placeholder"></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video__youtube" data-youtube>
+                        <div class="video__wrap">
+                            <button class="video__button" id="play-btn"
+                                aria-label="Play video: California Walnut Processing"
+                                data-youtube-button="https://www.youtube.com/embed/al68eQXB4FQ">
+                                <img src="img/play-icon.svg" alt="play video button icon">
+                            </button>
+                        </div>
+                        <div class="poster-image" id="poster-image" aria-hidden="true">
+                            <picture><source srcset="img/aboutBanner.webp" type="image/webp"><img src="img/aboutBanner.jpg" alt="banner" class="video__placeholder"></picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video__navigation">
+                <div class="video__swiper-button-prev">
+                    <img src="img/right arrow.svg" alt="arrow">
+                </div>
+                <div class="video__swiper-button-next">
+                    <img src="img/right arrow.svg" alt="arrow">
+                </div>
+            </div>
         </div>
-    </div>
+
 </section>
 
         <section class="person" aria-label="informaniton about person">
@@ -603,6 +644,22 @@
 
             <li>
                 <section class="video-gallery">
+    <!-- <div class="video__youtube video__wrap video-gallery__wrap @@solo" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="img/play-icon.svg" alt="play video button icon">
+            </button>
+            <h2 class="video__head">Проект UBHDP</h2>
+            <p class="video__text">
+                Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP за возможность получить консультацию от мировых специалистов!
+            </p>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="img/banner 5.jpg" alt="banner" class="video__placeholder">
+        </div>
+    </div> -->
+
     <div class="video__wrap video-gallery__wrap @@solo">
         <button class="video__button" id="play-btn" aria-label="Play video">
             <img src="img/play-icon.svg" alt="play video button icon">
@@ -644,6 +701,22 @@
 
             <li class="video-small">
                 <section class="video-gallery">
+    <!-- <div class="video__youtube video__wrap video-gallery__wrap solo" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="img/play-icon.svg" alt="play video button icon">
+            </button>
+            <h2 class="video__head"></h2>
+            <p class="video__text">
+                
+            </p>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="img/banner 6.jpg" alt="banner" class="video__placeholder">
+        </div>
+    </div> -->
+
     <div class="video__wrap video-gallery__wrap solo">
         <button class="video__button" id="play-btn" aria-label="Play video">
             <img src="img/play-icon.svg" alt="play video button icon">
@@ -686,6 +759,22 @@
     
                 <li>
                     <section class="video-gallery">
+    <!-- <div class="video__youtube video__wrap video-gallery__wrap @@solo" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="img/play-icon.svg" alt="play video button icon">
+            </button>
+            <h2 class="video__head">Проект UBHDP</h2>
+            <p class="video__text">
+                Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP за возможность получить консультацию от мировых специалистов!
+            </p>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="img/banner 5.jpg" alt="banner" class="video__placeholder">
+        </div>
+    </div> -->
+
     <div class="video__wrap video-gallery__wrap @@solo">
         <button class="video__button" id="play-btn" aria-label="Play video">
             <img src="img/play-icon.svg" alt="play video button icon">
@@ -727,6 +816,22 @@
     
                 <li class="video-small">
                     <section class="video-gallery">
+    <!-- <div class="video__youtube video__wrap video-gallery__wrap solo" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="img/play-icon.svg" alt="play video button icon">
+            </button>
+            <h2 class="video__head"></h2>
+            <p class="video__text">
+                
+            </p>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="img/banner 6.jpg" alt="banner" class="video__placeholder">
+        </div>
+    </div> -->
+
     <div class="video__wrap video-gallery__wrap solo">
         <button class="video__button" id="play-btn" aria-label="Play video">
             <img src="img/play-icon.svg" alt="play video button icon">
@@ -805,27 +910,20 @@
             </div>
             <div class="swiper-slide">
             <article class="news-item">
-    <div class="news-item__image">
-        <section class="video-gallery">
-    <div class="video__wrap video-gallery__wrap @@solo">
-        <button class="video__button" id="play-btn" aria-label="Play video">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-        <h2 class="video__head"></h2>
-        <p class="video__text">
-            
-        </p>
+    <!-- <div class="news-item__image"> -->
+    <div class="video__youtube" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="img/play-icon.svg" alt="play video button icon">
+            </button>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="img/news 3.jpg" alt="banner" class="video__placeholder">
+        </div>
     </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/news 3.jpg" alt="banner">
-    </div>
-
-    <iframe loading="lazy" class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
-        title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</section>
-    </div>
+    
+    <!-- </div> -->
 
     <div class="news-item__container">
         <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
@@ -856,27 +954,20 @@
 
             <div class="swiper-slide">
                 <article class="news-item">
-    <div class="news-item__image">
-        <section class="video-gallery">
-    <div class="video__wrap video-gallery__wrap @@solo">
-        <button class="video__button" id="play-btn" aria-label="Play video">
-            <img src="img/play-icon.svg" alt="play video button icon">
-        </button>
-        <h2 class="video__head"></h2>
-        <p class="video__text">
-            
-        </p>
+    <!-- <div class="news-item__image"> -->
+    <div class="video__youtube" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="img/play-icon.svg" alt="play video button icon">
+            </button>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="img/news 3.jpg" alt="banner" class="video__placeholder">
+        </div>
     </div>
-    <div class="poster-image" id="poster-image" aria-hidden="true">
-        <img src="img/news 3.jpg" alt="banner">
-    </div>
-
-    <iframe loading="lazy" class="video__video" preload="none" src="https://www.youtube.com/embed/hT4O8VI__XE"
-        title="Circum Pontiac region's Walnut video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-</section>
-    </div>
+    
+    <!-- </div> -->
 
     <div class="news-item__container">
         <time class="news-item__date active" datetime="2019-04-12">12.04.2019</time>
@@ -1072,17 +1163,17 @@
         </div>
     </div>
 </footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230612175638"
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230616181913"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230612175638"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230616181913"></script>
 
-    <!-- <script src="scripts/main.min.js?_v=20230612175638"></script> -->
-    <script src="scripts/main.js?_v=20230612175638"></script>
-    <script src="scripts/video.js?_v=20230612175638"></script>
-    <script src="scripts/news.js?_v=20230612175638"></script>
-    <script src="scripts/videoPlayer.js?_v=20230612175638"></script>
+    <!-- <script src="scripts/main.min.js?_v=20230616181913"></script> -->
+    <script src="scripts/main.js?_v=20230616181913"></script>
+    <script src="scripts/video.js?_v=20230616181913"></script>
+    <script src="scripts/news.js?_v=20230616181913"></script>
+    <script src="scripts/videoPlayer.js?_v=20230616181913"></script>
 </body>
 
 </html>

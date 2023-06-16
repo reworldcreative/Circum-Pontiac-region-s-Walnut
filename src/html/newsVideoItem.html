@@ -1,11 +1,22 @@
 <article class="news-item">
-    <div class="news-item__image">
-        @@include('video-gallery.html',{
+    <!-- <div class="news-item__image"> -->
+    <div class="video__youtube" data-youtube>
+        <div class="video__wrap">
+            <button class="video__button" id="play-btn" aria-label="Play video: Nut farming and harvesting"
+                data-youtube-button="https://www.youtube.com/embed/W9rZL4bgr4o">
+                <img src="@img/play-icon.svg" alt="play video button icon">
+            </button>
+        </div>
+        <div class="poster-image" id="poster-image" aria-hidden="true">
+            <img src="@@video" alt="banner" class="video__placeholder">
+        </div>
+    </div>
+    <!-- @@include('video-gallery.html',{
         banner:"@@video",
         title:"",
         text:"",
-        })
-    </div>
+        }) -->
+    <!-- </div> -->
 
     <div class="news-item__container">
         <time class="news-item__date active" datetime="@@date">@@datetext</time>

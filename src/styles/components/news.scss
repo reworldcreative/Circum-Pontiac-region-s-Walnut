@@ -110,7 +110,8 @@
   &__image {
     img {
       width: 100%;
-      z-index: 30;
+      height: 100%;
+      // z-index: 30;
       position: relative;
       top: 0px;
     }
@@ -220,6 +221,14 @@
       z-index: 10;
       position: relative;
     }
+  }
+
+  .video__wrap {
+    padding: 25% 0px 25%;
+  }
+
+  .video__youtube {
+    height: 270px;
   }
 }
 
