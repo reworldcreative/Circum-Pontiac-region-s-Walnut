@@ -106,6 +106,9 @@
     display: none;
     z-index: 30;
 
+    top: 35%;
+    left: 45%;
+
     &::before {
       position: absolute;
       content: "";
