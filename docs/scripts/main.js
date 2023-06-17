@@ -187,3 +187,18 @@ async function postData(url = "", data = {}) {
   });
   return await response.json();
 }
+
+function loadCSS(url) {
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = url;
+  document.head.appendChild(link);
+}
+
+// Завантаження стилів після першого відображення сторінки
+window.addEventListener("load", function () {
+  loadCSS("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
+  loadCSS(
+    "https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Roboto:wght@400;500;700;900&display=swap"
+  );
+});

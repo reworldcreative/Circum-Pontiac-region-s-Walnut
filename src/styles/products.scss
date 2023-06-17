@@ -215,3 +215,11 @@ $rfs-breakpoint: 1500;
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .products-about {
+    .video__carousel {
+      height: 300px;
+    }
+  }
+}

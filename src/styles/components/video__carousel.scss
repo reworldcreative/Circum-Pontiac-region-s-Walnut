@@ -1,6 +1,6 @@
 .video {
   &__carousel {
-    margin: 0px;
+    margin: 0px !important;
     width: 700px;
     height: 472px;
   }
@@ -60,7 +60,7 @@
   .video {
     &__carousel {
       width: auto;
-      height: auto;
+      // height: auto;
       margin: 0px 20px;
     }
   }
