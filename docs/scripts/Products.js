@@ -87,13 +87,15 @@ function createProductList(globalData) {
 
     <div class="product__info">
         <div class="weight">
-            <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon">
+            <img class="weight__icon" src="img/food-scale-tool.svg" alt="weight icon" style="
+            width: 18px; height: 32px;">
             <p class="weight__number">Масса: <span class="weight__number_accent"> ` +
         element.attributes.weight +
         `</span></p>
         </div>
         <div class="package">
-            <img class="package__icon" src="img/package-icon.svg" alt="weight icon">
+            <img class="package__icon" src="img/package-icon.svg" alt="weight icon" style="
+            width: 12px; height: 34px;">
             <p class="package__type">Упаковка <span class="package__type_accent">` +
         element.attributes.packageType +
         `</span></p>

@@ -48,7 +48,7 @@
     transition: all 0.3s ease 0s;
     &.show {
       z-index: 100;
-      height: 100%;
+      height: fit-content;
       display: block;
       position: absolute;
       background: $main-white;
