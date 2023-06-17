@@ -120,7 +120,7 @@ function createProductList(globalData) {
             </p>
         </div>
 
-        <button class="action-btn" aria-lable="buy" aria-description="buy product">Купить</button>
+        <button class="action-btn" aria-label="buy" aria-description="buy product">Купить</button>
     </div>
 </div>
 </article>`;
