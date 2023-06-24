@@ -513,6 +513,10 @@ $rfs-breakpoint: 1500;
     &__pop-up {
       width: auto;
       padding: 30px 10px 25px;
+
+      .action-btn {
+        text-align: center;
+      }
     }
 
     &__list {

@@ -137,7 +137,7 @@ function createProductList(globalData) {
             pathToServer +
             // "https://strapi-production-5725.up.railway.app" +
             element.attributes.url +
-            `" alt="product image" style="width: auto; height: 100%;">`;
+            `" alt="product image" style="width: auto; height: 240px;">`;
           item
             .querySelector(".product__carousel .swiper-wrapper")
             .appendChild(carouselItem);

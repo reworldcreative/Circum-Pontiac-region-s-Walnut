@@ -7,8 +7,11 @@
   background: none;
   border: none;
   height: fit-content;
+  width: 15px;
+  height: 15px;
   &__line {
     position: relative;
+    // position: absolute;
     display: block;
     width: 19px;
     height: 3px;
@@ -23,6 +26,7 @@
   &.show {
     .burger-btn__line {
       transition: all 0.3s ease 0s;
+      position: absolute;
       &:nth-child(1) {
         transform: rotate(45deg);
         // top: 5px;
@@ -31,7 +35,7 @@
 
       &:nth-child(2) {
         transform: rotate(-45deg);
-        bottom: 3px;
+        // bottom: 3px;
         margin: 0px;
       }
 
